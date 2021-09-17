@@ -1,0 +1,86 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Shopify-Training</a>
+    <a href="/cart" class="tb_menu ml-auto pr-3">
+      <span class="navbar-text ">
+        <i class="fas fa-shopping-cart fa-lg"></i>
+      </span>
+      <span class="navbar-text ">
+        カート({{cart.item_count}})
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
+        <!-- リンクをひとつずつ取り出す -->
+        {% for link in linklists.main-menu.links %}
+        <li class="nav-item">
+          <!-- リンクの名前をchild_list_handleで定義 -->
+          {% assign child_list_handle = link.title | handleize %}
+          <!-- リンクのchild_linkが空でなかったら（リンクが下の階層を持っていたら） -->
+          {% if linklists[child_list_handle].links != blank %}
+          <!-- ドロップダウンメニューを出す -->
+          <div class="dropdown drop-hover">
+            <!-- href="{{ link.url }}"でリンクのURLを指定 -->
+            <a class="nav-link dropdown-toggle" href="{{ link.url }}">
+              <!-- {{ link.title }}でタイトルを表示 -->
+              {{ link.title }}
+            </a>
+            <ul class="dropdown-menu">
+              <!-- 下の階層のリンクを1つずつ取り出す -->
+              {% for childlink in linklists[child_list_handle].links %}
+              <!-- その名前をsub_list_handleとして定義する -->
+              {% assign sub_list_handle = childlink.title | handleize %}
+              <!-- sub_list_handleがあったら -->
+              {% if linklists[sub_list_handle].links != blank %}
+              <!-- ドロップダウンメニューを出す -->
+              <li class="dropright drop-hover">
+                <a class="dropdown-item dropdown-toggle" href="{{ childlink.url }}"
+                  data-toggle="dropdown">{{ childlink.title }}</a>
+                <ul class="dropdown-menu">
+                  <!-- sub_list_handleのタイトルを1つずつ表示 -->
+                  {% for sublink in linklists[sub_list_handle].links %}
+                  <li>
+                    <a class="dropdown-item" href="{{ sublink.url }}">{{ sublink.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </li>
+              {%else%}
+              <li>
+                <a class="dropdown-item" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+              </li>
+              {%endif%}
+              {% endfor %}
+            </ul>
+          </div>
+          {%else%}
+          <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
+          {%endif%}
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="pc_menu d-flex">
+        <a href="/cart">
+          <span class="navbar-text ">
+            <i class="fas fa-shopping-cart fa-lg"></i>
+          </span>
+          <span class="navbar-text ">
+            カート({{cart.item_count}})
+          </span>
+        </a>
+        <form class="search" action="/search">
+          <div class="input-group ml-2">
+            <input type="text" class="form-control" placeholder="検索" name="q" value="{{ search.terms | escape }}">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
