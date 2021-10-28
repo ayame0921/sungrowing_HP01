@@ -1,0 +1,25 @@
+<div class="blog-page">
+  <div class="eye-chatch">
+    <img src="{% if article.image %}{{article.image.src | img_url: '1920x'}}{% else %}何らかのURL{% endif %}" alt="">
+  </div>
+  <div class="date">
+    <p>{{ article.created_at | date: "%Y.%m/%d" }}</p>
+  </div>
+  <div class="title">
+    <p>{{article.title}}</p>
+  </div>
+  <div class="blog-content">
+    {{ article.content }}
+  </div>
+</div>
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .site-title a{
+    color: black !important;
+  }
+</style>

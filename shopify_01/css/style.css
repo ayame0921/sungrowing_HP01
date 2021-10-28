@@ -25,9 +25,17 @@ h1{
 
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
-  
+  .pc{
+    display: none !important;
+  }
 }
 
+@media screen and (min-width: 480px) {
+	/* 480px以上に適用されるCSS（PC用） */
+  .m{
+    display: none !important;
+  }
+}
 /* ヘッダーここから */
 
 header{
@@ -224,7 +232,7 @@ header .header-right img{
 
 /* フッターここから */
 footer{
-  margin-top: 100px;
+  /* margin-top: 100px; */
   height: 924px;
   background-image: url('../img/footer-pc.png');
   background-size: cover;
@@ -683,6 +691,783 @@ text-align: center;
   padding-top: 25px;
 }
 
+/* ブログ一覧ここまで */
+
+/* お問い合わせここから */
+
 .contact .page-title{
-  
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 42px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  color: #020202;
+  padding-top: 71px;
 }
+
+.contact .company-info h3{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #020202;
+  padding-top: 61px;
+  padding-bottom: 9px;
+}
+
+.contact .company-info p{
+  font-family: YuGothic;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 40px;
+  text-align: center;
+  color: #3e3e3e;
+  padding-top: 41px;
+  padding-bottom: 144px;
+}
+
+.contact .company-info hr{
+  width: 80px;
+  margin: 0 auto;
+}
+
+.contact-background{
+  background-color: #F7F4ED;
+  height: 2209px;
+   width: 100%;
+   padding-top: 136px;
+}
+
+.contact-form{
+  width: 1420px;
+  height: 1972px;
+  margin: 0 auto !important;
+  background-color: #FFFFFF;
+}
+
+/* お問い合わせここまで */
+
+/* 商品一覧ここから */
+
+.shop-list .page-title h2{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 42px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #020202;
+  padding-top: 90px;
+}
+
+
+.shop-list .page-title p{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  line-height: 45px;
+  text-align: center;
+  color: #272727;
+  padding-top: 17px;
+}
+
+.shop-list .shop-list-copy{
+  font-family: "DNP ShueiGoGinStd";
+font-weight: normal;
+font-size: 16px;
+letter-spacing: 0.1em;
+line-height: 35px;
+text-align: center;
+color: #272727;
+padding-top: 51px;
+}
+
+.shop-list-content{
+  padding-top: 168px;
+  width: 1065px;
+  margin: 0 auto;
+  padding-bottom: 209px;
+}
+
+.shop-list-content img{
+ width: 340px;
+ margin-bottom: 28px;
+}
+
+.shop-list-content ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .shop-list .page-title h2{
+    font-family: "Operetta 8";
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #020202;
+  }
+  .shop-list .shop-list-copy {
+    font-family: "Operetta 8";
+    width: 314px;
+    margin: 0 auto;
+  }
+  .shop-list-content{
+    width: 345px;
+  }
+  .shop-list-content ul {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .shop-list-content ul img{
+    width: 345px;
+  }
+}
+/* 商品一覧ここまで */
+
+/* スペシャルページここから */
+.special-page-top{
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.special-page-top h1{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 42px;
+  padding-top: 350px;
+}
+
+.special-page-top p{
+  font-family: AnnabelleJF;
+font-weight: normal;
+font-size: 24px;
+letter-spacing: 0.02em;
+padding-top: 10px;
+}
+
+.special-page-top button a{
+  font-family: "Operetta 8";
+font-weight: 500;
+font-size: 20px;
+letter-spacing: 0.03em;
+line-height: 45px;
+display: block;
+margin-top: 94px;
+padding: 12px 69px;
+border: 1px solid #FFFFFF;
+}
+
+.special-page h1{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 34px;
+  letter-spacing: 0.05em;
+  line-height: 72px;
+  color: #000;
+  padding-bottom: 45px;
+  padding-top: 150px;
+}
+
+.special-page .p-padding{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 32px;
+  text-align: center;
+  color: #272727;
+  padding-top: 64px;
+}
+.special-page p{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 32px;
+  text-align: center;
+  color: #272727;
+}
+
+.spacial-img01{
+  width: 1080px;
+  margin: 0 auto;
+  padding-top: 110px;
+}
+
+.special-page .image_content {
+  width: 571px;
+  height: 983px;
+  position: relative; 
+}
+
+.special-page .image_content img {
+  position: absolute;
+  display: block;
+}
+
+.special-page .image_content .img_01 {
+  /* 左上に固定 */
+  width: 509px;
+  top: 0;
+  left: 0;
+  height: 764px;
+}
+
+.special-page .image_content .img_02 {
+  /* 右下に固定 */
+  width: 331px;
+  bottom: 0;
+  right: 0;
+}
+
+.special-page .row{
+  display: flex;
+}
+
+.special-page .page-content{
+  width: 1080px;
+  margin: 0 auto;
+  padding-top: 255px;
+}
+
+.special-page .page-content h3{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: 0.05em;
+  line-height: 60px;
+  text-align: left;
+  color: #000;
+  padding-bottom: 46px;
+  padding-top: 190px;
+}
+
+.special-page .page-content p{
+  text-align: left;
+}
+
+.special-page .special-image{
+  width: 955px;
+  margin: 0 auto;
+  padding-top: 225px;
+  justify-content: space-between;
+}
+
+.special-page .special-image .slide{
+  width: 450px;
+}
+
+.special-page .special-page-last p{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 32px;
+  text-align: left;
+  color: #272727;
+}
+
+.special-page .special-page-last{
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 110px;
+  padding-bottom: 44px;
+}
+
+.special-page button {
+  width: 1000px;
+  margin: 0 auto;
+  height: 72px;
+  background-color: #8E968E;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 199px;
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .special-page-top{
+    color: #FFFFFF;
+    text-align: center;
+  }
+  
+  .special-page-top h1{
+    font-family: YuMincho;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF !important;
+    padding-top: 184px;
+  }
+  
+  .special-page-top p{
+    font-family: AnnabelleJF;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    padding-top: 16px;
+  }
+  
+  .special-page-top button a{
+    font-family: "Operetta 8";
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    line-height: 45px;
+    display: block;
+    margin-top: 66px;
+    padding: 12px 69px;
+    border: 1px solid #FFFFFF;
+  }
+  
+  .special-page h1{
+    font-family: YuMincho;
+    font-weight: 500;
+    font-size: 34px;
+    letter-spacing: 0.05em;
+    line-height: 72px;
+    color: #000;
+    padding-bottom: 45px;
+    padding-top: 150px;
+  }
+  
+  .special-page .p-padding{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: center;
+    color: #272727;
+    padding-top: 32px;
+  }
+  .special-page p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: center;
+    color: #272727;
+    padding-top: 32px;
+  }
+  
+  .spacial-img01{
+    width: 375px;
+    margin: 0 auto;
+    padding-top: 110px;
+  }
+  
+  .special-page .image_content {
+    width: 345px;
+    height: 639px;
+    position: relative; 
+  }
+  
+  .special-page .image_content img {
+    position: absolute;
+    display: block;
+  }
+  
+  .special-page .image_content .img_01 {
+    /* 左上に固定 */
+    width: 310px;
+    top: 0;
+    left: 0;
+    height:  479px;
+  }
+  
+  .special-page .image_content .img_02 {
+    /* 右下に固定 */
+    width: 225px;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .special-page .row{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .special-page .page-content{
+    width: 325px;
+    margin: 0 auto;
+    padding-top: 255px;
+  }
+  
+  .special-page .page-content h3{
+    font-family: YuMincho;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    line-height: 40px;
+    text-align: center;
+    color: #000;
+    padding-bottom: 46px;
+    padding-top: 190px;
+  }
+  
+  .special-page .page-content p{
+    text-align: center;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    line-height: 32px;
+    text-align: center;
+    color: #272727;
+  }
+  
+  .special-page .special-image{
+    width: 314px;
+    margin: 0 auto;
+    padding-top: 225px;
+    
+  }
+  
+  .special-page .special-image .slide{
+    width: 314px;
+    padding-top: 44px;
+  }
+  
+  .special-page .special-page-last p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: left;
+    color: #272727;
+  }
+  
+  
+  .special-page button {
+    width: 345px;
+    margin: 0 auto;
+    height: 57px;
+    background-color: #8E968E;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 199px;
+  }
+}
+
+/* スペシャルページここまで */
+
+/* 商品詳細ページここから */
+.shop-description{
+  width: 1790px;
+  margin: 0 auto;
+  padding-top: 31px;
+  margin-bottom: 193px;
+}
+
+.shop-description-row{
+  display: flex;
+}
+
+.img-content{
+  width: 876px;
+}
+
+.discription{
+  width: 540px;
+  padding-left: 40px;
+}
+
+.shop-description .item-text{
+  padding-top: 103px;
+}
+
+.shop-description .item-text h2{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: left;
+  color: #3e3e3e;
+}
+
+.shop-description .item-text h6{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #cdb699;
+  padding-top: 21px;
+}
+
+.shop-description .item-text p{
+  display: block;
+  width: 479px;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 35px;
+  text-align: left;
+  color: #535353;
+  padding-top: 93px;
+}
+
+.shop-description .add-cart .size{
+  width: 256px;
+  height: 53px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.shop-description .add-cart .size p{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+  color: #3e3e3e;
+  padding-top: 16px;
+  padding-right: 17px;
+}
+
+.shop-description .add-cart form{
+  display: block !important;
+  border: 1px solid #707070 !important;
+  width: 203px !important;
+  height: 53px !important;
+}
+
+.shop-description .add-cart button a{
+  display: block;
+  width: 377px;
+  height: 53px;
+  background: #8e968e;
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  padding-top: 16px;
+}
+
+.shop-description .add-cart button{
+  margin-top: 36px;
+  margin-left: 50px;
+}
+
+.shop-description .detail h3{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 25px;
+  text-align: left;
+  color: #3e3e3e;
+  padding-top: 55px;
+}
+
+.shop-description .detail .detail-content{
+  width: 100%;
+  height: 326px;
+  background-color: rgb(231, 231, 231);
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  margin-top: 66px;
+}
+
+.shop-description-content .main-img{
+  padding-top: 93px;
+}
+
+.shop-description-content .main-img img{
+  width: 100%;
+}
+
+.shop-description-content .sub-img ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shop-description-content .sub-img ul img{
+  width: 110px;
+  margin-top: 30px;
+}
+
+.shop-description-content .review{
+  width: 100%;
+  height: 758px;
+  background-color: rgb(231, 231, 231);
+  margin-top: 10px;
+}
+
+.discription{
+  margin-top: 80px;
+  width: 40%;
+  padding-left: 40px;
+  overflow: scroll;
+  white-space:nowrap;
+  height: 1140px;
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  
+  .shop-description{
+    width: 375px;
+    margin: 0 auto;
+    padding-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .shop-description-row{
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+  }
+  
+  .img-content{
+    width: 375px;
+  }
+  
+  .discription{
+    width: 345px;
+    padding-left: 0px;
+    margin: 0 auto;
+  }
+  
+  .shop-description .item-text{
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+  
+  .shop-description .item-text h2{
+    font-family: YuMincho;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #3e3e3e;
+  }
+  
+  .shop-description .item-text h6{
+    font-family: YuMincho;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #cdb699;
+    padding-top: 26px;
+  }
+  
+  .shop-description .item-text p{
+    display: block;
+    width: 345px;
+    font-family: YuGothic;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    line-height: 20px;
+    text-align: left;
+    color: #3e3e3e;
+    padding-top: 59px;
+    margin: 0 auto;
+  }
+  
+  .shop-description .add-cart .size{
+    width: 256px;
+    height: 53px;
+    margin-top: 20px;
+  }
+  
+  .shop-description .add-cart .size p{
+    font-family: YuMincho;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: left;
+    color: #3e3e3e;
+    padding-top: 16px;
+    padding-right: 17px;
+  }
+  
+  .shop-description .add-cart form{
+    display: block !important;
+    border: 1px solid #707070 !important;
+    width: 203px !important;
+    height: 53px !important;
+  }
+  
+  .shop-description .add-cart button a{
+    display: block;
+    width: 345px;
+    height: 53px;
+    background: #8e968e;
+    font-family: YuMincho;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    padding-top: 16px;
+  }
+  
+  .shop-description .add-cart button{
+    margin-top: 28px;
+    margin-left: 0px;
+  }
+  
+  .shop-description .detail h3{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #3e3e3e;
+    padding-top: 77px;
+  }
+  
+  .shop-description .detail .detail-content{
+    width: 100%;
+    height: 215px;
+    background-color: rgb(231, 231, 231);
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    margin-top: 20px;
+  }
+  
+  .shop-description-content .main-img{
+    padding-top: 93px;
+  }
+  
+  .shop-description-content .main-img img{
+    width: 100%;
+  }
+  
+  .shop-description-content .sub-img ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .shop-description-content .sub-img ul img{
+    width: 73px;
+    margin-top: 20px;
+  }
+  
+  .shop-description-content .review{
+    width: 100%;
+    height: 503px;
+    background-color: rgb(231, 231, 231);
+    margin-top: 62px;
+  }
+}
+/* 商品詳細ページここまで */

@@ -1,0 +1,2624 @@
+body{
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+}
+li{
+  list-style: none;
+}
+html{
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+h1{
+  font-weight: 500;
+  font-size: 43px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .pc{
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 480px) {
+	/* 480px以上に適用されるCSS（PC用） */
+  .m{
+    display: none !important;
+  }
+}
+/* ヘッダーここから */
+/* .transform¥{
+  background-color: pink;
+} */
+header{
+  width: 100%;
+}
+
+header .header-content{
+  font-family: "Operetta 8";
+  width: 93%;
+  height: 90px !important;
+  margin: 0 auto;
+}
+
+header .header-left .nav ul {
+  width: 470px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+.header-left{
+  padding-top: 20px;
+}
+
+.header-left{
+  float: left;
+}
+
+.header-right{
+  float: right;
+}
+
+.site-title{
+  margin: 0 auto;
+  height: 19px;
+  width: 13%;
+  padding-top: 22px;
+}
+
+header .nav ul li a{
+  font-size: 15px;
+  line-height: 24px;
+}
+
+header .header-right ul{
+  display: flex;
+}
+
+header .header-right img{
+  height: 20px;
+  /* padding-left: 12px; */
+}
+
+.hamburger{
+  display: none;
+}
+
+.cart-icon-m{
+  display: none;
+}
+
+nav.globalMenuSp ul{
+  display: none;
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 0.6rem;
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+@media screen and (max-width: 1200px){
+  .hamburger-menu{
+    display: block;
+    padding-top: 20px;
+  }
+
+  nav.globalMenuSp ul{
+    display: block !important;
+  }
+
+   /*　ハンバーガーメニューボタン　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : black;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* スマホメニューを開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  background :#707070;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background :#707070;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+/* メニュー背景　*/
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: black;
+  background: #fff;
+  text-align: left;
+  width: 85%;
+  transform: translateX(-100%);
+  font-family: "Operetta 8";
+  height: 100%;
+}
+
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 20px;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: .4s all;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+nav.globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: black;
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+/* クリックでjQueryで追加・削除 */
+nav.globalMenuSp.active {
+  opacity: 100;
+  display: block;
+   transform: translateX(0%);
+}
+
+.header-pc{
+  display: none;
+}
+
+}
+
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  
+  header{
+    max-width: 100%;
+    height: 63px;
+  }
+  
+  .header-middle{
+    display: none;
+  }
+  h1{
+    padding-top: 9px;
+  }
+  
+  
+  .site-title a{
+    font-size: 30px;
+  }
+ 
+
+  .cart-icon-m{
+    display: block;
+    height: 20px;
+    padding-right: 16px;
+  }
+
+  .cart-icon-m{
+    padding-bottom: 18px;
+  }
+
+  .site-title{
+    margin: 0 auto;
+  height: 20px;
+  width: 168px;
+  padding-top: 15px;
+  }
+
+  .site-title a{
+    color: #000;
+  }
+  header .header-content{
+    border-bottom: 1px solid #000;
+  }
+  
+}
+
+
+/* ヘッダーここまで */
+
+/* フッターここから */
+footer{
+  /* margin-top: 100px; */
+  height: 840px;
+  background-image: url('{{" footer-pc.png " | asset_url }}');
+  background-size: cover;
+  color: white;
+  font-family: ''Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif';
+}
+footer .footer-txt{
+  text-align: center;
+  padding-bottom: 76px;
+}
+footer .footer-txt h2{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  padding-top: 87px;
+}
+
+footer .footer-txt h3{
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  padding-top: 37px;
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+}
+
+.footer-txt p{
+  font-size: 15px;
+  padding-top: 34px !important;
+  letter-spacing: 0.1em;
+  line-height: 25.2px;
+}
+
+
+
+.footer-menu-left{
+  width: 50%;
+  display: flex;
+}
+
+
+
+.footer-sub-menu{
+  width: 40%;
+  padding-right: 26.4px;
+}
+
+.footer-sub-menu ul{
+  padding-top: 19px;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+.footer-menu-title{
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 6px;
+}
+
+.menu-01 ul{
+  display: flex;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.menu-01 ul img{
+  height: 25px;
+  width: auto;
+  padding-right: 12px;
+}
+
+
+.menu-01 ul li{
+   padding-right: 13px;
+}
+
+.menu-02{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: left;
+  color: #fff;
+  padding-top: 24px;
+}
+
+.menu-02 nav{
+  display: flex;
+}
+
+.menu-02 nav ul{
+  padding-right: 40px;
+}
+
+.menu-icon{
+  padding-top: 25px;
+  display: block;
+  padding-bottom: 36px;
+}
+
+.menu-icon ul{
+  display: flex;
+}
+.menu-icon img{
+  height: 25px;
+  padding-right: 20px;
+  display: block;
+}
+
+
+.footer-content nav ul{
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding-top: 14px;
+}
+
+.footer-content nav ul li{
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 18px;
+  margin-right: 10px;
+}
+
+.footer-content p{
+  padding-top: 14px;
+  font-size: 10px;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-txt h3 br{
+  display: none;
+}
+@media screen and (min-width: 480px) {
+	/* 480px以上に適用されるCSS（PC用） */
+  /* 書き換えの際にレスポンシブの方に影響及ぼしたのでこっちに入れてます */
+  .footer-content{
+    width: 68%;
+    /* height: 71px; */
+    border-top: 1px solid #FFFFFF;
+    margin: 0 auto;
+  }
+  .footer-menu-right {
+    padding-left: 40px;
+    width: 50%;
+    border-left: 1px solid #ffffff;
+    margin-bottom: 28px;
+    margin-top: 19px;
+  }
+
+  .footer-menu{
+    font-size: 15px;
+    display: flex;
+    width: 68%;
+    margin: 0 auto;
+    height: 250px;
+  }
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  footer{
+    margin-top: 100px;
+    height: 920px;
+    background-image: url('{{" footer-m-back.png " | asset_url }}');
+    background-size: cover;
+    color: white;
+  }
+
+  footer .footer-txt{
+    text-align: center;
+    padding-bottom: 76px;
+  }
+  footer .footer-txt h2{
+    font-family: "Operetta 8";
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    padding-top: 69px;
+  }
+  
+  footer .footer-txt h3{
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    line-height: 40px;
+    margin: 0 auto;
+  }
+
+  footer .footer-txt h3 br{
+    display: block;
+  }
+  
+  .footer-txt p{
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    line-height: 24px;
+    padding-top: 0px !important;
+  }
+
+  .py-26{
+    padding-top: 26px !important;
+  }
+  
+  .footer-menu{
+    font-size: 12px;
+    display: block; 
+    /* width: 264px; */
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .footer-menu-left{
+    width: 264px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .footer-menu-right{
+    width: 264px !important;
+    margin: 0 auto;
+  }
+
+  .footer-menu hr{
+    border-top: 1px solid #FFFFFF;
+    width: 100%;
+  }
+  
+  .footer-sub-menu{
+    width: 132px;
+    padding-right: 0px;
+    padding-bottom:18px;
+  }
+  
+  .footer-sub-menu ul{
+    padding-top: 0px !important;
+    line-height: 23px !important;
+  }
+  
+  .footer-menu-title{
+    display: none;
+  }
+  .footer-menu-right{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .menu-01 ul{
+    display: none;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+  }
+  
+  .menu-01 ul img{
+    height: 18px;
+    padding-right: 10px;
+  }
+  
+  
+  .menu-01 ul li{
+     padding-right: 17px;
+  }
+  
+  .menu-02{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 22px;
+    text-align: left;
+    color: #fff;
+    padding-top: 30px;
+  }
+  
+  .menu-02 nav{
+    display: block;
+  }
+  
+  .menu-02 nav ul{
+    padding-right: 39px;
+  }
+  
+  .menu-icon{
+    padding-top: 96px;
+    display: block;
+    padding-bottom: 46px;
+    width: 50%;
+  }
+  
+  .menu-icon ul{
+    display: flex;
+  }
+  .menu-icon img{
+    height: 27px;
+    display: block;
+  }
+  .footer-content{
+    width: 375px;
+    height: 107px;
+    border-top: 0px solid #FFFFFF;
+    margin: 0 auto;
+  }
+  
+  .footer-content nav ul{
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    font-size: 9px;
+    padding-top: 12px;
+    text-align: center;
+  }
+  
+  .footer-content nav ul li{
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 22px;
+  }
+
+  .footer-content p{
+    display: none;
+  }
+}
+
+/* フッターここまで */
+
+/* ブログページここから */
+
+.blog-page {
+  width: 591px;
+  margin: 0 auto;
+  padding-top: 157px;
+  padding-bottom: 66px;
+}
+
+.blog-page .date{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 11px;
+  color: #4e4e4e;
+  padding-top: 21px;
+}
+
+.blog-page .title{
+  /* width: 1772px; */
+  height: 51px;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  line-height: 27px;
+  text-align: left;
+  color: #383838;
+  padding-top: 11px;
+}
+
+.blog-page .blog-content{
+  font-family: YuGothic;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+  text-align: left;
+  color: #3e3e3e;
+  padding-top: 31px;
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .blog-page {
+    width: 375px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .blog-page .date{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 19px;
+    letter-spacing: 0.01em;
+    line-height: 17px;
+    color: #4e4e4e;
+    padding-top: 16px;
+  }
+  
+  .blog-page .title{
+    /* width: 1772px; */
+    height: 77px;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    line-height: 37px;
+    text-align: left;
+    color: #383838;
+    padding-top: 17px;
+  }
+  
+  .blog-page .blog-content{
+    font-family: YuGothic;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    line-height: 25px;
+    text-align: left;
+    color: #3e3e3e;
+    padding-top: 49px;
+  }
+}
+
+/* ブログページここまで */
+
+/* ブログ一覧ここから */
+.blog-list .page-title{
+  font-family: "Operetta 8";
+font-weight: 500;
+font-size: 28px;
+letter-spacing: 0.08em;
+line-height: 30px;
+padding: 150px 0 37px 0;
+color: #272727;
+text-align: center;
+}
+
+.blog-list .blog-category{
+  width: 717px;
+  height: 66px;
+  margin: 0 auto;
+  border: 1px solid #000000;
+}
+
+.blog-list .blog-category nav ul{
+  display: flex;
+  justify-content: space-around;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  line-height: 30px;
+  color: #272727;
+  padding-top: 18px;
+}
+
+.blog-list .blog-list-content ul{
+  width: 717px;
+  margin: 0 auto;
+  padding-top: 104px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-list .blog-list-content ul li{
+  width: 224px;
+  padding-bottom: 76px;
+}
+
+.blog-list .blog-list-content ul li img{
+  width: 224px;
+  height: 224px;
+  object-fit: cover;
+}
+
+.blog-list .blog-list-content .title{
+  width: 203px;
+  height: 38px;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 8px;
+  letter-spacing: 0.01em;
+  line-height: 11px;
+  text-align: left;
+  color: #383838;
+  padding-top: 6px;
+}
+
+.blog-list .blog-list-content .date{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 7px;
+  letter-spacing: 0.01em;
+  line-height: 17px;
+  text-align: left;
+  color: #4e4e4e;
+  padding-top: 25px;
+}
+
+.pagination_nav{
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+
+  .pagination_nav{
+    display: block;
+  }
+  .blog-list .page-title{
+    font-family: "Operetta 8";
+font-weight: 500;
+font-size: 30px;
+letter-spacing: 0.1em;
+color: #020202;
+  padding: 144px 0 56px 0;
+  text-align: center;
+  }
+  
+  .blog-list .blog-category{
+    width: 177px;
+    height: 35px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+  }
+  
+  
+  .blog-list .blog-list-content ul{
+    width: 345px;
+    margin: 0 auto;
+    padding-top: 59px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 44px;
+  }
+  .blog-list .blog-list-content ul li{
+    padding-bottom: 0px;
+  }
+
+  .blog-list .blog-list-content ul li a{
+    width: 345px;
+    padding-bottom: 8px;
+    display: flex;
+  }
+
+  .blog-list .blog-list-content ul li img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  .blog-list{
+    height: 985px;
+  }
+  
+  .blog-list .blog-list-content .title{
+    width: 225px;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    line-height: 20px;
+    text-align: left;
+    color: #383838;
+    padding-top: 13px;
+  }
+  
+  .blog-list .blog-list-content .date{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 10px;
+    letter-spacing: 0.01em;
+    line-height: 17px;
+    text-align: left;
+    color: #4e4e4e;
+    padding-top: 0px;
+  }
+  .cp_ipselect {
+    overflow: hidden;
+    width: 177px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cp_ipselect select {
+    width: 177px;
+    padding-right: 1em;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .cp_ipselect select::-ms-expand {
+      display: none;
+  }
+  .cp_ipselect.cp_sl01 {
+    position: relative;
+    border: 1px solid #000;
+    background: #ffffff;
+  }
+  .cp_ipselect.cp_sl01::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.9em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    pointer-events: none;
+  }
+  .cp_ipselect.cp_sl01 select {
+    padding: 8px 38px 8px 8px;
+    color: #000;
+  }
+
+  .pagination_nav span{
+    font-size: large;
+  }
+}
+/* ブログ一覧ここまで */
+
+/* お問い合わせここから */
+
+.contact .page-title{
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  color: #020202;
+  padding-top: 137px;
+}
+
+.contact .company-info h3{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #020202;
+  padding-top: 40px;
+  padding-bottom: 6px;
+}
+
+.contact .company-info p{
+  font-family: YuGothic;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 33px !important;
+  text-align: center;
+  color: #3e3e3e;
+  padding-top: 27px;
+  padding-bottom: 96px;
+}
+
+.contact .company-info hr{
+  width: 80px;
+  margin: 0 auto;
+}
+
+.globo-form-app form {
+  margin: 0 auto !important;
+  width: 430px;
+}
+
+.contact-background{
+  background-color: #F7F4ED;
+  height: 1175px;
+   width: 100%;
+   padding-top: 60px;
+}
+
+.contact-form{
+  width: 1472px;
+  height: 1314px;
+  margin: 0 auto !important;
+  background-color: #FFFFFF;
+}
+
+/* お問い合わせここまで */
+
+/* 商品一覧ここから */
+
+.shop-list .page-title h2{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 42px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #020202;
+  padding-top: 210px;
+}
+
+
+.shop-list .page-title p{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: 0.03em;
+  line-height: 30px;
+  text-align: center;
+  color: #272727;
+  padding-top: 11px;
+}
+
+.shop-list .shop-list-copy{
+  font-family: "DNP ShueiGoGinStd";
+font-weight: normal;
+font-size: 16px;
+letter-spacing: 0.1em;
+line-height: 34px;
+text-align: center;
+color: #272727;
+padding-top: 34px;
+}
+
+.shop-list-content{
+  padding-top: 112px;
+  width: 900px;
+  margin: 0 auto;
+  padding-bottom: 139px;
+}
+
+.shop-list-content li{
+  height: 493px;
+  width: 440px;
+  margin-bottom: 25px;
+}
+
+.shop-list-content img{
+  height: 493px;
+  width: 440px;
+  object-fit:cover;
+}
+
+.shop-list-content ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-row{
+  display: block !important;
+}
+.form-control{
+  border-radius: 0px;
+  border: 1px solid #707070;
+}
+
+.form-row>.col, .form-row>[class*=col-]{
+  display: flex;
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .shop-list .page-title h2{
+    font-family: "Operetta 8";
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #020202;
+  }
+  .shop-list .shop-list-copy {
+    font-family: "Operetta 8";
+    width: 314px;
+    margin: 0 auto;
+  }
+  .shop-list-content{
+    width: 345px;
+  }
+  .shop-list-content ul {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .shop-list-content li{
+    height: 387px;
+    width: 345px;
+    margin-bottom: 19px;
+  }
+  
+  .shop-list-content img{
+    height: 387px;
+    width: 345px;
+    object-fit:cover;
+  }
+}
+/* 商品一覧ここまで */
+
+/* スペシャルページここから */
+.special-page-top{
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.special-page-top h1{
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 33px;
+  padding-top: 280px;
+}
+
+.special-page-top p{
+  font-family: AnnabelleJF;
+font-weight: normal;
+font-size: 19px;
+letter-spacing: 0.02em;
+padding-top: 8px;
+}
+
+.special-page-top button a{
+  font-family: "Operetta 8";
+font-weight: 500;
+font-size: 16px;
+letter-spacing: 0.03em;
+line-height: 36px;
+display: block;
+margin-top: 74px;
+padding: 10px 55px;
+border: 1px solid #FFFFFF;
+}
+
+.special-page h1{
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 27px;
+  letter-spacing: 0.05em;
+  line-height: 57px;
+  color: #000;
+  padding-bottom: 36px;
+  padding-top: 120px;
+}
+
+.special-page .p-padding{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 25px;
+  text-align: center;
+  color: #272727;
+  padding-top: 51px;
+}
+.special-page p{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 25px;
+  text-align: center;
+  color: #272727;
+}
+
+.spacial-img01{
+  width: 864px;
+  margin: 0 auto;
+  padding-top: 87px;
+  margin-bottom: 87px;
+}
+
+.special-page .image_content {
+  width: 456px;
+  height: 786px;
+  position: relative; 
+}
+
+.special-page .image_content img {
+  position: absolute;
+  display: block;
+}
+
+.special-page .image_content .img_01 {
+  /* 左上に固定 */
+  width: 407px;
+  top: 0;
+  left: 0;
+  height: 610px;
+}
+
+.special-page .image_content .img_02 {
+  /* 右下に固定 */
+  width: 264px;
+  bottom: 0;
+  right: 0;
+}
+
+.special-page .row{
+  display: flex;
+}
+
+.special-page .page-content{
+  width: 864px;
+  margin: 0 auto;
+  padding-top: 204px;
+  padding-bottom: 240px;
+}
+
+.special-page .page-content h3{
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  line-height: 33px;
+  text-align: left;
+  color: #000;
+  padding-bottom: 37px;
+  padding-top: 152px;
+}
+
+.special-page .page-content p{
+  text-align: left;
+}
+
+.special-page .special-image{
+  width: 764px;
+  margin: 0 auto;
+  /* padding-top: 150px; */
+  justify-content: space-between;
+}
+
+.special-page .special-image .slide{
+  width: 360px;
+}
+
+.special-page .special-page-last p{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 25px;
+  text-align: left;
+  color: #272727;
+}
+
+.special-page .special-page-last{
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 87px;
+  padding-bottom: 35px;
+}
+
+.special-page .button {
+  width: 800px;
+  margin: 0 auto;
+  height: 57px;
+  background-color: #8E968E;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 160px;
+}
+
+
+.slider img{
+  /* height: auto; */
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #000 !important;
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .special-page-top{
+    color: #FFFFFF;
+    text-align: center;
+  }
+  
+  .special-page-top h1{
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF !important;
+    padding-top: 184px;
+  }
+  
+  .special-page-top p{
+    font-family: AnnabelleJF;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    padding-top: 16px;
+  }
+  
+  .special-page-top button a{
+    font-family: "Operetta 8";
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    line-height: 45px;
+    display: block;
+    margin-top: 66px;
+    padding: 12px 69px;
+    border: 1px solid #FFFFFF;
+  }
+  
+  .special-page h1{
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 34px;
+    letter-spacing: 0.05em;
+    line-height: 72px;
+    color: #000;
+    padding-bottom: 45px;
+    padding-top: 150px;
+  }
+  
+  .special-page .p-padding{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: center;
+    color: #272727;
+    padding-top: 32px;
+  }
+  .special-page p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: center;
+    color: #272727;
+    padding-top: 32px;
+  }
+  
+  .spacial-img01{
+    width: 375px;
+    margin: 0 auto;
+    padding-top: 106px;
+  }
+  
+  .special-page .image_content {
+    width: 345px;
+    height: 639px;
+    position: relative; 
+  }
+  
+  .special-page .image_content img {
+    position: absolute;
+    display: block;
+  }
+  
+  .special-page .image_content .img_01 {
+    /* 左上に固定 */
+    width: 310px;
+    top: 0;
+    left: 0;
+    height:  479px;
+  }
+  
+  .special-page .image_content .img_02 {
+    /* 右下に固定 */
+    width: 225px;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .special-page .row{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .special-page .page-content{
+    width: 325px;
+    margin: 0 auto;
+    padding-top: 164px;
+    padding-bottom: 0px;
+  }
+  
+  .special-page .page-content h3{
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    line-height: 40px;
+    text-align: center;
+    color: #000;
+    padding-bottom: 46px;
+    padding-top: 190px;
+  }
+  
+  .special-page .page-content p{
+    text-align: center;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    line-height: 32px;
+    text-align: center;
+    color: #272727;
+  }
+  
+  .special-page .special-image{
+    width: 314px;
+    margin: 0 auto;
+    padding-top: 157px;
+    
+  }
+  
+  .special-page .special-image .slide{
+    width: 314px;
+    padding-top: 44px;
+  }
+  
+  .special-page .special-page-last p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: left;
+    color: #272727;
+  }
+  
+  
+  .special-page .button {
+    width: 345px;
+    margin: 0 auto;
+    height: 57px;
+    background-color: #8E968E;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 199px;
+  }
+}
+
+/* スペシャルページここまで */
+
+/* 商品詳細ページここから */
+.slick-dots{
+  bottom: 10px !important;
+}
+.shop-description{
+  width: 93%;
+  margin: 0 auto;
+  padding-top: 90px;
+  margin-bottom: 128px;
+}
+
+.shop-description-row{
+  display: flex;
+}
+
+.img-content{
+  width: 620px !important;
+}
+
+.img-content .slider{
+  width: 620px;
+  /* height: 100vh; */
+  object-fit: cover;
+}
+
+
+
+.discription-box{
+  /* width: 100%; */
+}
+
+.detail-list{
+  padding-left: 20px;
+}
+
+.detail-list .row{
+ display: flex;
+ font-size: 12px;
+ line-height: 22px;
+ color: #686767;
+}
+
+.detail-list .row .l{
+  width: 120px;
+}
+
+.detail-list .row .r{
+  width: 200px;
+}
+
+
+.shop-description .item-text{
+  padding-top: 68px;
+}
+
+.shop-description .item-text h2{
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+  color: #3e3e3e;
+
+  text-align: left;
+  color: #3e3e3e;
+}
+
+.shop-description .item-text h6{
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #cdb699;
+  padding-top: 14px;
+}
+
+.shop-description .item-text .item-discription{
+  display: block;
+  width: 319px;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 13px !important;
+  letter-spacing: 0.1em;
+  line-height: 23px;
+  text-align: left;
+  color: #535353;
+  padding-top: 61px;
+  overflow-wrap :normal;
+  padding-bottom: 20px;
+}
+.shop-description .item-text .item-discription span{
+  display: block;
+}
+
+.shop-description .item-text .item-discription p{
+  width: 319px;
+  overflow-wrap :normal;
+}
+.shop-description .add-cart .size{
+  width: 176px;
+  height: 35px;
+  margin-top: 13px;
+  display: flex;
+}
+
+.shop-description .add-cart label{
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: left;
+  color: #3e3e3e;
+  padding-top: 11px;
+  padding-right: 11px;
+  display: block !important;
+  width: 70px !important;
+}
+
+.shop-description .add-cart form{
+  display: block !important;
+  border: 1px solid #707070 !important;
+  width: 135px !important;
+  height: 35px !important;
+}
+
+.shop-description .add-cart input{
+  display: block !important;
+  border: 1px solid #707070 !important;
+  width: 135px !important;
+  height: 35px !important;
+}
+
+.shop-description .add-cart button {
+  display: block;
+  width: 251px;
+  height: 35px;
+  background: #8e968e;
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+}
+
+.shop-description .add-cart button{
+  margin-top: 24px;
+  margin-left: 33px;
+}
+
+.shop-description .detail h3{
+  font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+  color: #3e3e3e;
+  padding-top: 36px;
+}
+
+.shop-description .detail .detail-content{
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  border-top: 1px solid #d4d1d1;
+  border-bottom: 1px solid #d4d1d1;
+  margin-top: 44px;
+  padding: 15px 0;
+}
+
+.shop-description-content .main-img{
+  padding-top: 62px;
+}
+
+.shop-description-content .main-img img{
+  width: 100%;
+}
+
+.shop-description-content .sub-img ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shop-description-content .sub-img ul img{
+  width:  155px;
+  margin-top: 20px;
+}
+
+.shop-description-content .review{
+  width: 100%;
+  height: 505px;
+  background-color: rgb(231, 231, 231);
+  margin-top: 7px;
+}
+
+
+/* レビューここから */
+.spr-header-title{
+  font-size: 13px !important;
+}
+
+.spr-icon {
+  font-size: 13px !important;
+}
+
+.spr-reviews{
+  margin: 10px 0 0 0 !important;
+}
+
+.spr-summary-actions-togglereviews{
+   font-size: 10px !important;
+}
+
+.spr-summary-actions-newreview {
+  font-size: 13px !important;
+}
+
+.spr-review:first-child{
+  margin-top: 0px !important;
+}
+
+.spr-container{
+  padding: 10px !important;
+}
+
+.spr-form-title{
+  display: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+input,textarea{
+  border-color: #000 !important;
+}
+
+@media screen and (min-width: 480px) {
+	/* 480px以上に適用されるCSS（PC） */
+
+  .discription-box {
+    /* margin-top: 80px; */
+    /* padding-left: 40px; */
+    overflow: scroll;
+    white-space:nowrap;
+    height: 1140px;
+    padding-right:10px;
+    width: 100%;
+  }
+  .discription-box{
+  /* IE, Edge 対応 */
+  -ms-overflow-style: none;
+  /* Firefox 対応 */
+  scrollbar-width: none;
+}
+
+.discription-box::-webkit-scrollbar {
+  display:none;
+}
+
+.img-content .slider img{
+  object-fit: cover;
+  width: 620px;
+  height: 100vh;
+}
+
+.discription{
+  width: 382px;
+  padding-left: 26px;
+}
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  
+  .shop-description{
+    width: 375px;
+    margin: 0 auto;
+    padding-top: 75px;
+    margin-bottom: 0px;
+  }
+  
+  .shop-description-row{
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+  }
+  .img-content{
+    width: 375px !important;
+  }
+  
+  .img-content .slider{
+    width: 375px;
+    height: auto !important;
+    /* object-fit: cover; */
+  }
+  
+  .img-content .slider img{
+    /* object-fit: cover; */
+    width: 375px;
+    height: auto !important;
+  }
+  
+  .img-content{
+    width: 375px;
+  }
+  
+  .discription{
+    width: 345px;
+    padding-left: 15px !important;
+    margin: 0 auto;
+  }
+  
+  .shop-description .item-text{
+    padding-top: 27px;
+    margin: 0 auto;
+  }
+  
+  .shop-description .item-text h2{
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #3e3e3e;
+  }
+  
+  .shop-description .item-text h6{
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #cdb699;
+    padding-top: 26px;
+  }
+  
+  .shop-description .item-text .item-discription p{
+    display: block;
+    width: 345px;
+    font-family: YuGothic;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    line-height: 20px;
+    text-align: left;
+    color: #3e3e3e;
+    padding-top: 59px;
+    margin: 0 auto;
+    word-break: keep-all;
+  }
+  
+  .shop-description .add-cart .size{
+    width: 177px;
+    height: 35px;
+    margin: 0 auto;
+  }
+  
+  .shop-description .add-cart .size p{
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: left;
+    color: #3e3e3e;
+    padding-top: 16px;
+    padding-right: 17px;
+  }
+  
+  .shop-description .add-cart form{
+    display: block !important;
+    border: 1px solid #707070 !important;
+    width: 203px !important;
+    height: 53px !important;
+  }
+  
+  .shop-description .add-cart button{
+    display: block;
+    width: 345px;
+    height: 53px;
+    background: #8e968e;
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .shop-description .add-cart button{
+    margin-top: 28px;
+    margin-left: 0px;
+  }
+  
+  .shop-description .detail h3{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #3e3e3e;
+    padding-top: 77px;
+  }
+  
+  .shop-description .detail .detail-content{
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+    border-top: 1px solid #d4d1d1;
+    border-bottom: 1px solid #d4d1d1;
+    margin-top: 44px;
+    padding: 15px 0;
+  }
+  
+  .shop-description-content .main-img{
+    padding-top: 93px;
+  }
+  
+  .shop-description-content .main-img img{
+    width: 100%;
+  }
+  
+  .shop-description-content .sub-img ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .shop-description-content .sub-img ul img{
+    width:  155px;
+    margin-top: 20px;
+  }
+  
+  .shop-description-content .review{
+    width: 100%;
+    height: 503px;
+    background-color: rgb(231, 231, 231);
+    margin-top: 62px;
+  }
+
+  #productSelect{
+    width: 177px !important;
+    text-align: center;
+  }
+  .shop-description .add-cart label{
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: left;
+    color: #3e3e3e;
+    padding-top: 11px;
+    padding-right: 11px;
+    width: 70px;
+  }
+}
+/* 商品詳細ページここまで */
+
+/* その他機能ページ共通ここから */
+
+
+.common-design .container{
+  font-family: YuGothic;
+  font-weight: 500;
+  width: 574px;
+  margin: 0 auto;
+}
+
+.sample-font{
+  font-family: YuGothic;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 25px;
+  text-align: left;
+  color: #3e3e3e;
+}
+
+.sample-input{
+  width: 574px;
+  height: 54px;
+  background-color: #EEEEEE !important;
+}
+
+.common-design .container label{
+  display: block !important;
+}
+
+.submit{
+  color: white;
+  text-align: center;
+  display: block;
+  width: 377px;
+  height: 53px;
+  background: #8e968e;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 480px){
+  .common-design .container{
+    font-family: YuGothic;
+    font-weight: 500;
+    width: 350px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .sample-font{
+    font-family: YuGothic;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    line-height: 25px;
+    text-align: left;
+    color: #3e3e3e;
+  }
+  
+  .sample-input{
+    width: 350px;
+    height: 54px;
+    background-color: #EEEEEE !important;
+  }
+  
+  .common-design .container label{
+    display: block !important;
+  }
+  
+  .submit{
+    color: white;
+    text-align: center;
+    display: block;
+    width: 320px;
+    height: 53px;
+    background: #8e968e;
+    margin: 0 auto;
+  }
+}
+
+/* その他機能ページ共通ここまで */
+
+/* カートページここから */
+.cart-page h2{
+  font-size: 36px;
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Operetta 8";
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+  color: #020202;
+}
+
+.cart-page hr{
+  width: 80px;
+  height: 1px;
+  margin: 0 auto 50px auto;
+  background-color: #000;
+  border: none;
+}
+
+.cart-page a ,.cart-page p{
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 25px;
+  color: #3e3e3e;
+}
+
+.cart-page .common-design .container{
+  font-family: YuGothic;
+  font-weight: 500;
+  width: 350px;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  width: 900px;
+}
+
+.total-price{
+  border-top: 1px solid #dee2e6 !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-price-font{
+  font-size: 24px !important;
+  padding-top: 15px;
+}
+
+
+.go_cart{
+    color: white;
+    text-align: center;
+    display: block;
+    width: 320px;
+    height: 53px;
+    background: #8e968e;
+}
+
+.cart-button-box{
+  padding-top: 30px;
+}
+
+.cart-button{
+  color: white;
+  text-align: center;
+  display: block;
+  width: 150px;
+  height: 53px;
+  background-color: #535353;
+}
+
+.go-shopping{
+  display: block;
+  padding-bottom: 30px;
+}
+
+.cart-empty{
+ text-align: center;
+ width: 900px;
+ margin: 0 auto;
+}
+
+.cart-empty p{
+  padding-bottom: 20px;
+}
+
+.cart-empty a{
+  font-size: 12px;
+  color: #000 !important;
+  border-bottom: 1px solid #000;
+  width: 130px;
+  margin-bottom: 70px !important;
+  margin: 0 auto;
+  display: block;
+}
+.table thead th {
+ border-bottom: 1px solid #dee2e6 !important;
+}
+@media screen and (max-width: 480px){
+  .cart-page h2{
+    font-size: 36px;
+    text-align: center;
+    padding-top: 160px;
+    font-family: "Operetta 8";
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+    color: #020202;
+  }
+
+  .cart-page .common-design .container{
+    width: 350px;
+  }
+  .cart-empty{
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+   }
+
+   .cart-page .line{
+    border-bottom: 1px solid #dee2e6 !important;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+   }
+
+   .cart-page .form-control{
+     width: 70px;
+     height: 30px;
+     border: 1px solid #3e3e3e !important;
+   }
+
+   .cart-page .delete_button{
+     text-align: right;
+     display: block;
+   }
+
+   .cart-title{
+     font-size: 24px !important;
+     line-height: 32px !important;
+     font-family: YuGothic;
+     font-weight: 500;
+     padding: 10px 0;
+     display: block;
+   }
+
+   .quantity-box{
+     display: flex;
+   }
+   .quantity-box p{
+     width: 80px;
+   }
+   .cart-money{
+     margin-bottom: 10px;
+   }
+
+   .cart-page .d-flex{
+     margin-top: 50px;
+   }
+
+   .total-price{
+     margin-top: 50px;
+   }
+
+}
+/* カートページここまで */
+
+/* ログインページここから */
+.login-page h2{
+  font-size: 36px;
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Operetta 8";
+  font-weight: 500;
+  line-height: 53px;
+  letter-spacing: 0.1em;
+  color: #020202;
+}
+
+.login-page hr{
+  width: 100px;
+  height: 1px;
+  margin: 0 auto 0px auto;
+  background-color: #000;
+  border: none;
+}
+
+.login-page .submit{
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+
+.login-page label{
+  padding-top: 55px;
+}
+
+.login-page p a{
+  font-size: 16px !important;
+  letter-spacing: 0.03em !important;
+  line-height: 25px !important;
+  color: #3e3e3e !important;
+  text-align: center;
+  width: 250px;
+  margin: 0 auto;
+}
+.login-page .left{
+  width: 130px;
+  margin-bottom: 50px;
+  height: 1px;
+  background-color: #3e3e3e;
+  border: none;
+  text-align:left;
+  margin-left:0px;
+}
+
+.login-page .center{
+  width: 220px;
+}
+
+.login-page .forget{
+  display:block;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 480px){
+  .login-page h2{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 170px;
+    font-family: "Operetta 8";
+    font-weight: 500;
+    line-height: 43px;
+    letter-spacing: 0.1em;
+    color: #020202;
+  }
+  
+  .login-page hr{
+    width: 100px;
+    height: 1px;
+    margin: 0 auto 0px auto;
+    background-color: #000;
+    border: none;
+  }
+  
+  .login-page .submit{
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+  
+  .login-page label{
+    padding-top: 55px;
+  }
+  
+  .login-page p a{
+    font-size: 16px !important;
+    letter-spacing: 0.03em !important;
+    line-height: 25px !important;
+    color: #3e3e3e !important;
+    text-align: center;
+    width: 250px;
+    margin: 0 auto;
+  }
+  .login-page .left{
+    width: 130px !important;
+    margin-bottom: 50px;
+    height: 1px;
+    background-color: #3e3e3e;
+    border: none;
+    text-align:left;
+    margin-left:0px;
+  }
+
+  .login-page .forget{
+    display:block;
+    padding-top: 20px;
+  }
+
+  .login-page .center{
+    width: 220px;
+  }
+}
+/* ログインページここまで */
+
+/* ユーザー登録ここから */
+.siginup-page h2{
+  font-size: 36px;
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Operetta 8";
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: 0.1em;
+  color: #020202;
+}
+
+.siginup-page hr{
+  width: 150px;
+  height: 1px;
+  margin: 0 auto 30px auto;
+  background-color: #000;
+  border: none;
+}
+
+.siginup-page .submit{
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+
+.siginup-page label{
+  padding-top: 55px;
+}
+
+.siginup-page p a{
+  font-size: 16px !important;
+  letter-spacing: 0.03em !important;
+  line-height: 25px !important;
+  color: #3e3e3e !important;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+.siginup-page .left{
+  width: 230px;
+  margin-bottom: 50px;
+  height: 1px;
+  background-color: #3e3e3e;
+  border: none;
+  text-align:left;
+  margin-left:0px;
+}
+
+@media screen and (max-width: 480px){
+  .siginup-page h2{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 170px;
+    font-family: "Operetta 8";
+    font-weight: 500;
+    line-height: 43px;
+    letter-spacing: 0.1em;
+    color: #020202;
+  }
+  
+  .siginup-page hr{
+    width: 100px;
+    height: 1px;
+    margin: 0 auto 0px auto;
+    background-color: #000;
+    border: none;
+  }
+  
+  .siginup-page .submit{
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+  
+  .siginup-page label{
+    padding-top: 55px;
+  }
+  
+  .siginup-page p a{
+    font-size: 16px !important;
+    letter-spacing: 0.03em !important;
+    line-height: 25px !important;
+    color: #3e3e3e !important;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .siginup-page .left{
+    width: 230px;
+    margin-bottom: 50px;
+    height: 1px;
+    background-color: #3e3e3e;
+    border: none;
+    text-align:left;
+    margin-left:0px;
+  }
+}
+/* ユーザー登録ここまで */
+
+/* パスワード忘れページここから */
+.forget_pass-page h2{
+  font-size: 36px;
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Operetta 8";
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: 0.1em;
+  color: #020202;
+}
+
+.forget_pass-page hr{
+  width: 300px;
+  height: 1px;
+  margin: 0 auto 30px auto;
+  background-color: #000;
+  border: none;
+}
+
+.forget_pass-page h2{
+  font-size: 36px;
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Operetta 8";
+  font-weight: 500;
+  line-height: 53px;
+  letter-spacing: 0.1em;
+  color: #020202;
+}
+
+.forget_pass-page .submit{
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+
+.forget_pass-page label{
+  padding-top: 55px;
+}
+
+.forget_pass-page p a{
+  font-size: 16px !important;
+  letter-spacing: 0.03em !important;
+  line-height: 25px !important;
+  color: #3e3e3e !important;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+.forget_pass-page .left{
+  width: 230px;
+  margin-bottom: 50px;
+  height: 1px;
+  background-color: #3e3e3e;
+  border: none;
+  text-align:left;
+  margin-left:0px;
+}
+
+@media screen and (max-width: 480px){
+  .forget_pass-page h2{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 170px;
+    font-family: "Operetta 8";
+    font-weight: 500;
+    line-height: 43px;
+    letter-spacing: 0.1em;
+    color: #020202;
+  }
+  
+  .forget_pass-page hr{
+    width: 255px;
+    height: 1px;
+    margin: 0 auto 0px auto;
+    background-color: #000;
+    border: none;
+  }
+  
+  .forget_pass-page .submit{
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+  
+  .forget_pass-page .common-design .container label{
+    padding-top: 55px;
+  }
+  
+  .forget_pass-page p a{
+    font-size: 16px !important;
+    letter-spacing: 0.03em !important;
+    line-height: 25px !important;
+    color: #3e3e3e !important;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .login-page .left{
+    width: 230px;
+    margin-bottom: 50px;
+    height: 1px;
+    background-color: #3e3e3e;
+    border: none;
+    text-align:left;
+    margin-left:0px;
+  }
+}
+/* パスワード忘れページここまで */
+
+/* ユーザーページここから */
+.account-page h2{
+  font-size: 36px;
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Operetta 8";
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: 0.1em;
+  color: #020202;
+}
+
+.account-page hr{
+  width: 120px;
+  height: 1px;
+  margin: 0 auto 30px auto;
+  background-color: #000;
+  border: none;
+}
+
+.account-page h2{
+  font-size: 36px;
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Operetta 8";
+  font-weight: 500;
+  line-height: 53px;
+  letter-spacing: 0.1em;
+  color: #020202;
+}
+
+.account-page .submit{
+  display: block;
+  margin-bottom: 80px;
+  margin-top: 50px;
+  color: white;
+  padding-top: 15px;
+}
+
+.account-page label{
+  padding-top: 55px;
+}
+
+
+@media screen and (max-width: 480px){
+  .account-page h2{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 170px;
+    font-family: "Operetta 8";
+    font-weight: 500;
+    line-height: 43px;
+    letter-spacing: 0.1em;
+    color: #020202;
+  }
+  
+  .account-page hr{
+    width: 255px;
+    height: 1px;
+    margin: 0 auto 0px auto;
+    background-color: #000;
+    border: none;
+  }
+  
+  .account-page .submit{
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+  
+  .account-page .common-design .container label{
+    padding-top: 55px;
+  }
+  
+}
+/* ユーザーページここまで */
+
+/* 注意事項ページここから */
+.alert-page h2{
+  font-size: 36px;
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Operetta 8";
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: 0.1em;
+  color: #020202;
+}
+
+.alert-page hr{
+  width: 150px;
+  height: 1px;
+  margin: 0 auto 30px auto;
+  background-color: #000;
+  border: none;
+}
+
+.alert-page .submit{
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+
+.alert-page label{
+  padding-top: 55px;
+}
+
+.alert-page p a{
+  font-size: 16px !important;
+  letter-spacing: 0.03em !important;
+  line-height: 25px !important;
+  color: #3e3e3e !important;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+.alert-page .left{
+  width: 230px;
+  margin-bottom: 50px;
+  height: 1px;
+  background-color: #3e3e3e;
+  border: none;
+  text-align:left;
+  margin-left:0px;
+}
+
+@media screen and (max-width: 480px){
+  .alert-page h2{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 170px;
+    font-family: "Operetta 8";
+    font-weight: 500;
+    line-height: 43px;
+    letter-spacing: 0.1em;
+    color: #020202;
+  }
+  
+  .alert-page hr{
+    width: 100px;
+    height: 1px;
+    margin: 0 auto 0px auto;
+    background-color: #000;
+    border: none;
+  }
+  
+  
+  .siginup-page p a{
+    font-size: 16px !important;
+    letter-spacing: 0.03em !important;
+    line-height: 25px !important;
+    color: #3e3e3e !important;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .siginup-page .left{
+    width: 230px;
+    margin-bottom: 50px;
+    height: 1px;
+    background-color: #3e3e3e;
+    border: none;
+    text-align:left;
+    margin-left:0px;
+  }
+}
+
+/* 注意事項ページここまで */

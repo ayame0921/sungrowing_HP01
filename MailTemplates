@@ -1,0 +1,16 @@
+$data = $this->MailTemplates->find()
+        ->where([
+            'id' => $this->user_id,
+            'delete_flag' => 0
+        ])
+        ->first();
+        
+        if ($this->request->is(['post', 'put'])) {
+            $this->Users->patchEntity($data, $this->request->getData());
+            if ($this->Users->save($data)) {
+                $this->Flash->success(__('メールテンプレートが変更されました'));
+                return $this->redirect((['controller' => 'items', 'action' => 'list']));
+            }
+            $this->Flash->error(__('メールテンプレートが更新できませんでした'));
+        }
+        $this->set(compact('data'));

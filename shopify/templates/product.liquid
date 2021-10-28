@@ -1,0 +1,237 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+<div class="shop-description">
+  <div class="shop-description-row">
+    <div class="img-content">
+      <ul class="slider">
+        <li><img src="{{ product.images[1] | img_url: '600x600' }}" alt="{{product.images[0].alt}}" /></li>
+        <li><img src="{{ product.images[2] | img_url: '600x600' }}" alt="{{product.images[0].alt}}" /></li>
+        <li><img src="{{ product.images[3] | img_url: '600x600' }}" alt="{{product.images[0].alt}}" /></li>
+        
+      </ul>
+    </div>
+    <div class="discription-box">
+      <div class="discription">
+        <div class="item-text">
+          <h2>{{ product.title }}</h2>
+          <h6>{{ current_variant.price | money }}</h6>
+          <div class="item-discription">
+            {{ product.description }}
+          </div>
+        </div>
+
+        <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="add-cart">
+          <div class="form-row">
+            <div class="form-group d-flex">
+              <label for="id">type</label>
+              <select name="id" id="productSelect" class="form-control">
+                {% for variant in product.variants %}
+                {% if variant.available %}
+                <option value="{{ variant.id }}">
+                  {{ variant.title }}
+                  <!--  - {{ variant.price | money_with_currency }} -->
+                </option>
+                {% else %}
+                <option disabled="disabled">
+                  {{ variant.title }} - sold out
+                </option>
+                {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group d-flex">
+              <label for="number">quantity</label>
+              <input type="number" id="Quantity" name="quantity" class="form-control" value="1" min="1">
+            </div>
+          </div>
+          <button type="submit" name="add" id="AddToCart">ADD CART</button>
+        </form>
+        <div class="detail">
+          <h3>Detail</h3>
+          <div class="detail-content">
+            <div class="detail-list">
+              <div class="row">
+                <p class="l">原産国</p>
+                <p class="r">{{ product.metafields.my_fields._gensannkoku }}</p>
+              </div>
+              <div class="row">
+                <p class="l">素材</p>
+                <p class="r">{{ product.metafields.my_fields._sozai }}</p>
+              </div>
+              <div class="row">
+                <p class="l">特徴</p>
+                <p class="r">{{ product.metafields.my_fields._tokutyo }}</p>
+              </div>
+              <div class="row">
+                <p class="l">関連カテゴリー</p>
+                <p class="r">{{ product.metafields.my_fields._kannrenn }}</p>
+              </div>
+              <div class="row">
+                <p class="l">性別タイプ</p>
+                <p class="r">{{ product.metafields.my_fields._seibetu }}</p>
+              </div>
+              <div class="row">
+                <p class="l">即日</p>
+                <p class="r">{{ product.metafields.my_fields._sokujitu }}</p>
+              </div>
+              <div class="row">
+                <p class="l">送料</p>
+                <p class="r">{{ product.metafields.my_fields._souryou }}</p>
+              </div>
+              <div class="row">
+                <p class="l">ギフト</p>
+                <p class="r">{{ product.metafields.my_fields._gift }}</p>
+              </div>
+              <div class="row">
+                <p class="l">お問い合わせ番号</p>
+                <p class="r">{{ product.metafields.my_fields._contact }}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="shop-description-content">
+          <div class="sub-img">
+            <ul>
+              
+              <img src="{{ product.images[4] | img_url: '600x600' }}" alt="{{product.images[0].alt}}" />
+              <img src="{{ product.images[5] | img_url: '600x600' }}" alt="{{product.images[0].alt}}" />
+            </ul>
+          </div>
+          <div class="main-img">
+            <img src="{{ product.images[6] | img_url: '600x600' }}" alt="{{product.images[0].alt}}" />          </div>
+          <div class="main-img">
+            <img src="{{ product.images[7] | img_url: '600x600' }}" alt="{{product.images[0].alt}}" />        </div>
+          <div class="review">
+            <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- スペシャルコレクション　 -->
+<div class="conteinerBox" style="padding: 350px 0 100px 0;">
+  <div class="chapter">
+      <div class="CBoxL" id="mainvisual">
+          {{ 'chapter1.jpg' | asset_url | img_tag }}
+          <div class="SP">Chapter 1: <br class="SP">ありのままの美しさ</div>
+      </div>
+      <div class="CBoxR">
+          <div class="textBox">
+              <h2>Special Collection</h2>
+              <p>ありのままの美しさを形にしたCollection。</p>
+              <p>引き算の先にたどり着いた<br class="SP">Simple is the ultimate luxury.</p>
+              <br class="SPnone">
+              <br class="SPnone">
+              <div class="btnBox">
+                  <a href="https://srolanie.myshopify.com/pages/chapter">
+                      <button>View Collection</button>      
+                  </a>   
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- スペシャルコレクション　ここまで -->
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  .headerShow .header-content{
+  border-bottom: 0px solid #000000 !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .site-title a{
+    color: black !important;
+  }
+  header svg{
+    z-index: 1000;
+   fill:black!important;
+}
+.change{
+     fill: rgb(0, 0, 0);
+}
+@media screen and (max-width: 480px){
+        header{
+            height: 70px;
+        }
+        header .header-content {
+            font-family: "Operetta 8";
+            height: 70px!important;
+            margin: 0 auto;
+        }
+        .topNav.headerShow.hide{
+            color: #000000!important;
+            background-color: #ffffff!important;
+            z-index: 1000;
+        }
+        .topNav.headerShow .site-title a{
+            color: #000000!important;
+            z-index: 1000;
+        }
+        .topNav .hamburger span {
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            left: 6px;
+            background: rgb(0, 0, 0)!important;
+            -webkit-transition: .3s ease-in-out;
+            -moz-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .topNav.headerShow .hamburger span {
+            background: rgb(0, 0, 0)!important;
+        }
+        .site-title h1{
+            padding: 2px 0 0 0;
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: .1em;
+            text-align: center;
+        } 
+        .site-title a {
+            padding: 0;
+            margin-bottom: 10px;
+            color: #000000!important;
+        }
+        header .header-content {
+            border-bottom: 1px solid rgb(255, 255, 255) !important;
+        }
+        header:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 1000;
+        }
+      }
+</style>
+<style>
+  #productSelect {
+    border: 1px solid #707070;
+    width: 234px;
+    height: 35px;
+    border-radius: 0px;
+    font-size: 16px;
+  }
+
+  /*slick setting*/
+  .slick-prev:before,
+  .slick-next:before {
+    display: none;
+  }
+
+  .slick-next ,.slick-arrow{
+    display: none;
+  }
+</style>
+<script>
+  $('.slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: true,
+  });
+</script>
+{{ 'option_selection.js' | shopify_asset_url | script_tag }}

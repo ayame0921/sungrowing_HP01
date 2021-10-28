@@ -1,0 +1,119 @@
+<footer>
+    <div class="footer-txt">
+      <h2>Srolanie</h2>
+      <h3>Srolanhカンボジア語で<br class="m">"Love"を意味する</h3>
+      <div class="py-26">
+        <p>Srolanhカンボジア語で"Love"を意味する</p>
+        <p>私たちのプロダクトを、誰かを愛するように<br>
+          手をかけ時間をかけて<br>
+          愛してほしいとの願いを込めて。<br>
+          きっとあなたの人生を彩る<br>
+          素敵な出会いがここにある。</p>
+      </div>
+    </div>
+    <div class="footer-menu">
+      <div class="footer-menu-left">
+        <div class="footer-sub-menu">
+          <p class="footer-menu-title">Shop</p>
+          <nav>
+            <ul>
+              <li><a href="/collections/all">Basic Collection</a></li>
+              <li><a href="/pages/chapter">Special Collection</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-sub-menu">
+          <p class="footer-menu-title">About</p>
+          <nav>
+            <ul>
+              {% for link in linklists['footer'].links %}
+  <li><a href="{{ link.url }}">{{ link.title | escape }}</a>
+  {% if link.links != blank %}
+    <ul class="child">
+      {% for child_link in link.links %}  
+      <li><a href= "{{ child_link.url }}">{{ child_link.title | escape }}</a></li>
+      {% endfor %}
+    </ul> 
+  {% endif %} 
+  </li>
+{% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-menu-right">
+        <div class="menu-01">
+          <nav>
+            <ul>
+              <li><a href="/account/login"><img src="{{ ' 15.png ' | asset_url }}" alt="">ログイン</a></li>
+              <li><a href="/cart"><img src="{{ ' shopping-cart.png ' | asset_url }}" alt="">カートを見る</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu-02">
+          <nav>
+            <ul>
+              {% for link in linklists['link-list-1'].links %}
+  <li><a href="{{ link.url }}">{{ link.title | escape }}</a>
+  {% if link.links != blank %}
+    <ul class="child">
+      {% for child_link in link.links %}  
+      <li><a href= "{{ child_link.url }}">{{ child_link.title | escape }}</a></li>
+      {% endfor %}
+    </ul> 
+  {% endif %} 
+  </li>
+{% endfor %}
+            </ul>
+            <ul>
+              {% for link in linklists['link-list-3'].links %}
+  <li><a href="{{ link.url }}">{{ link.title | escape }}</a>
+  {% if link.links != blank %}
+    <ul class="child">
+      {% for child_link in link.links %}  
+      <li><a href= "{{ child_link.url }}">{{ child_link.title | escape }}</a></li>
+      {% endfor %}
+    </ul> 
+  {% endif %} 
+  </li>
+{% endfor %}
+            </ul>
+          </nav>
+        </div>
+        <div class="menu-icon">
+          <ul>
+            <li><a href="#"><img src="{{ ' line.png ' | asset_url }}" alt=""></a></li>
+            <li><a href="https://www.instagram.com/srolanie_official/"><img src="{{ ' instagram.png ' | asset_url }}" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="footer-content">
+      <nav>
+        <ul>
+          {% for link in linklists['policy'].links %}
+  <li><a href="{{ link.url }}">{{ link.title | escape }}</a>
+  {% if link.links != blank %}
+    <ul class="child">
+      {% for child_link in link.links %}  
+      <li><a href= "{{ child_link.url }}">{{ child_link.title | escape }}</a></li>
+      {% endfor %}
+    </ul> 
+  {% endif %} 
+  </li>
+{% endfor %}
+        </ul>
+      </nav>
+      <p>Copylight　NATURAL VALUE.</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

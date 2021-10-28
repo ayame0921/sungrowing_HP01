@@ -1,0 +1,104 @@
+
+<header class="topNav" id="headerFixed">
+  <div class="header-content">
+    <div class="header-left">
+      <div class="nav header-pc header-nav">
+        <ul>
+          {% for link in linklists['main-menu'].links %}
+          <li><a href="{{ link.url }}">{{ link.title | escape }}</a>
+            {% if link.links != blank %}
+            <ul class="child">
+              {% for child_link in link.links %}
+              <li><a href="{{ child_link.url }}">{{ child_link.title | escape }}</a></li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<nav class="globalMenuSp">
+    <ul>
+      {% for link in linklists['main-menu'].links %}
+      <li><a href="{{ link.url }}">{{ link.title | escape }}</a>
+        {% if link.links != blank %}
+        <ul class="child">
+          {% for child_link in link.links %}
+          <li><a href="{{ child_link.url }}">{{ child_link.title | escape }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+</nav>
+    </div>
+    <div class="site-title">
+      <h1><a href="/">Sloranie</a></h1>
+    </div>
+    <div class="header-right">
+      <div class="nav header-middle">
+        <ul>
+          {% if shop.customer_accounts_enabled %}
+          {% if customer %}
+            <!-- <li class="nav-item"><a class="nav-link" href="/account/logout">Log Out</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="/account">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20.003" height="20" viewBox="0 0 60.003 60">
+                <path id="パス_2" data-name="パス 2" d="M30,0A30,30,0,1,0,60,30,30,30,0,0,0,30,0Zm0,8.97a9.923,9.923,0,1,1-9.922,9.923A9.924,9.924,0,0,1,30,8.971Zm-.007,43.186A22.018,22.018,0,0,1,15.657,46.87a4.229,4.229,0,0,1-1.484-3.214,10.007,10.007,0,0,1,10.056-10H35.776a9.993,9.993,0,0,1,10.04,10,4.218,4.218,0,0,1-1.483,3.213A22.01,22.01,0,0,1,29.995,52.157Z" transform="translate(0 -0.001)"/>
+              </svg>
+            </a></li>
+            <li class="nav-item"><a class="nav-link" href="/cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24.328" height="20" viewBox="0 0 68.328 60">
+                <g id="グループ_12706" data-name="グループ 12706" transform="translate(-3629.197 -108.946)">
+                  <circle id="楕円形_1" data-name="楕円形 1" cx="5.704" cy="5.704" r="5.704" transform="translate(3653.931 157.537)"/>
+                  <circle id="楕円形_2" data-name="楕円形 2" cx="5.704" cy="5.704" r="5.704" transform="translate(3673.489 157.537)"/>
+                  <path id="パス_1" data-name="パス 1" d="M2,35H10.35l9.664,33.794-.758,1.514a6,6,0,0,0,5.372,8.682H58.318a2,2,0,1,0,0-4H24.628A2,2,0,0,1,22.837,72.1l.553-1.105H58.318a2,2,0,0,0,1.926-1.451l8.007-27.994A2,2,0,0,0,66.326,39H15.657l-1.873-6.547A2,2,0,0,0,11.859,31H2a2,2,0,1,0,0,4Z" transform="translate(3629.197 77.945)"/>
+                </g>
+              </svg>
+            </a></li>
+          {% else %}
+            <!-- <li class="nav-item"><a class="nav-link" href="/account/register">Sign Up</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="/account/login">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20.003" height="20" viewBox="0 0 60.003 60">
+                <path id="パス_2" data-name="パス 2" d="M30,0A30,30,0,1,0,60,30,30,30,0,0,0,30,0Zm0,8.97a9.923,9.923,0,1,1-9.922,9.923A9.924,9.924,0,0,1,30,8.971Zm-.007,43.186A22.018,22.018,0,0,1,15.657,46.87a4.229,4.229,0,0,1-1.484-3.214,10.007,10.007,0,0,1,10.056-10H35.776a9.993,9.993,0,0,1,10.04,10,4.218,4.218,0,0,1-1.483,3.213A22.01,22.01,0,0,1,29.995,52.157Z" transform="translate(0 -0.001)"/>
+              </svg>
+            </a></li>
+            <li class="nav-item"><a class="nav-link" href="/cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24.328" height="20" viewBox="0 0 68.328 60">
+                <g id="グループ_12706" data-name="グループ 12706" transform="translate(-3629.197 -108.946)">
+                  <circle id="楕円形_1" data-name="楕円形 1" cx="5.704" cy="5.704" r="5.704" transform="translate(3653.931 157.537)"/>
+                  <circle id="楕円形_2" data-name="楕円形 2" cx="5.704" cy="5.704" r="5.704" transform="translate(3673.489 157.537)"/>
+                  <path id="パス_1" data-name="パス 1" d="M2,35H10.35l9.664,33.794-.758,1.514a6,6,0,0,0,5.372,8.682H58.318a2,2,0,1,0,0-4H24.628A2,2,0,0,1,22.837,72.1l.553-1.105H58.318a2,2,0,0,0,1.926-1.451l8.007-27.994A2,2,0,0,0,66.326,39H15.657l-1.873-6.547A2,2,0,0,0,11.859,31H2a2,2,0,1,0,0,4Z" transform="translate(3629.197 77.945)"/>
+                </g>
+              </svg>
+            </a></li>
+          {% endif %}
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</header>
+<script>
+var _window = $(window),
+    _header = $('header-content'),
+    heroBottom;
+ 
+_window.on('scroll',function(){
+    heroBottom = $('.page-title').height();
+    if(_window.scrollTop() > heroBottom){
+        _header.addClass('transform');   
+    }
+    else{
+        _header.removeClass('transform');   
+    }
+});
+_window.trigger('scroll');
+</script>
+

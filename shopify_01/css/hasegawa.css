@@ -1,0 +1,1676 @@
+body{
+  font-family: YuMincho;
+}
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+h1{
+  font-weight: 500;
+  font-size: 29px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .pc{
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 480px) {
+	/* 480px以上に適用されるCSS（PC用） */
+  .m{
+    display: none !important;
+  }
+}
+/* ヘッダーここから */
+/* .transform¥{
+  background-color: pink;
+} */
+header{
+  width: 100%;
+}
+
+header .header-content{
+  font-family: "Operetta 8";
+  height: 60px;
+  width: 93%;
+  margin: 0 auto;
+}
+
+header .header-left .nav ul {
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left{
+  padding-top: 20px;
+}
+
+.header-left{
+  float: left;
+}
+
+.header-right{
+  float: right;
+}
+
+.site-title{
+  margin: 0 auto;
+  height: 19px;
+  width: 9%;
+  padding-top: 14px;
+}
+
+header .nav ul li a{
+  font-size: 12px;
+  line-height: 16px;
+}
+
+header .header-right ul{
+  display: flex;
+}
+
+header .header-right img{
+  height: 20px;
+  padding-left: 12px;
+}
+
+.hamburger{
+  display: none;
+}
+
+.cart-icon-m{
+  display: none;
+}
+
+nav.globalMenuSp ul{
+  display: none;
+}
+
+
+
+/* PC用のCSSはメディアクエリの外に記述する */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .header-pc{
+    display: none;
+  }
+  header{
+    max-width: 100%;
+    height: 63px;
+  }
+  .hamburger-menu{
+    display: block;
+    padding-top: 20px;
+  }
+
+  nav.globalMenuSp ul{
+    display: block !important;
+  }
+  
+  /*　ハンバーガーメニューボタン　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  left : 15px;
+  top   : 15px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : black;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* スマホメニューを開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  background :#707070;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background :#707070;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+/* メニュー背景　*/
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: black;
+  background: #fff;
+  text-align: left;
+  width: 85%;
+  transform: translateX(-100%);
+  font-family: "Operetta 8";
+  height: 100%;
+}
+
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 20px;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: .4s all;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+nav.globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: black;
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+/* クリックでjQueryで追加・削除 */
+nav.globalMenuSp.active {
+  opacity: 100;
+  display: block;
+   transform: translateX(0%);
+}
+
+  .cart-icon-m{
+    display: block;
+    height: 20px;
+    padding-right: 16px;
+  }
+
+  .cart-icon-m{
+    padding-bottom: 18px;
+  }
+
+  .site-title{
+    margin: 0 auto;
+  height: 20px;
+  width: 168px;
+  padding-top: 15px;
+  }
+
+  .site-title a{
+    color: #000;
+  }
+  header .header-content{
+    border-bottom: 1px solid #000;
+  }
+  
+}
+
+
+/* ヘッダーここまで */
+
+/* フッターここから */
+footer{
+  /* margin-top: 100px; */
+  height: 700px;
+  background-image: url('{{" footer-pc.png " | asset_url }}');
+  background-size: cover;
+  color: white;
+}
+footer .footer-txt{
+  text-align: center;
+  padding-bottom: 64px;
+}
+footer .footer-txt h2{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 0.1em;
+  padding-top: 73px;
+}
+
+footer .footer-txt h3{
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  padding-top: 31px;
+}
+
+.footer-txt p{
+  font-size: 10px;
+  padding-top: 28px !important;
+  letter-spacing: 0.1em;
+  line-height: 21px;
+}
+
+
+
+.footer-menu-left{
+  width: 50%;
+  display: flex;
+}
+
+
+
+.footer-sub-menu{
+  width: 40%;
+  padding-right: 22px;
+}
+
+.footer-sub-menu ul{
+  padding-top: 16px;
+  line-height: 20px;
+  font-size: 7px;
+}
+
+.footer-menu-title{
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 5px;
+}
+
+.menu-01 ul{
+  display: flex;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+}
+
+.menu-01 ul img{
+  height: 10px;
+  padding-right: 10px;
+}
+
+
+.menu-01 ul li{
+   padding-right: 11px;
+}
+
+.menu-02{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: left;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.menu-02 nav{
+  display: flex;
+}
+
+.menu-02 nav ul{
+  padding-right: 26px;
+}
+
+.menu-icon{
+  padding-top: 16px;
+  display: block;
+  padding-bottom: 30px;
+}
+
+.menu-icon ul{
+  display: flex;
+}
+.menu-icon img{
+  height: 12px;
+  padding-right: 11px;
+  display: block;
+}
+
+
+.footer-content nav ul{
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  padding-top: 12px;
+}
+
+.footer-content nav ul li{
+  font-weight: normal;
+  font-size: 6px;
+  line-height: 15px;
+}
+
+footer .footer-txt h3 br{
+  display: none;
+}
+@media screen and (min-width: 480px) {
+	/* 480px以上に適用されるCSS（PC用） */
+  /* 書き換えの際にレスポンシブの方に影響及ぼしたのでこっちに入れてます */
+  .footer-content{
+    width: 68%;
+    /* height: 71px; */
+    border-top: 1px solid #FFFFFF;
+    margin: 0 auto;
+  }
+  .footer-menu-right {
+    padding-left: 28px;
+    width: 50%;
+    border-left: 1px solid #ffffff;
+    margin-bottom: 28px;
+    margin-top: 19px;
+  }
+
+  .footer-menu{
+    font-size: 10px;
+    display: flex;
+    width: 68%;
+    margin: 0 auto;
+    height: 200px;
+  }
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  footer{
+    margin-top: 100px;
+    height: 920px;
+    background-image: url('{{" footer-m-back.png " | asset_url }}');
+    background-size: cover;
+    color: white;
+  }
+
+  footer .footer-txt{
+    text-align: center;
+    padding-bottom: 76px;
+  }
+  footer .footer-txt h2{
+    font-family: "Operetta 8";
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    padding-top: 69px;
+  }
+  
+  footer .footer-txt h3{
+    font-family: YuMincho;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    line-height: 40px;
+    width: 266px;
+    margin: 0 auto;
+  }
+
+  footer .footer-txt h3 br{
+    display: block;
+  }
+  
+  .footer-txt p{
+    font-family: YuMincho;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    line-height: 24px;
+    padding-top: 0px !important;
+  }
+
+  .py-26{
+    padding-top: 26px !important;
+  }
+  
+  .footer-menu{
+    font-size: 12px;
+    display: block; 
+    /* width: 264px; */
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .footer-menu-left{
+    width: 264px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .footer-menu-right{
+    width: 264px !important;
+    margin: 0 auto;
+  }
+
+  .footer-menu hr{
+    border-top: 1px solid #FFFFFF;
+    width: 100%;
+  }
+  
+  .footer-sub-menu{
+    width: 132px;
+    padding-right: 0px;
+    padding-bottom:18px;
+  }
+  
+  .footer-sub-menu ul{
+    padding-top: 0px !important;
+    line-height: 23px !important;
+  }
+  
+  .footer-menu-title{
+    display: none;
+  }
+  .footer-menu-right{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .menu-01 ul{
+    display: none;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+  }
+  
+  .menu-01 ul img{
+    height: 15px;
+    padding-right: 10px;
+  }
+  
+  
+  .menu-01 ul li{
+     padding-right: 17px;
+  }
+  
+  .menu-02{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 22px;
+    text-align: left;
+    color: #fff;
+    padding-top: 30px;
+  }
+  
+  .menu-02 nav{
+    display: block;
+  }
+  
+  .menu-02 nav ul{
+    padding-right: 39px;
+  }
+  
+  .menu-icon{
+    padding-top: 96px;
+    display: block;
+    padding-bottom: 46px;
+    width: 50%;
+  }
+  
+  .menu-icon ul{
+    display: flex;
+  }
+  .menu-icon img{
+    height: 27px;
+    display: block;
+  }
+  .footer-content{
+    width: 378px;
+    height: 107px;
+    border-top: 0px solid #FFFFFF;
+    margin: 0 auto;
+  }
+  
+  .footer-content nav ul{
+    width: 378px;
+    display: flex;
+    flex-direction: column;
+    font-size: 9px;
+    padding-top: 12px;
+    text-align: center;
+  }
+  
+  .footer-content nav ul li{
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 22px;
+  }
+}
+
+/* フッターここまで */
+
+/* ブログページここから */
+
+.blog-page {
+  width: 591px;
+  margin: 0 auto;
+  padding-top: 127px;
+  padding-bottom: 66px;
+}
+
+.blog-page .date{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 11px;
+  color: #4e4e4e;
+  padding-top: 21px;
+}
+
+.blog-page .title{
+  /* width: 1772px; */
+  height: 51px;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  line-height: 27px;
+  text-align: left;
+  color: #383838;
+  padding-top: 11px;
+}
+
+.blog-page .blog-content{
+  font-family: YuGothic;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+  text-align: left;
+  color: #3e3e3e;
+  padding-top: 31px;
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .blog-page {
+    width: 378px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .blog-page .date{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 19px;
+    letter-spacing: 0.01em;
+    line-height: 17px;
+    color: #4e4e4e;
+    padding-top: 16px;
+  }
+  
+  .blog-page .title{
+    /* width: 1772px; */
+    height: 77px;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    line-height: 37px;
+    text-align: left;
+    color: #383838;
+    padding-top: 17px;
+  }
+  
+  .blog-page .blog-content{
+    font-family: YuGothic;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    line-height: 25px;
+    text-align: left;
+    color: #3e3e3e;
+    padding-top: 49px;
+  }
+}
+
+/* ブログページここまで */
+
+/* ブログ一覧ここから */
+.blog-list .page-title{
+  font-family: "Operetta 8";
+font-weight: 500;
+font-size: 28px;
+letter-spacing: 0.08em;
+line-height: 30px;
+padding: 120px 0 37px 0;
+color: #272727;
+text-align: center;
+}
+
+.blog-list .blog-category{
+  width: 717px;
+  height: 66px;
+  margin: 0 auto;
+  border: 1px solid #000000;
+}
+
+.blog-list .blog-category nav ul{
+  display: flex;
+  justify-content: space-around;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  line-height: 30px;
+  color: #272727;
+  padding-top: 18px;
+}
+
+.blog-list .blog-list-content ul{
+  width: 717px;
+  margin: 0 auto;
+  padding-top: 104px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-list .blog-list-content ul li{
+  width: 224px;
+  padding-bottom: 76px;
+}
+
+.blog-list .blog-list-content .title{
+  width: 203px;
+  height: 38px;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 8px;
+  letter-spacing: 0.01em;
+  line-height: 11px;
+  text-align: left;
+  color: #383838;
+  padding-top: 6px;
+}
+
+.blog-list .blog-list-content .date{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 7px;
+  letter-spacing: 0.01em;
+  line-height: 17px;
+  text-align: left;
+  color: #4e4e4e;
+  padding-top: 25px;
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .blog-list .page-title{
+    font-family: "Operetta 8";
+font-weight: 500;
+font-size: 30px;
+letter-spacing: 0.1em;
+color: #020202;
+  padding: 144px 0 56px 0;
+  text-align: center;
+  }
+  
+  .blog-list .blog-category{
+    width: 177px;
+    height: 35px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+  }
+  
+  
+  .blog-list .blog-list-content ul{
+    width: 345px;
+    margin: 0 auto;
+    padding-top: 59px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .blog-list .blog-list-content ul li{
+    padding-bottom: 0px;
+  }
+
+  .blog-list .blog-list-content ul li a{
+    width: 345px;
+    padding-bottom: 8px;
+    display: flex;
+  }
+
+  .blog-list .blog-list-content ul li img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .blog-list .blog-list-content .title{
+    width: 225px;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    line-height: 20px;
+    text-align: left;
+    color: #383838;
+    padding-top: 13px;
+  }
+  
+  .blog-list .blog-list-content .date{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 10px;
+    letter-spacing: 0.01em;
+    line-height: 17px;
+    text-align: left;
+    color: #4e4e4e;
+    padding-top: 0px;
+  }
+  .cp_ipselect {
+    overflow: hidden;
+    width: 177px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cp_ipselect select {
+    width: 177px;
+    padding-right: 1em;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .cp_ipselect select::-ms-expand {
+      display: none;
+  }
+  .cp_ipselect.cp_sl01 {
+    position: relative;
+    border: 1px solid #000;
+    background: #ffffff;
+  }
+  .cp_ipselect.cp_sl01::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.9em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    pointer-events: none;
+  }
+  .cp_ipselect.cp_sl01 select {
+    padding: 8px 38px 8px 8px;
+    color: #000;
+  }
+}
+/* ブログ一覧ここまで */
+
+/* お問い合わせここから */
+
+.contact .page-title{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  color: #020202;
+  padding-top: 107px;
+}
+
+.contact .company-info h3{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #020202;
+  padding-top: 40px;
+  padding-bottom: 6px;
+}
+
+.contact .company-info p{
+  font-family: YuGothic;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  line-height: 26px;
+  text-align: center;
+  color: #3e3e3e;
+  padding-top: 27px;
+  padding-bottom: 96px;
+}
+
+.contact .company-info hr{
+  width: 53px;
+  margin: 0 auto;
+}
+
+.globo-form-app form {
+  margin: 0 auto !important;
+  width: 430px;
+}
+
+.contact-background{
+  background-color: #F7F4ED;
+  height: 1175px;
+   width: 100%;
+   padding-top: 60px;
+}
+
+.contact-form{
+  width: 1472px;
+  height: 1314px;
+  margin: 0 auto !important;
+  background-color: #FFFFFF;
+}
+
+/* お問い合わせここまで */
+
+/* 商品一覧ここから */
+
+.shop-list .page-title h2{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #020202;
+  padding-top: 120px;
+}
+
+
+.shop-list .page-title p{
+  font-family: "Operetta 8";
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  line-height: 30px;
+  text-align: center;
+  color: #272727;
+  padding-top: 11px;
+}
+
+.shop-list .shop-list-copy{
+  font-family: "DNP ShueiGoGinStd";
+font-weight: normal;
+font-size: 11px;
+letter-spacing: 0.1em;
+line-height: 23px;
+text-align: center;
+color: #272727;
+padding-top: 34px;
+}
+
+.shop-list-content{
+  padding-top: 112px;
+  width: 710px;
+  margin: 0 auto;
+  padding-bottom: 139px;
+}
+
+.shop-list-content li{
+  height: 255px;
+  width: 227px;
+  margin-bottom: 19px;
+}
+
+.shop-list-content img{
+  height: 255px;
+  width: 227px;
+  object-fit:cover;
+}
+
+.shop-list-content ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .shop-list .page-title h2{
+    font-family: "Operetta 8";
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #020202;
+  }
+  .shop-list .shop-list-copy {
+    font-family: "Operetta 8";
+    width: 314px;
+    margin: 0 auto;
+  }
+  .shop-list-content{
+    width: 345px;
+  }
+  .shop-list-content ul {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .shop-list-content li{
+    height: 387px;
+    width: 345px;
+    margin-bottom: 19px;
+  }
+  
+  .shop-list-content img{
+    height: 387px;
+    width: 345px;
+    object-fit:cover;
+  }
+}
+/* 商品一覧ここまで */
+
+/* スペシャルページここから */
+.special-page-top{
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.special-page-top h1{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 28px;
+  padding-top: 233px;
+}
+
+.special-page-top p{
+  font-family: AnnabelleJF;
+font-weight: normal;
+font-size: 16px;
+letter-spacing: 0.02em;
+padding-top: 7px;
+}
+
+.special-page-top button a{
+  font-family: "Operetta 8";
+font-weight: 500;
+font-size: 13px;
+letter-spacing: 0.03em;
+line-height: 30px;
+display: block;
+margin-top: 63px;
+padding: 8px 46px;
+border: 1px solid #FFFFFF;
+}
+
+.special-page h1{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 23px;
+  letter-spacing: 0.05em;
+  line-height: 48px;
+  color: #000;
+  padding-bottom: 30px;
+  padding-top: 100px;
+}
+
+.special-page .p-padding{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  line-height: 21px;
+  text-align: center;
+  color: #272727;
+  padding-top: 43px;
+}
+.special-page p{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  line-height: 21px;
+  text-align: center;
+  color: #272727;
+}
+
+.spacial-img01{
+  width: 720px;
+  margin: 0 auto;
+  padding-top: 73px;
+  margin-bottom: 73px;
+}
+
+.special-page .image_content {
+  width: 380px;
+  height: 655px;
+  position: relative; 
+}
+
+.special-page .image_content img {
+  position: absolute;
+  display: block;
+}
+
+.special-page .image_content .img_01 {
+  /* 左上に固定 */
+  width: 339px;
+  top: 0;
+  left: 0;
+  height: 509px;
+}
+
+.special-page .image_content .img_02 {
+  /* 右下に固定 */
+  width: 220px;
+  bottom: 0;
+  right: 0;
+}
+
+.special-page .row{
+  display: flex;
+}
+
+.special-page .page-content{
+  width: 720px;
+  margin: 0 auto;
+  padding-top: 170px;
+  padding-bottom: 200px;
+}
+
+.special-page .page-content h3{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  line-height: 40px;
+  text-align: left;
+  color: #000;
+  padding-bottom: 31px;
+  padding-top: 127px;
+}
+
+.special-page .page-content p{
+  text-align: left;
+}
+
+.special-page .special-image{
+  width: 637px;
+  margin: 0 auto;
+  /* padding-top: 150px; */
+  justify-content: space-between;
+}
+
+.special-page .special-image .slide{
+  width: 300px;
+}
+
+.special-page .special-page-last p{
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  line-height: 21px;
+  text-align: left;
+  color: #272727;
+}
+
+.special-page .special-page-last{
+  width: 666px;
+  margin: 0 auto;
+  padding-top: 73px;
+  padding-bottom: 29px;
+}
+
+.special-page .button {
+  width: 666px;
+  margin: 0 auto;
+  height: 48px;
+  background-color: #8E968E;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 133px;
+}
+
+
+.slider img{
+  /* height: auto; */
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #000 !important;
+}
+
+/* PC用のCSSはメディアクエリの外に記述する */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .special-page-top{
+    color: #FFFFFF;
+    text-align: center;
+  }
+  
+  .special-page-top h1{
+    font-family: YuMincho;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF !important;
+    padding-top: 184px;
+  }
+  
+  .special-page-top p{
+    font-family: AnnabelleJF;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    padding-top: 16px;
+  }
+  
+  .special-page-top button a{
+    font-family: "Operetta 8";
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    line-height: 45px;
+    display: block;
+    margin-top: 66px;
+    padding: 12px 69px;
+    border: 1px solid #FFFFFF;
+  }
+  
+  .special-page h1{
+    font-family: YuMincho;
+    font-weight: 500;
+    font-size: 34px;
+    letter-spacing: 0.05em;
+    line-height: 72px;
+    color: #000;
+    padding-bottom: 45px;
+    padding-top: 150px;
+  }
+  
+  .special-page .p-padding{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: center;
+    color: #272727;
+    padding-top: 32px;
+  }
+  .special-page p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: center;
+    color: #272727;
+    padding-top: 32px;
+  }
+  
+  .spacial-img01{
+    width: 375px;
+    margin: 0 auto;
+    padding-top: 106px;
+  }
+  
+  .special-page .image_content {
+    width: 345px;
+    height: 639px;
+    position: relative; 
+  }
+  
+  .special-page .image_content img {
+    position: absolute;
+    display: block;
+  }
+  
+  .special-page .image_content .img_01 {
+    /* 左上に固定 */
+    width: 310px;
+    top: 0;
+    left: 0;
+    height:  479px;
+  }
+  
+  .special-page .image_content .img_02 {
+    /* 右下に固定 */
+    width: 225px;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .special-page .row{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .special-page .page-content{
+    width: 325px;
+    margin: 0 auto;
+    padding-top: 164px;
+    padding-bottom: 0px;
+  }
+  
+  .special-page .page-content h3{
+    font-family: YuMincho;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    line-height: 40px;
+    text-align: center;
+    color: #000;
+    padding-bottom: 46px;
+    padding-top: 190px;
+  }
+  
+  .special-page .page-content p{
+    text-align: center;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    line-height: 32px;
+    text-align: center;
+    color: #272727;
+  }
+  
+  .special-page .special-image{
+    width: 314px;
+    margin: 0 auto;
+    padding-top: 157px;
+    
+  }
+  
+  .special-page .special-image .slide{
+    width: 314px;
+    padding-top: 44px;
+  }
+  
+  .special-page .special-page-last p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: left;
+    color: #272727;
+  }
+  
+  
+  .special-page .button {
+    width: 345px;
+    margin: 0 auto;
+    height: 57px;
+    background-color: #8E968E;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 199px;
+  }
+}
+
+/* スペシャルページここまで */
+
+/* 商品詳細ページここから */
+.shop-description{
+  width: 93%;
+  margin: 0 auto;
+  padding-top: 80px;
+  margin-bottom: 128px;
+}
+
+.shop-description-row{
+  display: flex;
+}
+
+.img-content{
+  width: 584px;
+}
+
+.img-content img{
+  width: 584px;
+  height: 761px;
+  object-fit: cover;
+}
+
+.discription{
+  width: 382px;
+  padding-left: 26px;
+}
+
+
+
+.shop-description .item-text{
+  padding-top: 68px;
+}
+
+.shop-description .item-text h2{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+  color: #3e3e3e;
+}
+
+.shop-description .item-text h6{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #cdb699;
+  padding-top: 14px;
+}
+
+.shop-description .item-text p{
+  display: block;
+  width: 319px;
+  font-family: "DNP ShueiGoGinStd";
+  font-weight: normal;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  line-height: 23px;
+  text-align: left;
+  color: #535353;
+  padding-top: 61px;
+}
+
+.shop-description .add-cart .size{
+  width: 176px;
+  height: 35px;
+  margin-top: 13px;
+  display: flex;
+}
+
+.shop-description .add-cart .size p{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: left;
+  color: #3e3e3e;
+  padding-top: 11px;
+  padding-right: 11px;
+}
+
+.shop-description .add-cart form{
+  display: block !important;
+  border: 1px solid #707070 !important;
+  width: 135px !important;
+  height: 35px !important;
+}
+
+.shop-description .add-cart button a{
+  display: block;
+  width: 251px;
+  height: 35px;
+  background: #8e968e;
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  padding-top: 11px;
+}
+
+.shop-description .add-cart button{
+  margin-top: 24px;
+  margin-left: 33px;
+}
+
+.shop-description .detail h3{
+  font-family: YuMincho;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+  color: #3e3e3e;
+  padding-top: 36px;
+}
+
+.shop-description .detail .detail-content{
+  width: 100%;
+  height:217px;
+  background-color: rgb(231, 231, 231);
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  margin-top: 44px;
+}
+
+.shop-description-content .main-img{
+  padding-top: 62px;
+}
+
+.shop-description-content .main-img img{
+  width: 100%;
+}
+
+.shop-description-content .sub-img ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shop-description-content .sub-img ul img{
+  width:  73px;
+  margin-top: 20px;
+}
+
+.shop-description-content .review{
+  width: 100%;
+  height: 505px;
+  background-color: rgb(231, 231, 231);
+  margin-top: 7px;
+}
+
+@media screen and (min-width: 480px) {
+	/* 480px以上に適用されるCSS（PC） */
+
+  .discription {
+    margin-top: 80px;
+    padding-left: 40px;
+    overflow: scroll;
+    white-space:nowrap;
+    height: 1140px;
+    padding-right:10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  
+  .shop-description{
+    width: 375px;
+    margin: 0 auto;
+    padding-top: 63px;
+    margin-bottom: 0px;
+  }
+  
+  .shop-description-row{
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+  }
+  
+  .img-content{
+    width: 375px;
+  }
+  
+  .discription{
+    width: 345px;
+    padding-left: 0px;
+    margin: 0 auto;
+  }
+  
+  .shop-description .item-text{
+    padding-top: 27px;
+    margin: 0 auto;
+  }
+  
+  .shop-description .item-text h2{
+    font-family: YuMincho;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #3e3e3e;
+  }
+  
+  .shop-description .item-text h6{
+    font-family: YuMincho;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #cdb699;
+    padding-top: 26px;
+  }
+  
+  .shop-description .item-text p{
+    display: block;
+    width: 345px;
+    font-family: YuGothic;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    line-height: 20px;
+    text-align: left;
+    color: #3e3e3e;
+    padding-top: 59px;
+    margin: 0 auto;
+  }
+  
+  .shop-description .add-cart .size{
+    width: 177px;
+    height: 35px;
+    margin: 0 auto;
+  }
+  
+  .shop-description .add-cart .size p{
+    font-family: YuMincho;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: left;
+    color: #3e3e3e;
+    padding-top: 16px;
+    padding-right: 17px;
+  }
+  
+  .shop-description .add-cart form{
+    display: block !important;
+    border: 1px solid #707070 !important;
+    width: 203px !important;
+    height: 53px !important;
+  }
+  
+  .shop-description .add-cart button a{
+    display: block;
+    width: 345px;
+    height: 53px;
+    background: #8e968e;
+    font-family: YuMincho;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    padding-top: 16px;
+  }
+  
+  .shop-description .add-cart button{
+    margin-top: 28px;
+    margin-left: 0px;
+  }
+  
+  .shop-description .detail h3{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #3e3e3e;
+    padding-top: 77px;
+  }
+  
+  .shop-description .detail .detail-content{
+    width: 100%;
+    height: 215px;
+    background-color: rgb(231, 231, 231);
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    margin-top: 20px;
+  }
+  
+  .shop-description-content .main-img{
+    padding-top: 93px;
+  }
+  
+  .shop-description-content .main-img img{
+    width: 100%;
+  }
+  
+  .shop-description-content .sub-img ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .shop-description-content .sub-img ul img{
+    width: 73px;
+    margin-top: 20px;
+  }
+  
+  .shop-description-content .review{
+    width: 100%;
+    height: 503px;
+    background-color: rgb(231, 231, 231);
+    margin-top: 62px;
+  }
+
+  #productSelect{
+    margin: 0 auto;
+    width: 177px !important;
+    text-align: center;
+  }
+}
+/* 商品詳細ページここまで */

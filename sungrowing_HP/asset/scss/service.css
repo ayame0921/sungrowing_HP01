@@ -1,0 +1,1114 @@
+#aboutus {
+  display: block;
+  height: 1080px;
+  width: 100%;
+  position: relative;
+}
+/*# sourceMappingURL=service.css.map */
+
+
+#service{
+  width: 1280px;
+  margin: 180px auto;
+}
+
+#service .row{
+  display: flex;
+}
+
+#service .left-img{
+  display: block;
+  margin: 121px 72px 131px 85px;
+}
+
+#service .txtTitle{
+  margin-left: 219px;
+  margin-bottom: 141px;
+}
+
+#service .txtTitle .title{
+  display: inline-block;
+  font-size: 320%;
+  line-height: 20px;
+  font-family: "EB Garamond", serif;
+  letter-spacing: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#service .txtTitle .sub{
+  display: block;
+  font-size: 80%;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+#service .text .subtitle{
+  display: inline;
+  font-family: "Noto Serif JP", serif;
+  background-color: #fff;
+  color: black;
+  font-weight: 500;
+  font-size: 41px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  line-height: 50px;
+}
+
+#service .text p{
+font-family: "Noto Serif JP";
+font-weight: 500;
+font-size: 18px;
+letter-spacing: 0.1em;
+line-height: 36px;
+text-align: left;
+color: #fefefe;
+margin-top: 20px;
+}
+
+#service .service_1 .service_button{
+  display: inline-block;
+  display: flex;
+  width: 321px;
+  height: 68px;
+  background-color: #fefefe;
+  position: relative;
+  border-radius: 50px;
+  margin-left: 444px;
+  margin-top: 32px;
+}
+
+#service .service_button p{
+  font-family: YuGothic;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.4em;
+  color: #c11920;
+  position: absolute;
+  left: 50px;
+  top:15px;
+}
+
+#service .service_button img{
+  width: 46px;
+  height:20px;
+  margin-top: 23.5px;
+  position: absolute;
+  left: -13px;
+}
+
+.service_2 {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 64px 51px;
+  color: black;
+}
+
+#service .service_2 .service_button{
+  display: inline-block;
+  display: flex;
+  width: 321px;
+  height: 68px;
+  background-color: #c11920;
+  position: relative;
+  border-radius: 50px;
+}
+
+#service .service_2 .service_button p{
+  font-family: YuGothic;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.4em;
+  color: #fff;
+  position: absolute;
+  left: 50px;
+  top:15px;
+}
+
+#service .service_2 .left{
+  width: 576px;
+  padding-left: 13px;
+}
+
+#service .service_2 .left h2{
+  font-family: "Noto Serif JP";
+font-weight: 500;
+font-size: 30px;
+letter-spacing: 0.1em;
+text-align: left;
+color: #040200;
+padding-top: 49px;
+}
+
+#service .service_2 .left .text p{
+  width: 513px;
+height: 83px;
+font-family: "Noto Serif JP";
+font-weight: normal;
+font-size: 15px;
+letter-spacing: 0.1em;
+line-height: 31px;
+text-align: left;
+color: #040200;
+margin-top: 18px;
+margin-bottom: 64px;
+}
+
+#service .service_2 .right img{
+  width: 576px;
+}
+
+/* 会社概要 */
+
+#company {
+  background-color: #c11920;
+  color: white;
+  position: relative;
+  padding-bottom: 120px;
+}
+
+#company .txtTitle{
+  padding-top: 208px;
+}
+
+#company .txtTitle .title{
+  display: block;
+  font-size: 80px;
+  line-height: 20px;
+  font-family: "EB Garamond", serif;
+  letter-spacing: 15px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  line-height: 105px;
+}
+
+#company .txtTitle .sub{
+  display: block;
+  font-size: 80%;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 4px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 31px;
+  padding-top: 5px;
+}
+
+#company .row {
+  display: flex;
+  width: 1280px;
+  margin: 0 auto;
+  padding-top: 84px;
+}
+
+#company .row .left img{
+  width: 640px;
+  height: auto;
+}
+
+#company .row .right{
+  margin: 22px 0 22px 64px;
+}
+
+#company .row .right ul li{
+  display: flex;
+  font-family: "Noto Serif JP";
+font-weight: 500;
+font-size: 16px;
+letter-spacing: 0.2em;
+line-height: 56px;
+text-align: left;
+color: #fefefe;
+
+}
+
+#company .row .right ul li .l{
+  width: 107px;
+}
+
+#company .company02{
+  display: block;
+  width: 1156px;
+  margin: 0 auto;
+  padding-top: 48px;
+  padding-bottom: 114px;
+}
+
+#company .map{
+  background-color: gray;
+  width: 100%;
+  height: 611px;
+}
+
+/* お問い合わせ */
+#contact{
+  background-color: #EFEFEF;
+  width: 100%;
+  padding-top: 160px;
+  padding-bottom: 195px;
+  color: #040200;
+}
+
+#contact .txtTitle{
+ margin-bottom: 153px;
+}
+
+#contact .txtTitle .title{
+  display: block;
+  font-size: 80px;
+  line-height: 20px;
+  font-family: "EB Garamond", serif;
+  letter-spacing: 15px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  line-height: 105px;
+}
+
+#contact .txtTitle .sub{
+  display: block;
+  font-size: 80%;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 4px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 31px;
+  padding-top: 5px;
+}
+
+
+#contact .contact_form{
+  width: 900px;
+  margin: 0 auto;
+}
+
+#contact .contact_form p{
+  font-family: "Noto Serif JP";
+font-weight: 500;
+font-size: 18px;
+letter-spacing: 0.1em;
+line-height: 36px;
+text-align: center;
+color: #040200;
+padding-bottom: 50px;
+}
+
+#contact .contact_form label{
+  display: inline-block;
+  font-family: YuGothic;
+font-weight: bold;
+font-size: 16px;
+letter-spacing: 0.2em;
+text-align: left;
+color: #040200;
+width: 286px;
+padding-top: 26px;
+}
+
+#contact .contact_form label span{
+  color: #C11920;
+}
+
+#contact .contact_form input{
+  height: 70px;
+  background-color: #fff;
+  width: 614px;
+}
+
+#contact .contact_form textarea{
+  height: 177px;
+  background-color: #fff;
+  width: 614px;
+}
+
+#contact .contact_form .row {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+#contact .contact_form .alert{
+  background-color: #fff;
+  padding: 20px 0 20px 21px;
+  width: 100%;
+  height: 138px;
+}
+
+#contact .contact_form .alert .title{
+font-family: YuGothic;
+font-weight: bold;
+font-size: 14px;
+letter-spacing: 0.2em;
+text-align: left;
+color: #040200;
+line-height: 17px;
+padding-bottom: 0px;
+}
+
+#contact .contact_form .alert p{
+font-family: YuGothic;
+font-weight: normal;
+font-size: 14px;
+letter-spacing: 0.2em;
+text-align: left;
+color: #040200;
+line-height: 17px;
+padding-bottom: 17px;
+width: 841px;
+}
+
+#contact .contact_form .submit{
+  display: block;
+  margin: 0 auto;
+  width: 321px;
+  height: 68px;
+  border-radius: 34px;
+  background: #c11920;  
+  font-family: "Noto Sans JP";
+font-weight: 500;
+font-size: 20px;
+letter-spacing: 0.4em;
+text-align: center;
+color: #fefefe;
+}
+
+#contact .contact_form .checkbox{
+  display: inline-block;
+  font-family: YuGothic;
+font-weight: bold;
+font-size: 16px;
+letter-spacing: 0.2em;
+text-align: center;
+color: #040200;
+padding-top: 26px;
+padding-bottom: 40px;
+}
+
+#contact .contact_form .checkbox span{
+  color: #C11920;
+}
+
+footer{
+  background-color: #fff;
+  border: 1px solid #707070;
+  height: 60px;
+}
+
+footer p{
+  margin-top: 20px;
+  font-family: "Noto Serif JP";
+font-weight: 500;
+font-size: 14px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #040200;
+}
+
+@media screen and (min-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .mobile{
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .pc{
+    display: none !important;
+  }
+
+  .mobile-bg{
+    background-color: #C11920;
+  }
+
+  /* ヘッダーここから */
+  header{
+    display: flex;
+    justify-content: space-between;
+  }
+  header .site-title img{
+    padding: 8px 0 0 8px;
+  }
+  /* ヘッダーここまで */
+
+  /* ハンバーガーメニューここから */
+  .hamburger-menu{
+    padding-top: 5px;
+  }
+  .hamburger-menu div {
+    width: 40px;
+    height: 1px;
+    background-color: white;
+    margin: 12px 0;
+    margin-right: 16px;
+  }
+  .hamburger-menu + .sidenavs:target {
+    overflow-x: visible;
+    /* ボックスからはみ出る箇所をそのまま表示 */
+    width: 100%;
+    display:block;
+  }
+  .sidenavs:target {
+    overflow-x: hidden;
+    /* ボックスからはみ出る箇所を隠す */
+    width: 0;
+  }
+  /* ハンバーガーメニュー表示時 */
+  .sidenavs {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* 画像の配置を指定 */
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #C11920;
+    overflow-x: hidden;
+    /* 横スクロールを無効にする */
+    transition: 0.5s;
+    /* アニメーションの時間を0.5秒に指定 */
+    list-style: none;
+    padding-top: 202px;
+  }
+  /* ハンバーガーメニュー表示時のリンク */
+  .sidenavs a {
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+    /* アニメーションの時間を0.3秒に指定 */
+    font-weight:bold;
+    font-family: "EB Garamond";
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: #fefefe;
+    padding-bottom: 40px;
+  }
+
+  .list-contact{
+    padding-top: 148px;
+  }
+
+  .sidenavs .close-btn{
+    background-color: #fefefe;
+    color: #C11920;
+    width: 44px;
+    height: 44px;
+    border-radius: 40px;
+    margin-top: 8px;
+  }
+
+  .sidenavs .close-btn img{
+    height: 23px;
+    width: 23px;
+    margin: 10.5px auto;
+  }
+
+  /* マウスオーバー後のリンク */
+  .sidenavs a:hover {
+    color: white;
+  }
+  /* クローズボタン */
+  .sidenavs .close-btn {
+    position: absolute;
+    /* 親要素との絶対位置を指定 */
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  /* ハンバーガーメニューはここまで */
+  .scrolldown1-m {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    /*全体の高さ*/
+    height: 50px;
+  }
+  
+  .scrolldown1-m span {
+    /*描画位置*/
+    position: absolute;
+    left: -24px;
+    top: -20px;
+    /*テキストの形状*/
+    color: #eee;
+    font-family: "EB Garamond", serif;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+  
+  .scrolldown1-m::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 5px;
+    /*線の形状*/
+    width: 1px;
+    height: 20px;
+    background: #eee;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    -webkit-animation: pathmove 1.4s ease-in-out infinite;
+            animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+  }
+  .main-box{
+    position: relative;
+    height: 667px;
+  }
+}
+
+
+
+@media screen and (max-width: 480px){
+  /* レスポンシブ メインここから */
+  main .main-box{
+    padding-top: 68px;
+    width: 327px;
+    margin: 0 auto;
+  }
+
+  main .main-box img{
+    display: block;
+    width: 81px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 17px;
+  }
+  main .main-box h1{
+    font-family: "EB Garamond";
+font-weight: normal;
+font-size: 36px;
+letter-spacing: 0.1em;
+text-align: left;
+color: #fefefe;
+
+  }
+
+  main .main-box h2{
+    font-family: "Noto Serif JP";
+    font-weight: normal;
+    font-size: 23px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #040200;
+    line-height: 27px;
+    background-color: #fefefe;
+    margin-bottom: 24px;
+  }
+
+  main .main-box .main-text{
+    width: 327px;
+height: 149px;
+font-family: "Noto Serif JP";
+font-weight: normal;
+font-size: 13px;
+letter-spacing: 0.09em;
+line-height: 26px;
+text-align: left;
+color: #fefefe;
+  }
+
+  main .main-box .scroll{
+    padding-top: 60px;
+    padding-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  #aboutus{
+    background-color: #C11920;
+    padding-top: 86px;
+    height: auto;
+  }
+
+  #aboutus h1{
+    font-family: "EB Garamond";
+font-weight: normal;
+font-size: 30px;
+letter-spacing: 0.2em;
+text-align: center;
+color: #fefefe;
+padding-bottom: 29px;
+  }
+  #aboutus .content{
+    width: 327px;
+    margin: 0 auto;
+  }
+  #aboutus .img-content .row{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+  }
+
+  #aboutus .img-content .row .img01{
+    width: 80px;
+  }
+
+  #aboutus .img-content .row .img02{
+    width: 231px;
+  }
+
+  #aboutus h2{
+    font-family: "Noto Serif JP";
+  font-weight: normal;
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #040200;
+  background-color: #fefefe;
+  line-height: 24px;
+  width: 250px;
+  margin-top: 27px;
+  margin-bottom: 24px;
+  }
+
+  #aboutus p{
+    width: 327px;
+height: 155px;
+font-family: "Noto Serif JP";
+font-weight: normal;
+font-size: 13px;
+letter-spacing: 0.1em;
+line-height: 26px;
+text-align: left;
+color: #fefefe;
+  }
+}
+
+@media screen and (max-width: 480px){
+  #business{
+    background-color: #C11920;
+    padding-top: 80px;
+    height: auto;
+  }
+
+  .sec-title{
+    font-family: "EB Garamond";
+font-weight: normal;
+font-size: 30px;
+letter-spacing: 0.2em;
+line-height: 39px;
+text-align: center;
+color: #fefefe;
+  }
+
+  .sub{
+    font-family: "Noto Serif JP" !important;
+font-weight: 500 !important;
+font-size: 12px !important;
+letter-spacing: 0.4em !important;
+line-height: 12px !important;
+text-align: center !important;
+color: #fefefe !important;
+padding-top: 11px !important;
+  }
+
+  #business .content{
+    margin: 0 auto;
+    width: 327px;
+  }
+  #business .img-effect{
+    width: 327px;
+    height: 226px;
+    position: relative;
+    margin-top: 21px;
+  }
+
+  #business .img-effect .img01{
+    width: 70px;
+    height: 68px;
+    position: absolute;
+    top: 0;
+    margin-left: 12px;
+  }
+
+  #business .img-effect:hover .img01{
+    width: 90px !important;
+    margin-left: 0px;
+  }
+
+  #business .img-effect .img02{
+    width: 327px;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .hover08 {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  #business .img-effect .hover08:hover {
+    -webkit-filter: grayscale(0%) !important;
+    filter: grayscale(0%) !important;
+  }
+
+  #business .human h1,#business .goods h1,#business .capital h1{
+    font-family: "EB Garamond";
+font-weight: normal;
+font-size: 44px;
+letter-spacing: 0.1em;
+text-align: left;
+color: #fefefe;
+line-height: 57px;
+padding-top: 8px;
+padding-bottom: 14px;
+  }
+  #business .human h2,#business .goods h2,#business .capital h2{
+    display: inline-block;
+    font-family: "Noto Serif JP";
+font-weight: normal;
+font-size: 26px;
+letter-spacing: 0.1em;
+text-align: left;
+color: #040200;
+line-height: 26px;
+background-color: white;
+margin-bottom: 5px;
+  }
+
+  #business .human p,#business .goods p,#business .capital p{
+    width: 327px;
+font-family: "Noto Serif JP";
+font-weight: normal;
+font-size: 13px;
+letter-spacing: 0.1em;
+line-height: 26px;
+text-align: left;
+color: #fefefe;
+padding-top: 15px;
+  }
+
+  #business .human ,#business .goods ,#business .capital {
+    padding-bottom: 64px;
+  }
+
+  #business .human p{
+    padding-bottom: 24px;
+  }
+}
+@media screen and (max-width: 480px){
+  #service{
+    background-color: #C11920;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+  }
+  #service .content{
+    margin: 0 auto;
+    width: 327px;
+    padding-top: 54px;
+  }
+
+  
+  .service_button{
+    display: inline-block;
+    display: flex;
+    width: 321px;
+    height: 68px;
+    background-color: #fefefe;
+    position: relative;
+    border-radius: 50px;
+    margin-top: 24px;
+  }
+  
+  .service_button p{
+    font-family: YuGothic !important;
+    font-weight: bold !important;
+    font-size: 20px !important;
+    letter-spacing: 0.4em !important;
+    color: #c11920 !important;
+    position: absolute;
+    left: 50px;
+    top:15px;
+  }
+  
+  .service_button img{
+    width: 46px;
+    height:20px;
+    margin-top: 23.5px;
+    position: absolute;
+    left: -13px;
+  }
+
+  #service .bg-img{
+    background-image: url(../image/img/servise_1.png) ;
+    background-size: 137px;
+    background-position: center;
+    padding-top: 271px;
+    background-repeat: none;
+  }
+
+  #service .bg-img h2{
+    font-family: "Noto Serif JP";
+    font-weight: 500;
+    font-size: 26px;
+    /* letter-spacing: 0.1em; */
+    text-align: left;
+    color: #040200;
+    background-color: #fefefe;
+    line-height: 28px;
+    margin-bottom: 9px;
+    display: inline-block;
+  }
+
+  #service p{
+font-family: "Noto Serif JP";
+/* font-weight: 300; */
+font-size: 16px;
+letter-spacing: 0.1em;
+line-height: 32px;
+text-align: left;
+color: #fefefe;
+padding-top: 9px;
+  }
+
+  #service .service-content {
+    margin-top: 79px;
+    width: 327px;
+background-color: #fefefe;
+padding: 24px;
+border-radius: 15px;
+  }
+
+  #service .service-content .img01{
+    padding-bottom: 16px;
+  }
+
+  #service .service-content .img02{
+    display: block;
+    width: 239px;
+    margin: 0 auto;
+  }
+
+  #service .service-content h3{
+    font-family: "Noto Serif JP";
+font-weight: 500;
+font-size: 23px;
+letter-spacing: 0.1em;
+text-align: left;
+color: #040200;
+padding-top: 22px;
+  }
+
+  #service .service-content p{
+font-family: "Noto Serif JP";
+font-weight: normal;
+font-size: 13px;
+letter-spacing: 0.1em;
+line-height: 26px;
+text-align: left;
+color: #040200;
+
+  }
+  .service-content .service_button{
+    display: inline-block;
+    display: flex;
+    width: 285px;
+    height: 68px;
+    background-color: #c11920;
+    position: relative;
+    border-radius: 50px;
+    margin-top: 24px;
+  }
+  
+  .service-content .service_button p{
+    font-family: YuGothic;
+    font-weight: bold !important;
+    font-size: 17px !important;
+    letter-spacing: 0.4em;
+    color: #fefefe !important;
+    position: absolute;
+    left: 50px;
+    top:15px;
+  }
+  
+  .service-content .service_button img{
+    width: 46px;
+    height:20px;
+    margin-top: 23.5px;
+    position: absolute;
+    left: -13px;
+  }
+
+  #company .content{
+    width: 327px;
+    margin: 0 auto;
+    padding-top: 159px;
+  }
+
+  #company .content .img01{
+    margin-top: 42px;
+  }
+
+  #company{
+    padding-bottom: 80px;
+  }
+  #company .content dl{
+    padding-top: 37px;
+    font-family: "Noto Serif JP";
+font-weight: normal;
+font-size: 13px;
+letter-spacing: 0.2em;
+line-height: 13px;
+text-align: left;
+color: #fefefe;
+
+  }
+
+  #company .content dl dt{
+    padding-bottom: 14px;
+  }
+
+  #company .content dl dd{
+    padding-bottom: 22px;
+  }
+
+  #company .content .img02{
+    margin-top: 29px;
+    width: 100%;
+  }
+
+  #company .content .google-map{
+    margin-top: 70px;
+    background-color: beige;
+    width: 327px;
+    height: 233px;
+  }
+
+  #contact{
+    padding-top: 62px;
+    padding-bottom: 86px;
+  }
+  #contact .content{
+    width: 327px;
+    margin: 0 auto;
+  }
+  #contact .txtTitle .title {
+    font-family: "EB Garamond" !important;
+    font-weight: normal !important;
+    font-size: 30px !important;
+    letter-spacing: 0.2em !important;
+    text-align: center !important;
+    color: #040200;
+      line-height: 39px !important;
+  }
+
+  #contact .txtTitle{
+    margin-bottom: 46px;
+  }
+
+  #contact .contact_form p{
+    padding-bottom: 18px;
+  }
+
+  #contact .txtTitle .sub{
+    font-family: "Noto Serif JP";
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.4em;
+    line-height: 31px;
+    text-align: center;
+    color: #040200 !important;
+    
+  }
+
+  #contact .contact_form p{
+    font-family: "Noto Serif JP";
+font-weight: 500;
+font-size: 12px;
+letter-spacing: 0.1em;
+line-height: 26px;
+text-align: center;
+color: #040200;
+  }
+
+  #contact .contact_form .row{
+    margin-bottom: 0px;
+  }
+  #contact .contact_form label{
+    padding-top: 28px;
+    font-family: YuGothic;
+font-weight: bold;
+font-size: 13px;
+letter-spacing: 0.4em;
+text-align: left;
+padding-bottom: 9px;
+
+  }
+
+  #contact .contact_form .row{
+    flex-direction: column;
+    width: 327px;
+  }
+
+  #contact .contact_form .row input{
+    width: 327px;
+    height: 50px;
+  }
+
+  #contact .contact_form textarea{
+    width: 327px;
+    height: 140px;
+  }
+  #contact .contact_form .alert{
+    width: 327px;
+    margin-top: 37px;
+    height: 177px;
+  }
+
+  #contact .contact_form{
+    width: 327px;
+  }
+
+  #contact .contact_form .alert p{
+    width: 279px;
+    font-family: YuGothic;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #040200;
+    
+  }
+
+  #contact .contact_form .checkbox{
+font-family: YuGothic;
+font-weight: bold;
+font-size: 12px;
+letter-spacing: 0.2em;
+text-align: left;
+color: #040200;
+padding-top: 24px;
+    padding-bottom: 46px;
+  }
+  #contact .contact_form .alert .title{
+    width: 279px;
+    font-family: YuGothic;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #040200;
+    font-weight: bold;
+  }
+  footer{
+    height: 36px;
+    width: 100%;
+  }
+  footer p{
+    margin-top: 14px;
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .sample{
+    height: 200px;
+  }
+}

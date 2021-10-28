@@ -1,0 +1,125 @@
+
+
+<div class="main-background">
+  <div class="special-page-top">
+    <h1>" Chapter 1: <br class="m">ありのままの美しさ "</h1>
+    <p class="pc">Special Collection</p>
+    <button class="pc"><a href="#">BUY NOW</a></button>
+    <p class="m">We spent a day for every moment one.</p>
+    <button class="m"><a href="#">SHOP NOW</a></button>
+  </div>
+  <style>
+    .main-background {
+      background-image: url('{{ "chapter-top.png" | asset_url }}');
+      background-size: cover;
+      height: 734px;
+    }
+
+
+    @media screen and (max-width: 480px) {
+      .main-background {
+        background-image: url('{{ "chapter-top.png" | asset_url }}');
+        background-position: center;
+        height: 737px;
+      }
+    }
+  </style>
+</div>
+
+
+
+
+<div class="special-page">
+  <h1>Chapter 1: <br class="m">ありのままの美しさ </h1>
+  <p class="p-padding">足し算ではなく引き算から生まれた、<br class="m">ありのままの美しさ。<br>
+    気品漂うシンプルな姿は、<br class="m">どんなシーンにもフィットする。</p>
+
+  <p class="p-padding">お気に入りの花を<br class="m">ベッドサイドに</p>
+  <p>カゴいっぱいのjuicyな<br class="m">フルーツをダイニングに</p>
+  <p>口紅とハンカチを入れて<br class="m">特別なディナータイムに</p>
+  <p>サンドウィッチを詰めて<br class="m">コーヒー片手にピクニックに。</p>
+
+  <p class="p-padding">With you.<br>
+    あらゆるシーンで、<br class="m">あなたと一緒に特別な時間を。</p>
+
+  <div class="spacial-img01">
+    <img src="{{ "chapter002.png" | asset_url }}" alt="">
+  </div>
+
+
+  <p class="pc">凛と立った持ち手と、チャーミングな丸みを帯びたボディ。<br>
+    このままの姿、シンプルな裸のままの美しさ。</p>
+
+  <p class="p-padding">たとえば、おうちのリビングで。</p>
+  <p>差し込む日の光、流れる水の音、<br class="m">ここにあるあなたの生活。</p>
+  <p>そのままのあなたにやさしく寄り添い<br>
+    この時間こそが特別なんだと<br class="m">語りかけます。</p>
+
+  <div class="row page-content">
+    <div class="image_content">
+      <img src="{{ "chapter003.png" | asset_url }}g" alt="" class="img_01">
+      <img src="{{ "chapter001.png" | asset_url }}" alt="" class="img_02">
+    </div>
+    <div class="content-right">
+      <h3>手元から<br class="pc">あなたと<br class="m">あなたの今日を彩る</h3>
+      <p>お気に入りをたずさえて街を歩けば<br>
+        今日のあなたの気分さえも<br class="m">コーディネート。<br>
+        のんびり食事に、スキップしながら<br class="m">ショッピングに。<br>
+        チャーミングで可愛らしい<br class="m">あなたを彩ります。</p>
+    </div>
+    
+    
+  </div>
+  <div class="row special-image">
+    <div class="slide"><ul class="slider">
+      <li><a href="#"><img src="{{ "chapter005.png" | asset_url }}g" alt=""></a></li>
+      <li><a href="#"><img src="{{ "chapter005.png" | asset_url }}g" alt=""></a></li>
+      <li><a href="#"><img src="{{ "chapter005.png" | asset_url }}g" alt=""></a></li>
+      <li><a href="#"><img src="{{ "chapter005.png" | asset_url }}g" alt=""></a></li>
+      <li><a href="#"><img src="{{ "chapter005.png" | asset_url }}g" alt=""></a></li>
+  </ul></div>
+    <div class="slide">
+      <ul class="slider">
+        <li><a href="#"><img src="{{ "chapter004.png" | asset_url }}" alt=""></a></li>
+        <li><a href="#"><img src="{{ "chapter004.png" | asset_url }}" alt=""></a></li>
+        <li><a href="#"><img src="{{ "chapter004.png" | asset_url }}" alt=""></a></li>
+        <li><a href="#"><img src="{{ "chapter004.png" | asset_url }}" alt=""></a></li>
+        <li><a href="#"><img src="{{ "chapter004.png" | asset_url }}" alt=""></a></li>
+    </ul>
+    </div>
+  </div>
+  <div class="special-page-last pc">
+    <p>コーヒー片手にちょっとひと息。<br>
+      なにもしない時間も、思わずあふれたため息も。ありのままで愛しいあなたのそばに。</p>
+  </div>
+
+  <button class="button">
+    <a href="#">BUY NOW</a>
+  </button>
+</div>
+
+<style>
+  header .header-content{
+    border-bottom: 1px solid #FFFFFF !important;
+}
+
+
+
+.slick-next {
+    right: 7px;
+    top: 17px;
+}
+.slick-prev {
+  left: 7px;
+  top: 17px;
+}
+
+</style>
+
+<script>
+  $('.slider').slick({
+    autoplay:true,
+    autoplaySpeed:5000,
+    // dots:true,
+});
+</script>

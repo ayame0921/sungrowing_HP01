@@ -1,0 +1,82 @@
+@charset "UTF-8";
+#header {
+  font-family: "EB Garamond", sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #FEFEFE;
+  width: 100%;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 999;
+  height: 70px;
+}
+
+#header h1 {
+  display: inline-block;
+}
+
+#header h1 img {
+  width: 100px;
+  height: 98px;
+  margin-top: 60px;
+  margin-left: 30px;
+}
+
+#header .nav01c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header .nav01c li {
+  margin-right: 32px;
+  text-align: center;
+}
+
+#header .nav01c li a {
+  position: relative;
+  display: block;
+}
+
+#header .nav01c li a span {
+  display: inline-block;
+  width: 22px;
+  height: 16.93px;
+  margin-right: 12px;
+}
+
+#header .nav01c li a::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  /*線の形状*/
+  width: 90%;
+  height: 1px;
+  background: #fff;
+  /*アニメーションの指定*/
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: scale(0.1, 1);
+          transform: scale(0.1, 1);
+  /*X方向0、Y方向1*/
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  /*上部中央基点*/
+}
+
+#header .nav01c li a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  /*X方向にスケール拡大*/
+}
+/*# sourceMappingURL=header.css.map */

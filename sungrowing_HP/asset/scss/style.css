@@ -1,0 +1,873 @@
+@charset "UTF-8";
+#header {
+  font-family: "EB Garamond", sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #FEFEFE;
+  width: 100%;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 999;
+  height: 70px;
+}
+
+#header h1 {
+  display: inline-block;
+}
+
+#header h1 img {
+  width: 100px;
+  height: 98px;
+  margin-top: 60px;
+  margin-left: 30px;
+}
+
+#header .nav01c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header .nav01c li {
+  margin-right: 32px;
+  text-align: center;
+}
+
+#header .nav01c li a {
+  position: relative;
+  display: block;
+}
+
+#header .nav01c li a span {
+  display: inline-block;
+  width: 22px;
+  height: 16.93px;
+  margin-right: 12px;
+}
+
+#header .nav01c li a::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  /*線の形状*/
+  width: 90%;
+  height: 1px;
+  background: #fff;
+  /*アニメーションの指定*/
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: scale(0.1, 1);
+          transform: scale(0.1, 1);
+  /*X方向0、Y方向1*/
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  /*上部中央基点*/
+}
+
+#header .nav01c li a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  /*X方向にスケール拡大*/
+}
+
+@-webkit-keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+
+.bg-half {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  /*Scrollテキストの描写*/
+  /* 線の描写 */
+}
+
+.bg-half .bgMov {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.bg-half .bgMov #bgvideo {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-60%, -50%);
+          transform: translate(-60%, -50%);
+  width: 100%;
+  height: 2100px;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.bg-half .bg-red {
+  width: 100vh;
+  height: 100vh;
+  background-color: #c11920;
+  position: fixed;
+  z-index: -1;
+  margin-left: 55%;
+}
+
+.bg-half .sideTxLeftin {
+  position: fixed;
+  width: 60px;
+  line-height: 60px;
+  font-weight: bold;
+  height: 100vh;
+  font-family: "EB Garamond", serif;
+  font-size: 0.15vw;
+  text-align: center;
+  letter-spacing: 8px;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  left: 0;
+  transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+}
+
+.bg-half .sideTxRightin {
+  position: fixed;
+  width: 60px;
+  line-height: 60px;
+  font-weight: bold;
+  height: 100vh;
+  font-family: "EB Garamond", serif;
+  font-size: 0.15vw;
+  text-align: center;
+  letter-spacing: 8px;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  right: 0;
+}
+
+.bg-half .scrolldown1 {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  /*全体の高さ*/
+  height: 50px;
+}
+
+.bg-half .scrolldown1 span {
+  /*描画位置*/
+  position: absolute;
+  left: -24px;
+  top: -20px;
+  /*テキストの形状*/
+  color: #eee;
+  font-family: "EB Garamond", serif;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.bg-half .scrolldown1::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 5px;
+  /*線の形状*/
+  width: 1px;
+  height: 20px;
+  background: #eee;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+  -webkit-animation: pathmove 1.4s ease-in-out infinite;
+          animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+.bg-half #visual-area {
+  position: relative;
+  width: 70%;
+  height: 50vh;
+  text-align: center;
+  margin: auto;
+}
+
+.bg-half #visual-area .maintxBox {
+  text-align: left;
+  -webkit-transform: translate(20%, 60%);
+          transform: translate(20%, 60%);
+  position: relative;
+}
+
+.bg-half #visual-area .maintxBox .mainTxt h1 {
+  display: inline-block;
+  font-size: 4.2rem;
+  font-family: "EB Garamond", serif;
+  font-weight: normal;
+  letter-spacing: 8px;
+  line-height: 80px;
+}
+
+.bg-half #visual-area .maintxBox .subTxt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bg-half #visual-area .maintxBox .subTxt h2 {
+  display: inline-block;
+  background-color: #fff;
+  color: black;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: normal;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.bg-half #visual-area .maintxBox .subTxt p {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: normal;
+}
+
+.bg-half #visual-area .maintxBox .subTxt .mainLogo {
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+.bg-half #visual-area .maintxBox .subTxt .mainLogo img {
+  display: inline-block;
+  width: 100%;
+}
+
+.bg-half #visual-area .maintxBox .otherTxt {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: normal;
+}
+
+#aboutus {
+  display: block;
+  height: 1080px;
+  width: 100%;
+  position: relative;
+}
+
+#aboutus .wrapper {
+  width: 66.6666%;
+  margin: 0 auto;
+}
+
+#aboutus .wrapper .aboutBox {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  width: 66.6666%;
+  height: 43%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#aboutus .wrapper .aboutBox .boxImg {
+  height: 100%;
+  margin: 0 0.2%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+#aboutus .wrapper .aboutBox .boxImg .boxImgTop {
+  -webkit-box-flex: 1.7;
+      -ms-flex: 1.7;
+          flex: 1.7;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+#aboutus .wrapper .aboutBox .boxImg .boxImgTop .Aimg1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 8px 0 -8px;
+  width: 100%;
+  display: inline-block;
+}
+
+#aboutus .wrapper .aboutBox .boxImg .boxImgTop .Aimg2 {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  width: 100%;
+  display: inline-block;
+  padding-right: 8px;
+}
+
+#aboutus .wrapper .aboutBox .boxImg .boxImgBtm {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  margin-top: 8px;
+}
+
+#aboutus .wrapper .aboutBox .boxImg .boxImgBtm img {
+  display: inline-block;
+  width: 100%;
+}
+
+#aboutus .wrapper .aboutBox .boxTxt {
+  height: 100%;
+  margin: 0 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#aboutus .wrapper .aboutBox .boxTxt h2 {
+  display: inline-block;
+  font-size: 320%;
+  line-height: 20px;
+  font-family: "EB Garamond", serif;
+  letter-spacing: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#aboutus .wrapper .aboutBox .boxTxt .txt1 {
+  display: inline-block;
+  font-size: 110%;
+  line-height: 15px;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 5px;
+  font-weight: 500;
+  margin-top: 30px;
+  background-color: #fff;
+  color: black;
+}
+
+#aboutus .wrapper .aboutBox .boxTxt .txt2 {
+  display: inline-block;
+  font-size: 65%;
+  line-height: 20px;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 2.5px;
+  font-weight: 550;
+  margin-top: 20px;
+}
+
+#aboutus .bgAbout {
+  position: absolute;
+  width: 45%;
+  bottom: 0;
+  right: 0;
+}
+
+#aboutus .bgAbout img {
+  display: inline-block;
+  width: 100%;
+}
+
+#business {
+  display: block;
+  height: 1080px;
+  width: 100%;
+  position: relative;
+}
+
+#business .wrapper {
+  width: 66.6666%;
+  margin: 0 auto;
+}
+
+#business .wrapper .busiBox {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  width: 66.6666%;
+  height: 43%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#business .wrapper .busiBox .boxImg {
+  width: 47%;
+}
+
+#business .wrapper .busiBox .boxImg .boxImgTop {
+  position: absolute;
+  -webkit-transform: translate(10%, 10%);
+          transform: translate(10%, 10%);
+}
+
+#business .wrapper .busiBox .boxImg .boxImgTop img {
+  display: block;
+  width: 90%;
+}
+
+#business .wrapper .busiBox .boxImg .boxImgTop2 {
+  position: absolute;
+  -webkit-transform: translate(0%, 30%);
+          transform: translate(0%, 30%);
+  width: 120%;
+  z-index: -1;
+}
+
+#business .wrapper .busiBox .boxImg .boxImgTop2 img {
+  display: block;
+  width: 39%;
+}
+
+#business .wrapper .busiBox .boxTxt {
+  height: 100%;
+  width: 200%;
+  margin: 0 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#business .wrapper .busiBox .boxTxt .txtTitle {
+  -webkit-transform: translate(0%, -60%);
+          transform: translate(0%, -60%);
+}
+
+#business .wrapper .busiBox .boxTxt .txtTitle .title {
+  display: inline-block;
+  font-size: 320%;
+  line-height: 20px;
+  font-family: "EB Garamond", serif;
+  letter-spacing: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#business .wrapper .busiBox .boxTxt .txtTitle .sub {
+  display: block;
+  font-size: 80%;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+#business .wrapper .busiBox .boxTxt .txtTitle2 {
+  -webkit-transform: translate(0%, -10%);
+          transform: translate(0%, -10%);
+}
+
+#business .wrapper .busiBox .boxTxt .txtTitle2 .title {
+  display: block;
+  font-size: 170%;
+  font-family: "EB Garamond", serif;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+#business .wrapper .busiBox .boxTxt .txtTitle2 .sub {
+  display: inline;
+  font-size: 120%;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 3px;
+  line-height: 1px;
+  font-weight: 600;
+  background-color: #fff;
+  color: black;
+}
+
+#business .wrapper .busiBox .boxTxt .txtTitle2 .border {
+  position: absolute;
+  top: 100px;
+  width: 165%;
+  -webkit-transform: translate(-40px, 0%);
+          transform: translate(-40px, 0%);
+  height: 1px;
+  background: #fff;
+  z-index: -5;
+}
+
+#business .wrapper .busiBox .boxTxt .txtTitle2 .desc {
+  position: absolute;
+  font-size: 60%;
+  font-family: "Noto Serif JP", serif;
+  line-height: 20px;
+  letter-spacing: 2.5px;
+  margin-top: 15px;
+  font-weight: 550;
+}
+
+#business2 {
+  display: block;
+  width: 100%;
+}
+
+#business2 .busiEff1 {
+  display: block;
+  height: 60vh;
+  width: 100%;
+  position: relative;
+}
+
+#business2 .busiEff1 .wrapper {
+  width: 66.6666%;
+  margin: 0 auto;
+}
+
+#business2 .busiEff1 .wrapper .containerBis {
+  position: absolute;
+  width: 66.6666%;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#business2 .busiEff1 .wrapper .containerBis .box {
+  display: inline-block;
+  width: 20%;
+  height: 20%;
+}
+
+#business2 .busiEff1 .wrapper .containerBis .circle {
+  border: 1px solid;
+  /* 線の太さと可視化 */
+  border-color: #fff;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+  text-align: center;
+}
+
+#business2 .busiEff1 .wrapper .containerBis .circle .text {
+  -webkit-transform: translate(0px, 80%);
+          transform: translate(0px, 80%);
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 2.5px;
+}
+
+#business2 .busiEff1 .wrapper .containerBis .circle .text h2 {
+  font-size: 2rem;
+}
+
+#business2 .busiEff1 .wrapper .containerBis .circle .text p {
+  font-size: 1.2rem;
+}
+
+#business2 .busiEff1 .wrapper .containerBis .circle2 {
+  border: 1px solid;
+  /* 線の太さと可視化 */
+  border-color: #fff;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+  text-align: center;
+}
+
+#business2 .busiEff1 .wrapper .containerBis .circle2 .text {
+  -webkit-transform: translate(0px, 80%);
+          transform: translate(0px, 80%);
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 2.5px;
+}
+
+#business2 .busiEff1 .wrapper .containerBis .circle2 .text h2 {
+  font-size: 2rem;
+}
+
+#business2 .busiEff1 .wrapper .containerBis .circle2 .text p {
+  font-size: 1.2rem;
+}
+
+#business2 .busiEff1 .wrapper .containerBis2 {
+  position: absolute;
+  width: 66.6666%;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate(0%, 20%);
+          transform: translate(0%, 20%);
+}
+
+#business2 .busiEff1 .wrapper .containerBis2 .bisleft {
+  -webkit-transform: translate(-45%, 0%);
+          transform: translate(-45%, 0%);
+}
+
+#business2 .busiEff1 .wrapper .containerBis2 .bisright {
+  -webkit-transform: translate(45%, 0%);
+          transform: translate(45%, 0%);
+}
+
+#business2 .busiEff1 .wrapper .containerBis2 .biscenter {
+  -webkit-transform: translate(10%, 35%);
+          transform: translate(10%, 35%);
+  text-align: center;
+}
+
+#business2 .busiEff1 .wrapper .containerBis2 .biscenter h2 {
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 20px;
+  font-size: 2rem;
+  background-color: #C11920;
+  line-height: 2rem;
+}
+
+#business2 .busiEff2 {
+  display: block;
+  height: 120vh;
+  width: 100%;
+}
+
+#business2 .busiEff2 .wrapper {
+  width: 66.6666%;
+  margin: 0 auto;
+}
+
+#business2 .busiEff2 .wrapper .goods .images {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+#business2 .busiEff2 .wrapper .goods .images .sun {
+  position: absolute;
+  width: 10%;
+  -webkit-transform: translate(70%, -50%);
+          transform: translate(70%, -50%);
+  z-index: 1;
+}
+
+#business2 .busiEff2 .wrapper .goods .images .img {
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  -webkit-transform: translate(10%, 0%);
+          transform: translate(10%, 0%);
+}
+
+#business2 .busiEff2 .wrapper .goods .images .line {
+  position: absolute;
+  -webkit-transform: translate(-60%, 90%);
+          transform: translate(-60%, 90%);
+  width: 80%;
+  z-index: -1;
+}
+
+#business2 .busiEff2 .wrapper .goods .textBox {
+  display: block;
+  width: 50%;
+  height: 50vh;
+  -webkit-transform: translate(0%, 98%);
+          transform: translate(0%, 98%);
+  position: relative;
+}
+
+#business2 .busiEff2 .wrapper .goods .textBox .title {
+  display: block;
+  font-size: 170%;
+  font-family: "EB Garamond", serif;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+#business2 .busiEff2 .wrapper .goods .textBox .subTitle {
+  display: inline;
+  font-size: 120%;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 3px;
+  line-height: 1px;
+  font-weight: 600;
+  background-color: #fff;
+  color: black;
+}
+
+#business2 .busiEff2 .wrapper .goods .textBox .desc {
+  position: absolute;
+  font-size: 60%;
+  font-family: "Noto Serif JP", serif;
+  line-height: 20px;
+  letter-spacing: 2.5px;
+  margin-top: 15px;
+  font-weight: 550;
+}
+
+#business2 .busiEff2 .wrapper .capital .images {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+#business2 .busiEff2 .wrapper .capital .images .sun {
+  position: absolute;
+  width: 10%;
+  -webkit-transform: translate(400%, -115%);
+          transform: translate(400%, -115%);
+  z-index: 1;
+}
+
+#business2 .busiEff2 .wrapper .capital .images .img {
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  -webkit-transform: translate(80%, -20%);
+          transform: translate(80%, -20%);
+}
+
+#business2 .busiEff2 .wrapper .capital .images .line {
+  position: absolute;
+  -webkit-transform: translate(60%, -98%);
+          transform: translate(60%, -98%);
+  width: 80%;
+  z-index: -1;
+}
+
+#business2 .busiEff2 .wrapper .capital .textBox {
+  display: block;
+  width: 50%;
+  height: 50vh;
+  -webkit-transform: translate(150%, 20%);
+          transform: translate(150%, 20%);
+  position: relative;
+}
+
+#business2 .busiEff2 .wrapper .capital .textBox .title {
+  display: block;
+  font-size: 170%;
+  font-family: "EB Garamond", serif;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+#business2 .busiEff2 .wrapper .capital .textBox .subTitle {
+  display: inline;
+  font-size: 120%;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 3px;
+  line-height: 1px;
+  font-weight: 600;
+  background-color: #fff;
+  color: black;
+}
+
+#business2 .busiEff2 .wrapper .capital .textBox .desc {
+  position: absolute;
+  font-size: 60%;
+  font-family: "Noto Serif JP", serif;
+  line-height: 20px;
+  letter-spacing: 2.5px;
+  margin-top: 15px;
+  font-weight: 550;
+}
+
+svg {
+  width: 100px;
+}
+
+svg path {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
+  -webkit-animation: line_animation 5s both;
+          animation: line_animation 5s both;
+  stroke: #fff;
+}
+
+@-webkit-keyframes line_animation {
+  0% {
+    stroke-dashoffset: 1000px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes line_animation {
+  0% {
+    stroke-dashoffset: 1000px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

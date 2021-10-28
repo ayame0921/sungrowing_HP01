@@ -1,0 +1,187 @@
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+    30% {
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
+}
+
+.bg-half {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    .bgMov {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        #bgvideo {
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -50%);
+            width: 100%;
+            height: 2100px;
+            min-height: 100%;
+            min-width: 100%;
+        }
+    }
+
+    .bg-red {
+        width: 100vh;
+        height: 100vh;
+        background-color: #c11920;
+        position: fixed;
+        z-index: -1;
+        margin-left: 55%;
+    }
+
+    .sideTxLeftin {
+        position: fixed;
+
+        width: 60px;
+        line-height: 60px;
+        font-weight: bold;
+        height: 100vh;
+        font-family: "EB Garamond", serif;
+        font-size: 0.15vw;
+        text-align: center;
+        letter-spacing: 8px;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        left: 0;
+        transform: rotateZ(180deg);
+        -ms-transform: rotateZ(180deg);
+        -moz-transform: rotateZ(180deg);
+        -webkit-transform: rotateZ(180deg);
+        -o-transform: rotateZ(180deg);
+    }
+
+    .sideTxRightin {
+        position: fixed;
+        width: 60px;
+        line-height: 60px;
+        font-weight: bold;
+        height: 100vh;
+        font-family: "EB Garamond", serif;
+        font-size: 0.15vw;
+        text-align: center;
+        letter-spacing: 8px;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        right: 0;
+    }
+    .scrolldown1 {
+        /*描画位置※位置は適宜調整してください*/
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        /*全体の高さ*/
+        height: 50px;
+    }
+
+    /*Scrollテキストの描写*/
+    .scrolldown1 span {
+        /*描画位置*/
+        position: absolute;
+        left: -24px;
+        top: -20px;
+        /*テキストの形状*/
+        color: #eee;
+        font-family: "EB Garamond", serif;
+        font-size: 1rem;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+
+    /* 線の描写 */
+    .scrolldown1::after {
+        content: "";
+        /*描画位置*/
+        position: absolute;
+        top: 5px;
+        /*線の形状*/
+        width: 1px;
+        height: 20px;
+        background: #eee;
+        /*線の動き1.4秒かけて動く。永遠にループ*/
+        animation: pathmove 1.4s ease-in-out infinite;
+        opacity: 0;
+    }
+
+    #visual-area {
+        position: relative;
+        width: 70%;
+        height: 50vh;
+        text-align: center;
+        margin: auto;
+        .maintxBox {
+            text-align: left;
+            transform: translate(20%, 60%);
+            position: relative;
+
+            .mainTxt {
+                h1 {
+                    display: inline-block;
+                    font-size: 4.2rem;
+                    font-family: "EB Garamond", serif;
+                    font-weight: normal;
+                    letter-spacing: 8px;
+                    line-height: 80px;
+                }
+            }
+            .subTxt {
+                display: flex;
+                h2 {
+                    display: inline-block;
+                    background-color: #fff;
+                    color: black;
+                    font-size: 1.2rem;
+                    letter-spacing: 5px;
+                    font-family: "Noto Serif JP", serif;
+                    font-weight: normal;
+                    margin-top: 40px;
+                    margin-bottom: 50px;
+                }
+                p {
+                    display: block;
+                    font-size: 0.8rem;
+                    letter-spacing: 2px;
+                    font-family: "Noto Serif JP", serif;
+                    font-weight: normal;
+                }
+                .mainLogo{
+                    margin-left: 100px;
+                    margin-top: 30px;
+                    img{
+                        display: inline-block;
+                        width: 100%;
+                    }
+                }
+            }
+            .otherTxt{
+                display: block;
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+                font-family: "Noto Serif JP", serif;
+                font-weight: normal;
+            }
+        }
+    }
+}

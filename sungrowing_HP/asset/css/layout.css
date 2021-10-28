@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* レイアウトのためのCSS */
+
+body{
+    background:#000;
+    font-family: 'Noto Sans JP', sans-serif;
+	color: #eee;
+	font-size:1rem;
+	line-height:1.85;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%; 
+	word-wrap: break-word;
+}
+
+*{box-sizing: border-box;}
+
+ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+	color: #eee;
+	text-decoration: none;
+    outline: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}

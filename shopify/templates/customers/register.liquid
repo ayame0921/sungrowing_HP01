@@ -1,0 +1,53 @@
+<!-- /templates/customers/register.liquid -->
+<div class="siginup-page">
+  <h2>Sign Up</h2>
+  <hr>
+  <div class="common-design">
+    <div class="container">
+      {% form 'create_customer' %}
+
+      {{ form.errors | default_errors }}
+
+      <div class="block">
+        <label class="sample-font" for="first_name">First Name</label>
+        <input class="sample-input" type="text" value="" name="customer[first_name]" size="30" />
+      </div>
+
+      <div class="block">
+        <label class="sample-font" for="last_name">Last Name</label>
+        <input class="sample-input" type="text" value="" name="customer[last_name]" size="30" />
+      </div>
+      
+      <div class="block">
+        <label class="sample-font" for="email">Email Address</label>
+        <input class="sample-input" type="email" value="" name="customer[email]" size="30" />
+      </div>
+      
+      <div class="block">
+        <label class="sample-font" for="password">Password</label>
+        <input class="sample-input" type="password" value="" name="customer[password]" size="30" />
+      </div>
+      
+
+      <input class="submit" type="submit" value="Create" />
+
+      {% endform %}
+
+    </div>
+  </div>
+</div>
+
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .site-title a{
+    color: black !important;
+  }
+  .change{
+     fill: rgb(0, 0, 0);
+}
+</style>

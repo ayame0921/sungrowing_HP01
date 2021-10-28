@@ -1,0 +1,285 @@
+<!-- セクション１ -->
+<section class="TopBottomM">
+    <div class="conteiner">
+        <div class="conteinerBox">
+            <div class="CBoxL" data-aos="fade-in">
+                <h2 class="CBocLmessage">たとえば、この時間を愛せたら。</h2>
+                <h3 class="CBocLtitle">CONCEPT</h3>
+                <p class="CBoxtext">あなたは<br class="SP">モノとどんな時を過ごしますか。</p>
+                <br>
+                <br>
+                <p class="CBoxtext">見て、触って、感じて。</p>
+                <p class="CBoxtext">ひとりで、誰かと、どんな場所で。</p>
+                <br>
+                <p class="CBoxtext">時間をかけるほどに<br class="SP">そのモノやかけた時間が愛しさを増し</p>
+                <p class="CBoxtext">自分の一部となっていきます。</p>
+                <br>
+                <p class="CBoxtext">そう　私と私の物語をつくるのは</p>
+                <p class="CBoxtext">私が選んだモノ、時間、<br class="SP">そして大切な人たち。</p>
+                <br>
+                <p class="CBoxtext">選んできたこれまでも　<br class="SP">これからの自分も抱きしめて。</p>
+                <br class="SP">
+                <p class="CBoxtext">いつもここにある　<br class="SP">my dear, 私をつくるもの。</p>
+                <br>
+                <br>
+            </div>
+            <div class="CBoxR" data-aos="fade-in">
+                <div class="CBoxRtop">
+                    <div class="CBocRbigimg">
+                    {{ 'topBodyRight.jpg' | asset_url | img_tag }}
+                    </div>
+                    <div class="CBocRsmallimg">
+                        {{ 'topBodyRightSmall.jpg' | asset_url | img_tag }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- セクション２ -->
+<section class="BottomM">
+    <div class="conteiner">
+        <div class="instagaramBox" data-aos="fade-in">
+            <a href="#" class="instagramtitle">＠sloranie_official</a>
+            <div class="instagramList">
+                {{ 'instagramListContent1.jpg' | asset_url | img_tag }}
+                {{ 'instagramListContent1.jpg' | asset_url | img_tag }}
+                {{ 'instagramListContent1.jpg' | asset_url | img_tag }}
+                {{ 'instagramListContent1.jpg' | asset_url | img_tag }}
+                {{ 'instagramListContent1.jpg' | asset_url | img_tag }}
+                {{ 'instagramListContent1.jpg' | asset_url | img_tag }}
+                {{ 'instagramListContent1.jpg' | asset_url | img_tag }}
+                {{ 'instagramListContent1.jpg' | asset_url | img_tag }}
+                {{ 'instagramListContent1.jpg' | asset_url | img_tag }}
+                {{ 'instagramListContent1.jpg' | asset_url | img_tag }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- セクション３ -->
+<div class="conteinerBox">
+    <div class="chapter">
+        <div class="CBoxL" id="mainvisual">
+            {{ 'chapter1.jpg' | asset_url | img_tag }}
+            <div class="SP">Special Collection</div>
+        </div>
+        <div class="CBoxR">
+            <div class="textBox">
+                <h2>Chapter 1: <br class="SP">ありのままの美しさ</h2>
+                <br class="SPnone">
+                <br class="SPnone">
+                <br class="SPnone">
+                <h3>Special Collection</h3>
+                <br>
+                <p>引き算の先にたどり着いた<br class="SP">Simple is the ultimate luxury.</p>
+                <p>ため息が出るほどの、ありのままの価<br class="SP">値（美しさ）を形にしたCollection。</p>
+                <br class="SPnone">
+                <br class="SPnone">
+                <div class="btnBox">
+                    <button>View Collection</button>         
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- セクション４ -->
+<div class="conteinerLeft">
+    <div class="conteinerBox">
+        <div class="collection" data-aos="fade-in">
+            <div class="CBoxL">
+                <div class="textBox">
+
+                    <h2>Basic Collection</h2>
+                    <br>
+                    <br class="SP">
+                    <br class="SP">
+                    <h4 class="SP">Thousands of stories</h4>
+                    <br class="SP">
+                    <p>人の手から生まれたstoryは、<br class="SP">時をかけてまた人の手に。</p>
+                    <p>持つ人とともに、新たなstoryを育み<br class="SP">生きるCollection。</p>
+                    <br class="SPnone">
+                    <br class="SPnone">
+                    <div class="btnBox">
+                        <button>View Collection</button>         
+                    </div>
+                </div>
+            </div>
+            <div class="CBoxR">
+                <div class="scrollItem">
+                    <div class="SBox">
+                        {% for product in collections.all.products %}
+                        <div class="PBox">
+                            <div class="Pflex">
+                                <a href="{{ product.url | within: collection }}">
+                                <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+                                </a>
+                                <a class="Ptitle" href="{{ product.url | within: collection }}">{{ product.title }}</a>
+                                <div class="Pprice">{{ product.price | money }}</div>
+                                {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- セクション5 -->
+<section class="BottomM">
+    <div class="conteiner">
+        <div class="special" data-aos="fade-in">
+            <h1>All Special Collection</h1>
+            <br>
+            <br>
+            <p>コレクション一覧</p>
+
+            <div class="specialcollectionList">
+                <div class="SPCL">
+                    <div class="SPCLback1"></div>
+                    <div class="SPCLtitle">
+                        <p>×Srolanie</p>
+                        <button>VIEW</button>
+                    </div>
+                </div>
+                <div class="SPCL">
+                    <div class="SPCLback2"></div>
+                    <div class="SPCLtitle">
+                        <p>×Srolanie</p>
+                        <button>VIEW</button>
+                    </div>
+                </div>
+                <div class="SPCL">
+                    <div class="SPCLback3"></div>
+                    <div class="SPCLtitle">
+                        <p>×Srolanie</p>
+                        <button>VIEW</button>
+                    </div>
+                </div>
+                <div class="SPCL">
+                    <div class="SPCLback4"></div>
+                    <div class="SPCLtitle">
+                        <p>×Srolanie</p>
+                        <button>VIEW</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- セクション６ -->
+<div class="backblue">
+    <div class="conteiner">
+        <div class="conteinerBox" data-aos="fade-in">
+            <div class="CBoxL">
+                <div class="CBoxs" id="mainvisual2">
+                    {{ 'OurStory.jpg' | asset_url | img_tag }}
+                </div>
+                <div class="CBocLtitle">Our Story</div>
+                <div class="underline">
+                    <a href="#" class="CBoxtext btnripple3">read more</a>
+                    <span></span>
+                </div>
+            </div>
+            <div class="CBoxR">
+                <div class="CBocRbigimg" data-aos-delay="300" id="mainvisual2">
+                    {{ 'OurStoryFot.jpg' | asset_url | img_tag }}
+                </div>
+                <div class="CBocRsmallimg">
+                    <p>Srolanieの作り手はカンボジアの女性たちです。彼女たちが培ったものづくりの技術は一級品。
+                        そこには、彼女たちの美しい人生の物語と未来への挑戦が詰まっています。</p>
+                </div>
+            </div>
+        </div>
+        <div class="BoxCenter" data-aos="fade-in">
+            <div class="material">
+                <div class="CBoxL" id="mainvisual2">
+                    {{ 'Material.jpg' | asset_url | img_tag }}
+                </div>
+                <div class="CBocLtitle" >Material</div>
+                <div class="underline SPnone">
+                    <a href="#" class="CBoxtext btnripple3" >read more</a>
+                    <span></span>
+                </div>
+                <br class="SP">
+                <p class="" >素材に使用している水草は、使うほどに地球環境を改善します。
+                <br class="SPnone">悪魔と呼ばれた水草に命を吹き込む、サスティナブル・プロダクトです。</p>
+                <br class="SP">
+                <div class="underline SP">
+                    <a href="#" class="CBoxtext btnripple3" >read more</a>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="conteinerLeft SPnone">
+        <div class="conteinerBox">
+            <div class="collection" data-aos="fade-in">
+                <div class="CBoxL">
+                    <div class="textBox">
+                        <h2>News & Column</h2>
+                        <br>
+                        <div class="underline">
+                            <a href="#" class="CBoxtext btnripple3" >read more</a>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="CBoxR">
+                    <div class="NewsList">
+                        <ul>
+                            {% for article in blogs['ニュース'].articles  %}
+                                <li><a href="{{ article.url }}">
+                                    <img class="btn_design" src="{{article.image.src | img_url: '1920x'}}" alt="">
+                                    <div class="text">
+                                        <div class="date">
+                                            <p>{{ article.created_at | date: "%Y.%m/%d" }}</p>
+                                        </div>
+                                        <div class="title">
+                                            <p>{{ article.title }}</p>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            {% endfor%}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="centerText">
+    <div class="blogheight blog-list SP">
+        <div class="page-title"><h2>News & Column</h2></div>
+        <div class="blog-list-content">
+        <ul>
+            {% paginate blogs['ニュース'].articles by 3 %}
+            {% for article in blogs['ニュース'].articles %}
+            <li class="btn_design"><a href="{{ article.url }}">
+                <img src="{{article.image.src | img_url: '1920x'}}" alt="">
+                <div class="text">
+                    <div class="date">
+                    <p>{{ article.created_at | date: "%Y.%m/%d" }}</p>
+                    </div>
+                    <div class="title">
+                    <p>{{ article.title }}</p>
+                    </div>
+                </div>
+            </a></li>
+            {% endfor%}
+            {% endpaginate%}
+        </ul>
+        <div class="underline SP">
+            <a href="#" class="CBoxtext btnripple3" >read more</a>
+            <span></span>
+        </div>
+        </div>
+    </div>
+</div>

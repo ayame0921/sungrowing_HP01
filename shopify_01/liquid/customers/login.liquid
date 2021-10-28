@@ -1,0 +1,44 @@
+<div class="login-page">
+  <h2>Login</h2>
+  <hr>
+  <div class="common-design">
+    <div class="container">
+      {% form 'customer_login' %}
+
+      {{ form.errors | default_errors }}
+      <div class="block">
+        <label for="customer_email" class="sample-font">Email Address</label>
+        <input class="sample-input" type="email" name="customer[email]" />
+      </div>
+      
+      <div class="block">
+        <label for="customer_password" class="sample-font">Password</label>
+        <input class="sample-input"　type="password" name="customer[password]" />
+      </div>
+
+      <p><a href="/pages/forget_password" class="forget">パスワードをお忘れですか？</a></p>
+      <hr class="center">
+      
+      <input class="submit" type="submit" value="Sign In" />
+  
+      {% endform %}
+  
+    <p><a href="/account/register">新規登録はこちら</a></p>
+    <hr class="left">
+    </div>
+    
+  </div>
+
+</div>
+
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .site-title a{
+    color: black !important;
+  }
+</style>

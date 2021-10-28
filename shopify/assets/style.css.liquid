@@ -1,0 +1,3003 @@
+header{
+    /* border-bottom: 1px solid #FFFFFF; */
+    color: #FFFFFF;
+    z-index: 1000;
+}
+header .header-content{
+    font-family: "Operetta 8";
+    width: 93%;
+    border-bottom: 1px solid #ffffff;
+    margin: 0 auto;
+}
+
+header:hover{
+    /* border-bottom: 1px solid #FFFFFF; */
+    color: #000000;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+img{
+    width: 100%;
+}
+.wrap {
+	animation: fadein 5s forwards;
+}
+@keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+.SP{
+    display: none;
+}
+
+/*ナビゲーションのスタイル*/
+.site-title a{
+      text-decoration: none;
+}
+.site-title a:hover{
+    color: #000000;
+}
+.headerShow .site-title a:hover{
+    color: #000000;
+    z-index: 1000;
+}
+
+.header-nav ul {
+display:-webkit-box;
+display:-ms-flexbox;
+display: flex;
+-webkit-box-pack: justify;
+-ms-flex-pack: justify;
+justify-content: space-between;
+}
+.header-nav ul li a {
+position: relative;
+}
+/*ホバーエフェクト*/
+.header-nav ul li a::after {
+/*マークのスタイル*/
+position: absolute;
+content: "";
+display: block;
+width: 10px;
+height: 10px;
+background-color: #000000;
+color: #000000;
+border-radius: 50%;
+top: -15px;
+left: calc(50% - 5px);
+/*不透明度0で非表示*/
+opacity: 0;
+/*アニメーションの速度設定*/
+-webkit-transition: all 0.6s ease;
+transition: all 0.6s ease;
+}
+.header-nav ul li a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+.header-nav ul li a:hover::after {
+/*不透明度1で表示*/
+opacity: 1;
+}
+
+
+
+/* 追加 */
+.topNav {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 99;
+	opacity: 1;
+}
+.topNav img{
+	opacity: 1;
+}
+
+.topNav.headerShow {
+	opacity: 1;
+    color: #000000;
+    background-color: #ffffffd9;
+    z-index: 1000;
+}
+.topNav.headerShow:hover {
+	opacity: 1;
+    color: #000000;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+.headerShow .header-content{
+    border-bottom: 0px solid #000000;
+    z-index: 1000;
+}
+/*ホバーエフェクト*/
+.headerShow .header-nav ul li a::after {
+/*マークのスタイル*/
+position: absolute;
+content: "";
+display: block;
+width: 10px;
+height: 10px;
+background-color: #000000;
+color: #000000;
+border-radius: 50%;
+top: -15px;
+left: calc(50% - 5px);
+/*不透明度0で非表示*/
+opacity: 0;
+/*アニメーションの速度設定*/
+-webkit-transition: all 0s ease;
+transition: all 0s ease;
+z-index: 1000;
+}
+.headerShow .header-nav ul li a:hover {
+    color: #000000;
+    text-decoration: none;
+    z-index: 1000;
+}
+.headerShow .header-nav ul li a:hover::after {
+/*不透明度1で表示*/
+opacity: 1;
+z-index: 1000;
+}
+
+
+/* topFV */
+.topFV {
+    background-image: url('{{ " PC_toppage_FV.jpg " | asset_url }}');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 1081px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.topFVmaterial{
+    background-image: url('{{ " MaiterialBack.jpg " | asset_url }}');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 1081px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.topFVchapter{
+    background-image: url('{{ " FVchapter.jpg " | asset_url }}');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 1081px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.topFVtext{
+    font-family: 'YuMincho';
+    font-weight: 250;
+    font-size: 42px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #fff;
+    
+}
+.topFVSmalltext{
+    font-size: 15px;
+    font-family: 'AnnabelleJF';
+}
+.topFVsmallBoxText{
+    font-family: "Operetta 8";
+    font-size: 12.5px;
+    padding: 10px 40px;
+    border: solid 1px #FFFFFF;
+    margin: 50px;
+
+    font-family: "Operetta 8";
+    font-weight: normal;
+    letter-spacing: 0.1em;
+
+}
+
+.topFVbottom{
+    height: 53px;
+    background-color: #8E968E;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.topFVbottomtext{
+    font-family: 'YuGothic';
+    font-weight: 250;
+    font-size: 17.5px;
+    letter-spacing: 0.2em;
+
+}
+
+/*== 波紋がふわっと広がる */
+
+.btnripple3{
+    /*波紋の基点とするためrelativeを指定*/
+	position: relative;
+    /*リンクの形状*/
+	display:inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    outline: none;
+}
+
+/*波形の設定*/
+.btnripple3:hover::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left:30%;
+    top:-10px;
+    /*波形の形状*/
+    border: 1px solid rgb(255, 255, 255);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /*はじめは不透明*/
+	opacity:1;
+    /*アニメーションの設定*/
+    animation:1s circleanime2 forwards;
+}
+
+/*波形が広がるアニメーション*/
+@keyframes circleanime2{
+	0%{
+	  transform: scale(0);
+	}
+	100%{
+		transform:scale(2);
+		opacity: 0;
+	}
+}
+
+/*矢印の設定*/
+.btnripple3::after {
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+}
+
+/*== 波紋がふわっと広がる */
+
+.CBoxtext.btnripple3{
+    /*波紋の基点とするためrelativeを指定*/
+	position: relative;
+    /*リンクの形状*/
+	display:inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+
+/*波形の設定*/
+.CBoxtext.btnripple3:hover::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left:20%;
+    top:-10px;
+    /*波形の形状*/
+    border: 1px solid rgb(0, 0, 0);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /*はじめは不透明*/
+	opacity:1;
+    /*アニメーションの設定*/
+    animation:1s circleanime2 forwards;
+}
+
+/*波形が広がるアニメーション*/
+@keyframes circleanime2{
+	0%{
+	  transform: scale(0);
+	}
+	100%{
+		transform:scale(2);
+		opacity: 0;
+	}
+}
+
+/*矢印の設定*/
+.CBoxtext.btnripple3::after {
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+}
+/* topFV.fin */
+
+/* topBody */
+.conteiner{
+    width: 100%;
+    padding: 0px 20%;
+    margin: 0 auto;
+}
+.TopBottomM{
+    padding: 225px 0;
+}
+.TopM{
+    padding-top: 225px;
+}
+.BottomM{
+    padding-bottom: 225px;
+}
+
+.conteinerBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+}
+.CBoxL{
+    width: 50%;
+}
+.CBoxL p{
+    font-family: 'YuMincho';
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 32px;
+    text-align: left;
+    color: #272727;
+}
+.CBoxL h3{
+    font-family: "Operetta 8";
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #000;
+    padding-bottom: 45px;
+}
+.SBox{
+    height: 485px;
+}
+.PBox{
+    display: inline-block;
+    margin:3%;
+}
+.collection .CBoxR .scrollItem .PBox img {
+    width: 325px;
+    height: 407px;
+    object-fit: cover;
+}
+.Pflex{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Ptitle{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    color: #4d4c4c;    
+    margin-top: 40px;
+}
+.Ptitle:hover{
+    color: #4d4c4c;
+    opacity: 0.8;
+}
+.Pprice{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #cdb699;
+}
+
+.CBoxR{
+    width: 50%;
+}
+.CBoxRtop{
+    width: 632px;
+    height: 1110px;
+}
+.CBocRbigimg{
+    max-width: 540px;
+    position: relative;
+    right: -100px;
+}
+.CBocRsmallimg{
+    max-width: 330px;
+    position: relative;
+    left: 0;
+    bottom: 175px;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    color: #272727;
+
+}
+.CBocLmessage{
+    font-size: 36px;
+    font-family: 'YuMincho';
+    font-weight: 250;
+    letter-spacing: 0.025em;
+    text-align: left;
+    color: #000;
+    margin-bottom: 110px;
+}
+.CBocLtitle{
+    font-size: 24px;
+}
+.CBoxtext{
+    line-height: 32px;
+    font-size: 16px;
+    font-family: 'DNP 秀英角ゴシック銀 Std';
+}
+.instagaramBox{
+    text-align: center;
+    width: 100%;
+}
+.instagramtitle{
+    font-size: 36px;
+    font-family: "Operetta 8";
+    font-weight: 250;
+    letter-spacing: 0.03em;
+    line-height: 45px;
+    color: #000;
+}
+.instagramtitle:hover{
+    text-decoration: none;
+    color: #000;
+}
+.instagramList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 45px 0 0 0;
+}
+.instagramList img{
+    width: 19%;
+    margin: 0.2% 0.2%;
+}
+.chapter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #F7F4ED;
+    height: 770px;
+    width: 100%;
+}
+.chapter .CBoxL{
+    width: 45%;
+}
+.chapter .CBoxR{
+    width: 55%;
+    color: #000000;
+
+}
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual {
+    justify-content: center;
+    /* スクロールで画像を拡大させた際に、横スクロールが出ないよう設定 */
+    overflow: hidden;
+}
+  /*
+  スクロールしたタイミングでjQueryにて画像を拡大するが、
+  その際に画像が縮まないよう「flex-shrink: 0;」を設定する
+  */
+#mainvisual img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+#mainvisual2 {
+    justify-content: center;
+    /* スクロールで画像を拡大させた際に、横スクロールが出ないよう設定 */
+    overflow: hidden;
+}
+  /*
+  スクロールしたタイミングでjQueryにて画像を拡大するが、
+  その際に画像が縮まないよう「flex-shrink: 0;」を設定する
+  */
+#mainvisual2 img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+#mainvisual3 {
+    justify-content: center;
+    /* スクロールで画像を拡大させた際に、横スクロールが出ないよう設定 */
+    overflow: hidden;
+}
+  /*
+  スクロールしたタイミングでjQueryにて画像を拡大するが、
+  その際に画像が縮まないよう「flex-shrink: 0;」を設定する
+  */
+#mainvisual3 img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.textBox{
+    padding: 5%;
+}
+.collection .textBox{
+    width: 600px;
+}
+.textBox h2{
+    font-size: 36px;
+    font-family: 'YuMincho';
+    font-weight: 250;
+    color: #000;
+    font-family: "Operetta 8";
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #000;
+}
+.chapter .textBox h2{
+    font-size: 36px;
+    font-family: 'YuMincho';
+    font-weight: 250;
+    color: #000;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+.textBox h3{
+    font-family: "Operetta 18";
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #272727;
+
+}
+.textBox p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 25px;
+    text-align: left;
+    color: #272727;
+}
+.btnBox button{
+    width: 60%;
+    padding: 0px  100px;
+    color: #FFFFFF;
+    background-color: #8E968E;
+    font-size: 20px;
+    font-family: "Operetta 8";
+    font-weight: 250;
+    letter-spacing: 0.03em;
+    line-height: 45px;
+    text-align: center;
+}
+
+.conteinerLeft{
+    padding: 225px 0 225px 20%; 
+}
+
+.collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+}
+.backblue .collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
+    height:  420px;
+}
+.collection .CBoxL{
+    width: 600px;
+    color: #000000;
+}
+.collection .CBoxR {
+    width: 70%;
+}
+.backblue .collection .CBoxL{
+    width: 400px;
+    color: #000000;
+}
+.backblue .collection .CBoxR{
+    width: 80%;
+}
+.collection .CBoxR img{
+    width: 100%;
+    height: 245px;
+}
+.SBox{
+    width: 50%;
+}
+.scrollItem{
+    margin-left: 10px;
+    overflow-x: scroll;
+    white-space:nowrap;
+    height: 520px;
+    /* IE, Edge 対応 */
+    -ms-overflow-style: none;
+    /* Firefox 対応 */
+    scrollbar-width: none;
+}
+.scrollItem::-webkit-scrollbar {
+    display:none;
+}
+.collection .btnBox button{
+    background-color: #8E968E;
+    color:#ffffff;
+    border: solid 1px #8E968E;
+    margin-bottom: 75px;
+}
+.NewsList{
+    overflow-x: scroll;
+    white-space:nowrap;
+    width: 100%;
+    height:  420px;
+    /* IE, Edge 対応 */
+    -ms-overflow-style: none;
+    /* Firefox 対応 */
+    scrollbar-width: none;
+}
+.NewsList::-webkit-scrollbar {
+    display:none;
+}
+
+.NewsList li{
+    display: inline-block;
+    margin: 2%;
+    width: 285px;
+    height: 362.5px;
+    background-color: #f5f5f5;
+    box-shadow: 2.5px 2.5px 9px rgba(0, 0, 0, 0.16);
+    object-fit: cover;
+}
+.date p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 7.5px;
+    letter-spacing: 0.01em;
+    line-height: 17.5px;
+    text-align: left;
+    color: #4e4e4e;
+}
+.title p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 12.5px;
+    letter-spacing: 0.01em;
+    line-height: 17.5px;
+    text-align: left;
+    color: #383838;  
+}
+.NewsList .text{
+    padding: 20px 25px;
+}
+.backblue .collection .textBox{
+    padding: 5%;
+    width: 300px;
+}
+
+.textBox p{
+    font-size: 16px;
+    line-height: 32px;
+}
+.btnBox button{
+    padding: 0px 0px;
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: #8E968E;
+}
+.btnBox button:hover{
+    background-color: #8e968e66;
+}
+
+.conteinerLeft{
+    width: 100%;
+    padding: 225px 0 225px 20%; 
+}
+.special {
+    text-align: center;
+}
+.special h1{
+    font-family: 'YuMincho';
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    color: #000;
+
+}
+.special p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 0px;
+    text-align: center;
+    color: #272727;
+}
+.specialcollectionList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+}
+.SPCL{
+    position: relative;
+    width: 45%;
+    height: 271.5px;
+    vertical-align: middle;
+    margin: 10px;
+}
+.SPCLback1{
+    background-image: url('{{ " SPCL1.jpg " | asset_url }}');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+.SPCLback2{
+    background-image: url('{{ " SPCL2.jpg " | asset_url }}');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.SPCLback3{
+    background-image: url('{{ " SPCL3.jpg " | asset_url }}');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.SPCLback4{
+    background-image: url('{{ " SPCL4.jpg " | asset_url }}');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.SPCLtitle{
+    position: relative;
+    color: #FFFFFF;
+    top: -60%;
+    font-size: 14px;
+}
+.SPCLtitle p{
+    font-family: "Operetta 8";
+    font-weight: 250;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    
+}
+.SPCLtitle button{
+    background-color: #8E968E;
+    padding: 5px 35px;
+    margin-top: 25px;
+    font-family: 'YuMincho';
+    font-weight: 250;
+    font-size: 13.5px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    z-index: 10;
+}
+.SPCLtitle button:hover{
+    background-color: #8e968e8a;
+    z-index: 10;
+}
+
+.backblue{
+    background-color: #EBF0F2;
+    padding-top: 110px;
+}
+
+.backblue .conteinerBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.backblue .CBoxL{
+    width: 40%;
+}
+.backblue .CBoxL img{
+    width: 264.5px;
+    height: 356px;
+    margin-bottom: 40px;
+    
+}
+
+.backblue .CBoxR{
+    width: 60%;
+    margin-bottom: 0px;
+}
+.backblue .CBocRbigimg{
+    max-width: 511.5px;
+    height: 689px;
+    position: relative;
+    left: 150px;
+}
+.backblue .CBocRsmallimg{
+    min-width: 406px;
+    height: 199px;
+    position: relative;
+    top: -100px;
+    left: 0px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    padding: 43px 25px;
+}
+.backblue .CBocLtitle{
+    font-family: "Operetta 8";
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 0.08em;
+    line-height: 45px;
+    color: #000;
+    
+}
+.backblue .underline{
+    max-width: 94px;
+    border-bottom: solid 1px #000000;
+    margin-bottom: 25px;
+}
+.underline{
+    max-width: 94px;
+    border-bottom: solid 1px #000000;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.backblue .underline a{
+    text-decoration: none;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    line-height: 22.5px;
+    text-align: left;
+    color: #272727;
+}
+.underline a{
+    text-decoration: none;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    line-height: 22.5px;
+    text-align: left;
+    color: #272727;
+}
+.backblue .CBoxtext a{
+    line-height: 30px;
+    font-size: 16px;
+    font-family: 'DNP 秀英角ゴシック銀 Std';
+    border-bottom: solid 1px #000000;
+}
+.materialTop{
+    text-align: center;
+}
+.materialTop .topFVtext {
+    position: relative;
+    top: -600px;
+}
+.materialTop .topFVSmalltext {
+    position: relative;
+    top: -600px;
+    color: #ffffff;
+}
+.BoxCenter{
+    display: flex;
+    justify-content: center;
+}
+.backblue .CBoxtext p{
+    line-height: 30px;
+    font-size: 16px;
+    font-family: 'DNP 秀英角ゴシック銀 Std';
+}
+
+.backblue .material img{
+    margin-top: 125px;
+    width: 500px;
+    height: 671px;
+}
+.material .CBoxL{
+    width: 100%;
+}
+.material p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 22.5px;
+    text-align: left;
+    color: #272727;
+}
+.collection .textBox h2{
+    font-family: "Operetta 8";
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.08em;
+    line-height: 45px;
+    text-align: left;
+    color: #272727;    
+}
+.collectionBox{
+    text-align: start;
+}
+/* topBody.fin */
+
+/* material_page */
+.material_page h1{
+    font-family: "Operetta 8";
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #000;    
+    margin: 0 0 45px 0;
+    display: inline-block;
+    position: relative;
+}
+.material_page h1:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /*下線の上下位置調整*/
+    display: inline-block;
+    width: 60px; /*下線の幅*/
+    height: 1px; /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%); /*位置調整*/
+    background-color: #000000; /*下線の色*/
+}
+
+.Materialintro{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.Materialintro h2{
+    font-size: 24px;
+    line-height: 48px;
+    font-family: 'YuMincho';
+    font-weight: 250;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #272727;
+    
+
+}
+.Materialintro img{
+    margin: 225px 0 110px 0;
+}
+.Materialintro p{
+    font-size: 16px;
+    line-height: 32px;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #272727;  
+}
+.SPnone .Materialintro p{
+    text-align: start;
+}
+.Processing {
+    background: linear-gradient(90deg,white 0%, white 49%, #EBF0F2 49%, #EBF0F2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 225px;
+    padding-bottom: 225px;
+}
+.processingfot1{
+    position: relative;
+    right: 200px;
+    width: 750px;
+    
+}
+.processingfot2{
+    position: relative;
+    right: -180px;
+    width: 600px;
+    
+}
+.contentLeft{
+    text-align: start;
+}
+.contentLeft p{
+    position: relative;
+    right: -180px;
+}
+.devilBox{
+    padding: 450px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+.devil_angel{
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.devil_angel img{
+    position: relative;
+    width: 750px;
+    margin-bottom: 110px;
+}
+.deviltext {
+    text-align: start;
+}
+.deviltext p{
+    font-size: 16px;
+    line-height: 32px;
+    margin-left: 350px;
+}
+.textB h2{
+    padding-bottom: 45px;
+}
+/* material_page.fin */
+
+
+/* chapter_page */
+.chapter_page h1{
+    font-size: 36px;
+    margin: 50px 0;
+    display: inline-block;
+    position: relative;
+}
+
+.chapter_page .conteinerBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+}
+.chapter_page .CBoxR{
+    width: 50%;
+    padding-bottom: 250px;
+}
+.chapter_page .CBoxL{
+    width: 50%;
+}
+.chapter_page .CBocLbigimg{
+    max-width: 540px;
+    position: relative;
+    right: 30px;
+}
+.chapter_page .CBocLsmallimg{
+    max-width: 331.5px;
+    position: relative;
+    top: -150px;
+    left: 225px;
+}
+.chapter_page .CBocRmessage{
+    font-size: 36px;
+}
+.chapter_page .CBocRtitle{
+    font-size: 24px;
+}
+.chapter_page .CBoxtext{
+    line-height: 32px;
+    font-size: 16px;
+}
+
+.chapterBox .CBoxR{
+    width: 450px;
+    padding-bottom: 0px;
+    margin:0px 15px 100px 15px;
+}
+.chapterBox .CBoxL{
+    width: 450px;
+    margin:0px 15px 100px 15px;
+}
+
+.chapterBox .conteinerBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
+}
+.CTbox{
+    width: 80%;
+    text-align: start;
+}
+.CTBtn{
+    width: 80%;
+    display: flex;
+    text-align: center;
+    font-size: 24px;
+    color: #FFFFFF;
+    background-color: #8E968E;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+/* chapter_page.fin */
+
+/* ourstory */
+.OurImg{
+    padding-top: 219px;
+}
+.OurBox{
+    position: relative;
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+    top: -50px;
+    background-color: #ffffff;
+    z-index: 10;
+}
+.centerText{
+    text-align: center;
+}
+
+.OSsc1 h1{
+    font-size: 36px;
+    margin: 0px 0  50px 0;
+    display: inline-block;
+    position: relative;
+    font-family: "Operetta 8";
+    font-weight: 250;
+    font-size: 36px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #000;    
+}
+.OSsc1 h1:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /*下線の上下位置調整*/
+    display: inline-block;
+    width: 60px; /*下線の幅*/
+    height: 1px; /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%); /*位置調整*/
+    background-color: #000000; /*下線の色*/
+}
+.OSsubContent{
+    font-family: 'YuMincho';
+    font-weight: 250;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    line-height: 48px;
+    text-align: center;
+    color: #272727;
+    margin-top: 65px;
+}
+.OSimg2{
+    margin-top: 225px;
+    margin-bottom: 107px;
+}
+.OSsc2 .OStitle{
+    font-family: YuMincho;
+    font-weight: 250;
+    font-size: 36px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #000;
+    margin-bottom: 29px;
+}
+.titleBox p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    line-height: 25px;
+    text-align: center;
+    color: #272727;
+}
+.OSsc2 .OStext{
+    margin-top: 107px;
+    margin-bottom: 100px;    
+}
+.OSsc2 .OStext p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: center;
+    color: #272727;
+}
+.OSproduct{
+    margin-bottom: 207px;
+}
+.OSsc3{
+    /* background-image: url('{{ " OS4.jpg " | asset_url }}'); */
+    padding-top: 114px;
+    padding-bottom: 170px;
+    background: transparent;
+}
+.OSsc3back{
+    background-image: url('{{ " OS4.jpg " | asset_url }}');
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.OSsc3 h1{
+    font-size: 36px;
+    margin: 0px 0  50px 0;
+    display: inline-block;
+    position: relative;
+    font-family: "Operetta 8";
+    font-weight: 250;
+    font-size: 36px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+}
+.OSsc3 h1:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /*下線の上下位置調整*/
+    display: inline-block;
+    width: 60px; /*下線の幅*/
+    height: 1px; /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%); /*位置調整*/
+    background-color: #ffffff; /*下線の色*/
+}
+.OSsc3 .OSsubContent{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    margin-top: 65px;
+    margin-bottom: 0px;
+}
+.factory img{
+    margin-top: 425px;
+    width: 770px;
+}
+.Fbox span{
+    font-family: 'YuMincho';
+    font-weight: 250;
+    font-size: 100px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #fff;
+}
+.Fbox h2{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 0.07em;
+    line-height: 25px;
+    color: #fff;
+}
+.Fbox p{
+    position: relative;
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 32px;
+    text-align: left;
+    color: #fff; 
+    left: 140px;
+}
+.Fbox .samllBox{
+    margin-top: 45px;
+}
+.Fbox {
+    width: 662.5px;
+    margin:30px auto 0 auto;
+}
+
+.centerLine{
+    width: 50%;
+    text-align: start;
+}
+.startText{
+    text-align: start;
+}
+.endText{
+    text-align: end;
+}
+.rightmargin{
+    margin-right: 10%;
+}
+
+.OSsc4{
+    padding-top: 227px;
+    padding-bottom: 225px;
+}
+.sc4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.sc4L{
+    width: 48%;
+}
+.sc4R{
+    width: 48%;
+}
+.sc4R h2{
+    font-family: 'YuMincho';
+    font-weight: 250;
+    font-size: 36px;
+    letter-spacing: 0.05em;
+    line-height: 50px;
+    text-align: left;
+    color: #313131;
+    margin-top: 109px;
+    margin-bottom: 47px;
+}
+.sc4R p{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 32px;
+    text-align: left;
+    color: #313131;    
+}
+.sc4R span{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    line-height: 30px;
+    text-align: left;
+    color: #4500ff;
+}
+.OSsc5 img{
+    margin-bottom: 45px;
+}
+.OSsc5 h2{
+    font-family: 'YuMincho';
+    font-weight: 250;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    line-height: 43px;
+    text-align: left;
+    color: #000;
+    margin-bottom: 36px;
+}
+.OSsc5 .CBocLtitle{
+    font-family: "Operetta 8";
+    font-weight: 250;
+    font-size: 36px;
+    letter-spacing: 0.08em;
+    line-height: 45px;
+    text-align: left;
+    color: #272727;    
+}
+.OSsc5 .CBoxtext{
+    font-family: "DNP ShueiGoGinStd";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    color: #272727;
+    padding-bottom: 10px;
+    border-bottom: 0px;
+}
+/* ourstory.fin */
+
+
+/* スマホ */
+@media screen and (max-width: 480px){
+    /* topFV */
+    .topFV {
+        background-image: url('{{ " PC_toppage_FV.jpg " | asset_url }}');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        min-height: auto;
+        max-height: 730px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .SP{
+        display: block;
+    }
+    .topFVmaterial{
+        background-image: url('{{ " MaiterialBack.jpg " | asset_url }}');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 737px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .topFVchapter{
+        background-image: url('{{ " FVchapter.jpg " | asset_url }}');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 1081px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .topFVtext{
+        font-family: "Operetta 8";
+        font-weight: normal;
+        font-size: 24px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #fff;
+        
+    }
+    .topFVSmalltext{
+        font-family: 'AnnabelleJF';
+        font-weight: normal;
+        font-size: 7.5px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #fff;             
+    }
+    .topFVsmallBoxText{
+        font-family: "Operetta 8";
+        padding: 7px 23px;
+        border: solid 1px #FFFFFF;
+        margin: 77px auto;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        color: #fff;
+    }
+    .topFVSmalltext span{
+        display: none;
+    }
+    .topFVbottom{
+        display: none;
+    }
+    .topFVbottomtext{
+        font-family: 'YuGothic';
+        font-weight: 250;
+        font-size: 17.5px;
+        letter-spacing: 0.2em;
+    
+    }
+    
+    /*== 波紋がふわっと広がる */
+    
+    .btnripple3{
+        /*波紋の基点とするためrelativeを指定*/
+        position: relative;
+        /*リンクの形状*/
+        display:inline-block;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        outline: none;
+    }
+    
+    /*波形の設定*/
+    .btnripple3:hover::before {
+        content: '';
+        /*絶対配置で波形の位置を決める*/
+        position: absolute;
+        left:30%;
+        top:-10px;
+        /*波形の形状*/
+        border: 1px solid rgb(255, 255, 255);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        /*はじめは不透明*/
+        opacity:1;
+        /*アニメーションの設定*/
+        animation:1s circleanime2 forwards;
+    }
+    
+    /*波形が広がるアニメーション*/
+    @keyframes circleanime2{
+        0%{
+          transform: scale(0);
+        }
+        100%{
+            transform:scale(2);
+            opacity: 0;
+        }
+    }
+    
+    /*矢印の設定*/
+    .btnripple3::after {
+        content: '';
+        /*絶対配置で矢印の位置を決める*/
+        position: absolute;
+    }
+    
+    /*== 波紋がふわっと広がる */
+    
+    .CBoxtext.btnripple3{
+        /*波紋の基点とするためrelativeを指定*/
+        position: relative;
+        /*リンクの形状*/
+        display:inline-block;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        outline: none;
+    }
+    
+    /*波形の設定*/
+    .CBoxtext.btnripple3:hover::before {
+        content: '';
+        /*絶対配置で波形の位置を決める*/
+        position: absolute;
+        left:20%;
+        top:-10px;
+        /*波形の形状*/
+        border: 1px solid rgb(0, 0, 0);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        /*はじめは不透明*/
+        opacity:1;
+        /*アニメーションの設定*/
+        animation:1s circleanime2 forwards;
+    }
+    
+    /*波形が広がるアニメーション*/
+    @keyframes circleanime2{
+        0%{
+          transform: scale(0);
+        }
+        100%{
+            transform:scale(2);
+            opacity: 0;
+        }
+    }
+    
+    /*矢印の設定*/
+    .CBoxtext.btnripple3::after {
+        content: '';
+        /*絶対配置で矢印の位置を決める*/
+        position: absolute;
+    }
+    /* topFV.fin */
+    
+    /* topBody */
+    .conteiner{
+        width: 100%;
+        padding: 50px 0 0 0;
+        margin: 0 auto;
+    }
+    .conteinerBox {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .CBoxL{
+        width: 100%;
+        text-align: center;
+    }
+    .CBoxL p{
+        font-family: 'YuMincho';
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        line-height: 32px;
+        text-align: center;
+        color: #272727;
+        
+    }
+    .CBoxL h3{
+        font-family: "Operetta 8";
+        font-weight:250;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        color: #000;
+        padding-bottom: 75px;
+    }
+    .SBox{
+        height: 350px;
+    }
+    .PBox{
+        display: inline-block;
+        margin: 2%;
+
+    }
+    .collection .CBoxR .scrollItem .PBox img {
+        width: 200px;
+        height: 250px;
+    }
+    .Pflex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Ptitle{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 14px;
+        text-align: center;
+        color: #4d4c4c;
+        margin-top: 22.5px;
+    }
+    .Pprice{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: #cdb699;    
+        margin-top: 10px;    
+    }
+    
+    .CBoxR{
+        width: 100%;
+        margin-top: 75px;
+    }
+    .CBoxRtop {
+        width: 100%;
+        height: 100%;
+    }
+    .CBocRbigimg{
+        max-width: 310px;
+        width: 310px;
+        position: relative;
+        margin-left: 0;
+        right: 0;
+        text-align: end;
+    }
+    .CBocRbigimg img{
+        text-align: end;
+        margin-left: 50px;
+    }
+    .CBocRsmallimg{
+        max-width: none;
+        width: 225px;
+        position: relative;
+        top:  -100px;
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        margin-left: 10px;
+        color: #272727;
+    
+    }
+    .CBocLmessage{
+        margin-top: 50px;
+        font-family: 'YuMincho';
+        font-weight: 300;
+        font-size: 20px;
+        letter-spacing: 0.07em;
+        line-height: 30px;
+        text-align: center;
+        color: #000;
+        margin-bottom: 75px;
+    }
+    .CBocLtitle{
+        font-size: 24px;
+    }
+    .CBoxtext{
+        line-height: 32px;
+        font-size: 16px;
+        font-family: 'DNP 秀英角ゴシック銀 Std';
+    }
+    .instagaramBox{
+        text-align: center;
+        width: 100%;
+    }
+    .instagramtitle{
+        font-family: "Operetta 8";
+        font-weight: 250;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        color: #000;
+    }
+    .instagramtitle:hover{
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .instagramList{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 75px 0px;
+    }
+    .instagramList img{
+        width: 46%;
+        margin: 2% 2%;
+    }
+    .instagramList span{
+        display: none;
+    }
+    .chapter {
+        margin-top: 75px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        background-color: #f7f4ed;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        text-align: center;
+    }
+    .chapter .CBoxL{
+        width: 100%;
+        margin-bottom: 75px;
+        min-height: 250px;
+    }
+    .chapter .CBoxR{
+        width:100%;
+        color: #000000;
+    }
+    .chapter .SP{
+        font-family: 'AnnabelleJF';
+        font-weight: normal;
+        font-size: 24px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        top: -145px;
+    }
+    .textBox{
+        padding: 0%;
+    }
+    .textBox h2{
+        font-family: 'YuMincho';
+        font-weight: 250;
+        font-size: 24px;
+        line-height: 35px;
+        text-align: center;
+        color: #000;        
+    }
+    .backblue .blogheight .underline{
+        margin: 0 auto;
+    }
+    .textBox h3{
+        display: none;
+    }
+    .textBox p{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 25px;
+        text-align: left;
+        color: #272727;
+    }
+    .btnBox button{
+        padding: 0px 0px;
+        color: #FFFFFF;
+        background-color: #8E968E;
+        font-size: 20px;
+        font-family: "Operetta 8";
+        font-weight: 250;
+        letter-spacing: 0.03em;
+        line-height: 45px;
+        text-align: left;
+        font-family: "Operetta 8";
+        margin: 75px 0 150px 0;
+        height: 50px;
+    }
+    
+    .conteinerLeft{
+        padding: 150px 0 0px 0; 
+    }
+    
+    .collection {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .backblue .conteinerBox {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collection .CBoxL{
+        width: 100%;
+        color: #000000;
+    }
+    .collection .CBoxR {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+    .backblue .collection .CBoxL{
+        width: auto;
+        color: #000000;
+    }
+    .backblue .collection .CBoxR{
+        width: 80%;
+    }
+    .collection .CBoxR img{
+        width: 100%;
+        height: 245px;
+    }
+    .SBox{
+        width: 100%;
+    }
+    .scrollItem{
+        overflow-x: scroll;
+        white-space:nowrap;
+        /* IE, Edge 対応 */
+        -ms-overflow-style: none;
+        /* Firefox 対応 */
+        scrollbar-width: none;
+        width: unset;
+        height: 350px;
+    }
+    .scrollItem::-webkit-scrollbar {
+        display:none;
+    }
+    .textBox h4{
+        font-family: "Operetta 8";
+        font-weight: 250;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        line-height: 45px;
+        color: #272727;        
+    }
+    .NewsList{
+        overflow-x: scroll;
+        white-space:nowrap;
+        width: 100%;
+        height:  370px;
+        /* IE, Edge 対応 */
+        -ms-overflow-style: none;
+        /* Firefox 対応 */
+        scrollbar-width: none;
+    }
+    .NewsList::-webkit-scrollbar {
+        display:none;
+    }
+    
+    .NewsList li{
+        display: inline-block;
+        margin-right: 1%;
+        width: 285px;
+        height: 362.5px;
+        background-color: #f5f5f5;
+        box-shadow: 2.5px 2.5px 9px rgba(0, 0, 0, 0.16);
+    }
+    .date p{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 7.5px;
+        letter-spacing: 0.01em;
+        line-height: 17.5px;
+        text-align: left;
+        color: #4e4e4e;
+    }
+    .title p{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 12.5px;
+        letter-spacing: 0.01em;
+        line-height: 17.5px;
+        text-align: left;
+        color: #383838;  
+    }
+    .NewsList .text{
+        padding: 20px 25px;
+    }
+    .backblue .collection .textBox{
+        padding: 5%;
+        width: 300px;
+    }
+    .blogheight.blog-list{
+        height: auto;
+    }
+    .backblue .collection {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .SPnone{
+        display: none;
+    }
+
+    .textBox p{
+        text-align: center;
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 32px;
+        color: #272727;
+        
+    }
+    .chapter .btnBox{
+        width: 100%;
+        text-align: center;
+    }
+    .btnBox button{
+        padding: 0px 0px;
+        color: #FFFFFF;
+        background-color: #8E968E;
+        width: 95%;
+        font-family: 'YuMincho';
+        font-weight: 250;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        line-height: 40px;
+        text-align: center;
+    }
+    .btnBox button:hover{
+        background-color: #8e968e66;
+    }
+    .collection .textBox {
+        width: 100%;
+    }
+    .conteinerLeft{
+        width: 100%;
+        padding: 150px 0 0px 0px; 
+    }
+    .special {
+        text-align: center;
+    }
+    .special h1{
+        font-family: YuMincho;
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        color: #272727;
+        
+    
+    }
+    .special p{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        line-height: 22.5px;
+        text-align: center;
+        color: #272727;
+        
+    }
+    .specialcollectionList{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding-bottom: 100px;
+    }
+    .SPCL{
+        position: relative;
+        width: 100%;
+        height: 192px;
+        vertical-align: middle;
+        margin: 10px;
+    }
+    .SPCLback1{
+        background-image: url('{{ " SPCL1.jpg " | asset_url }}');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .SPCLback2{
+        background-image: url('{{ " SPCL2.jpg " | asset_url }}');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .SPCLback3{
+        background-image: url('{{ " SPCL3.jpg " | asset_url }}');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .SPCLback4{
+        background-image: url('{{ " SPCL4.jpg " | asset_url }}');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .SPCLtitle{
+        position: relative;
+        color: #FFFFFF;
+        top: -70%;
+        font-size: 14px;
+    }
+    .SPCLtitle p{
+        font-family: "Operetta 8";
+        font-weight: 250;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        color: #fff;
+        
+    }
+    .SPCLtitle button{
+        background-color: #8E968E;
+        padding: 5px 35px;
+        margin-top: 25px;
+        font-family: 'YuMincho';
+        font-weight: 250;
+        font-size: 13.5px;
+        letter-spacing: 0.03em;
+        color: #fff;
+    }
+    .SPCLtitle button:hover{
+        background-color: #8e968e8a;
+    }
+    
+    .backblue{
+        background-color: #EBF0F2;
+        padding-top: 0;
+        padding-bottom: 140px;
+    }
+    
+    .backblue .conteinerBox {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .backblue .CBoxL{
+        width: 100%;
+    }
+    .backblue .CBoxL img{
+        width: 100%;
+        height: 375px;
+        margin-bottom: 75px;
+        margin-top: 0;
+    }
+    .backblue .conteiner .CBoxR img{
+        margin-top: 75px;
+        width: 250px;
+    }
+    
+    .backblue .CBoxR{
+        width: 100%;
+        padding-bottom: 130px;
+    }
+    .backblue .CBocRbigimg{
+        max-width: 310px;
+        height: auto;
+        position: relative;
+        left: 0;
+        text-align: end;
+    }
+    .backblue .CBocRsmallimg{
+        min-width: 270px;
+        width: 270px;
+        height: 165px;
+        position: relative;
+        top: -30px;
+        left: 0px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        padding: 25px 25px;
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        line-height: 22.5px;
+        text-align: left;
+        color: #272727;
+        
+    }
+    .backblue .CBocLtitle{
+        font-family: "Operetta 8";
+        font-weight: 250;
+        font-size: 24px;
+        letter-spacing: 0.08em;
+        line-height: 45px;
+        text-align: left;
+        color: #000;
+        
+    }
+    .backblue .conteiner{
+        padding: 100px 45px 0 45px;
+    }
+    .backblue .underline{
+        max-width: 78px;
+        margin-top: 5px;
+        border-bottom: solid 1px #000000;
+        margin-bottom: 25px;
+    }
+    .backblue .underline a{
+        text-decoration: none;
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        line-height: 0px;
+        text-align: left;
+        color: #272727;
+        
+    }
+    .underline{
+        max-width: 78px;
+        margin-top: 5px;
+        border-bottom: solid 1px #000000;
+        margin-bottom: 25px;
+    }
+    .underline a{
+        text-decoration: none;
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        line-height: 0px;
+        text-align: left;
+        color: #272727;
+    }
+    .backblue .CBoxtext a{
+        line-height: 30px;
+        font-size: 16px;
+        font-family: 'DNP 秀英角ゴシック銀 Std';
+        border-bottom: solid 1px #000000;
+    }
+    
+    .BoxCenter{
+        display: flex;
+        justify-content: center;
+    }
+    .backblue .CBoxtext p{
+        line-height: 30px;
+        font-size: 16px;
+        font-family: 'DNP 秀英角ゴシック銀 Std';
+    }
+    
+    .backblue .CBoxL img {
+        width: 100%;
+        height: 375px;
+        margin-bottom: 40px;
+    }
+    .material .CBoxL{
+        width: 100%;
+    }
+    .material p{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        line-height: 28px;
+        text-align: left;
+        color: #272727;
+        
+    }
+    .collection .textBox h2{
+        font-family: "Operetta 8";
+        font-weight: 250;
+        font-size: 24px;
+        letter-spacing: 0.08em;
+        line-height: 45px;
+        text-align: center;
+        color: #272727;    
+        width: 100%;    
+    }
+    .collectionBox{
+        text-align: start;
+    }
+    /* topBody.fin */
+    
+    /* material_page */
+    .material_page .SPnone h1{
+        display: none;    
+    }
+    .material_page h1{
+        font-family: "Operetta 8";
+        font-weight: 250;
+        font-size: 24px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: #000;
+        margin-top: 0;   
+        display: none;    
+    }
+    .material_page h1:before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px; /*下線の上下位置調整*/
+        display: inline-block;
+        width: 60px; /*下線の幅*/
+        height: 1px; /*下線の太さ*/
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translate(-50%); /*位置調整*/
+        background-color: #000000; /*下線の色*/
+    }
+    
+    .Materialintro{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .Materialintro h2{
+        font-family: 'YuMincho';
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 32px;
+        text-align: center;
+        color: #272727;
+             
+    }
+    .Materialintro.SPnone h2{
+        display: none;
+    }
+    .Materialintro img{
+        margin: 150px 0 75px 0;
+    }
+    .Materialintro p{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 32px;
+        text-align: left;
+        color: #272727;
+        
+    }
+    .Processing {
+        background: linear-gradient(90deg,white 0%, white 45%, #EBF0F2 45%, #EBF0F2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+    .Processing .Materialintro p{
+        font-family: 'YuMincho';
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.00em;
+        line-height: 32px;
+        text-align: left;
+        color: #272727;
+        padding-left: 30px;
+    }
+    .processingfot1{
+        position: relative;
+        left: 0px;
+        right: unset;
+        width: 280px;
+        
+    }
+    .processingfot2{
+        position: relative;
+        margin-left: 80px;
+        right: 0px;
+        width: 280px;
+        text-align: end;
+    }
+    .contentLeft{
+        text-align: start;
+        width: 100%;
+    }
+    .contentLeft p{
+        position: relative;
+        right: 0px;
+    }
+    .devilBox{
+        padding-top: 0px;
+        height: 620px;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    
+    }
+    .devil_angel{
+        display: flex;
+        text-align: start;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .devil_angel img{
+        position: relative;
+        width: 350px;
+        margin-bottom: 100px;
+    }
+    .deviltext {
+        text-align: start;
+    }
+    .deviltext p{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        line-height: 28px;
+        text-align: left;
+        color: #272727;
+        padding:0 20px;
+        margin-bottom: 150px;
+        margin-left: 0;
+    }
+    /* material_page.fin */
+    
+    
+    /* chapter_page */
+    .chapter_page h1{
+        font-size: 36px;
+        margin: 50px 0;
+        display: inline-block;
+        position: relative;
+    }
+    
+    .chapter_page .conteinerBox{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .chapter_page .CBoxR{
+        width: 100%;
+        padding-bottom: 250px;
+    }
+    .chapter_page .CBoxL{
+        width: 100%;
+    }
+    .chapter_page .CBocLbigimg{
+        max-width: 540px;
+        position: relative;
+        right: 30px;
+    }
+    .chapter_page .CBocLsmallimg{
+        max-width: 331.5px;
+        position: relative;
+        top: -150px;
+        left: 225px;
+    }
+    .chapter_page .CBocRmessage{
+        font-size: 36px;
+    }
+    .chapter_page .CBocRtitle{
+        font-size: 24px;
+    }
+    .chapter_page .CBoxtext{
+        line-height: 32px;
+        font-size: 16px;
+    }
+    
+    .chapterBox .CBoxR{
+        width: 450px;
+        padding-bottom: 0px;
+        margin:0px 15px 100px 15px;
+    }
+    .chapterBox .CBoxL{
+        width: 450px;
+        margin:0px 15px 100px 15px;
+    }
+    
+    .chapterBox .conteinerBox{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .chapter .textBox h2{
+        font-family: 'YuMincho';
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 35px;
+        text-align: center;
+        color: #000;
+        
+        text-align: center;
+    }
+    .CTbox{
+        width: 80%;
+        text-align: start;
+    }
+    .CTBtn{
+        width: 80%;
+        display: flex;
+        text-align: center;
+        font-size: 24px;
+        color: #FFFFFF;
+        background-color: #8E968E;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    /* chapter_page.fin */
+    
+    /* ourstory */
+    .OurtopFV{
+        background-image: url('{{ " OSback.jpg " | asset_url }}');
+        height: 375px;
+        background-size: contain;
+    }
+    .OurImg{
+        display: none;
+    }
+    .OurBox{
+        position: relative;
+        width: 90%;
+        height: 50px;
+        margin: 0 auto;
+        top: 325px;
+        background-color: #ffffff;
+        z-index: 10;
+    }
+    .centerText{
+        text-align: center;
+    }
+    
+    .OSsc1 h1{
+        font-size: 36px;
+        margin: 0px 0  50px 0;
+        display: inline-block;
+        position: relative;
+        font-family: "Operetta 8";
+        font-weight: 250;
+        font-size: 24px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: #000;        
+        z-index: 15;
+        top: -25px;
+        
+    }
+    .OSsc1 h1:before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px; /*下線の上下位置調整*/
+        display: inline-block;
+        width: 40px; /*下線の幅*/
+        height: 1px; /*下線の太さ*/
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translate(-50%); /*位置調整*/
+        background-color: #000000; /*下線の色*/
+    }
+    .OSsubContent{
+        font-family: 'YuMincho';
+        font-weight: 250;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 32px;
+        text-align: center;
+        color: #272727; 
+        margin-top: 0px;
+        margin-bottom: 150px;
+    }
+    .OSsc2 .OStitle{
+        font-family: 'YuMincho';
+        font-weight: 250;
+        font-size: 24px;
+        letter-spacing: 0.05em;
+        line-height: 45px;
+        text-align: center;
+        color: #000;
+        margin-bottom: 29px;
+    }
+    .OSimg2{
+        margin-top: 83px;
+        margin-bottom: 75px;
+    }
+    .titleBox p{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        line-height: 25px;
+        text-align: center;
+        color: #272727;
+    }
+    .OSsc2 .OStext{
+        margin-top: 75px;
+        margin-bottom: 100px;  
+        text-align: start;  
+    }
+    .OSsc2 .OStext p{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 32px;
+        text-align: start;
+        color: #272727;
+    }
+    .OSproduct{
+        margin-bottom: 207px;
+    }
+    .OSsc3{
+        background: transparent;
+        padding-top: 114px;
+        padding-bottom: 170px;
+    }
+    .OSsc3back{
+        background-image: url('{{ " OSSPback.jpg " | asset_url }}');
+        min-height: 100vh;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .OSsc3 h1{
+        font-family: "Operetta 8";
+        font-weight: 250;
+        font-size: 24px;
+        letter-spacing: 0.05em;
+        line-height: 45px;
+        text-align: center;
+        color: #fff;
+        
+    }
+    .OSsc3 h1:before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px; /*下線の上下位置調整*/
+        display: inline-block;
+        width: 40px; /*下線の幅*/
+        height: 1px; /*下線の太さ*/
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translate(-50%); /*位置調整*/
+        background-color: #ffffff; /*下線の色*/
+    }
+    .OSsc3 .OSsubContent{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        line-height: 32px;
+        text-align: center;
+        color: #fff;
+        margin-top: 65px;
+    }
+    .factory img{
+        margin-top: 150px;
+        width: 100%;
+    }
+    .Fbox span{
+        font-family: 'YuMincho';
+        font-weight: 250;
+        font-size: 50px;
+        letter-spacing: 0.05em;
+        line-height: 0px;
+        text-align: center;
+        color: #fff;        
+    }
+    .Fbox h2{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.07em;
+        line-height: 25px;
+        text-align: left;
+        color: #fff;
+    }
+    .Fbox p{
+        position: relative;
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 32px;
+        text-align: left;
+        color: #fff; 
+        left: 0px;
+    }
+    .Fbox .samllBox{
+        margin-top: 30px;
+        width: 100%;
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 32px;
+        text-align: left;
+        color: #fff;
+        padding-left: 50px;
+        
+    }
+    .Fbox {
+        width: 100%;
+        margin:30px auto 0 auto;
+    }
+    
+    .centerLine{
+        width: 50%;
+        text-align: start;
+    }
+    .startText{
+        text-align: start;
+    }
+    .endText{
+        text-align: end;
+    }
+    .rightmargin{
+        margin-right: 0;
+    }
+    
+    .OSsc4{
+        padding-top: 150px;
+        padding-bottom: 0px;
+    }
+    .sc4 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .collection .btnBox button {
+        background-color: #ffffff00;
+        color: #8e968e;
+        border: solid 1px #8e968e;
+        margin-bottom: 75px;
+    }
+    .sc4L{
+        width: 100%;
+    }
+    .sc4L h2{
+        font-family: 'YuMincho';
+        font-weight: 250;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        line-height: 48px;
+        text-align: left;
+        color: #313131;
+            
+    }
+    .sc4L img{
+        margin: 75px auto;
+    }
+
+    .sc4R{
+        width: 100%;
+    }
+    .sc4R h2{
+        font-family: 'YuMincho';
+        font-weight: 250;
+        font-size: 36px;
+        letter-spacing: 0.05em;
+        line-height: 50px;
+        text-align: left;
+        color: #313131;
+        margin-top: 109px;
+        margin-bottom: 47px;
+    }
+    .sc4R p{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        line-height: 32px;
+        text-align: left;
+        color: #313131; 
+        padding: 0 20px;   
+    }
+    .sc4R span{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        line-height: 30px;
+        text-align: left;
+        color: #4500ff;
+    }
+    .OSsc5 img{
+        margin-bottom: 45px;
+    }
+    .OSsc5 h2{
+        font-family: 'YuMincho';
+        font-weight: 250;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        line-height: 43px;
+        text-align: left;
+        color: #000;
+        margin-bottom: 36px;
+    }
+    .OSsc5 .CBocLtitle{
+        font-family: "Operetta 8";
+        font-weight: 250;
+        font-size: 36px;
+        letter-spacing: 0.08em;
+        line-height: 45px;
+        text-align: left;
+        color: #272727;    
+    }
+    .OSsc5 .CBoxtext{
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+        text-align: left;
+        color: #272727;
+        padding-bottom: 10px;
+        border-bottom: 0px;
+    }
+    /* ourstory.fin */
+    .blogheight.blog-list li{
+        height: 100px;
+    }
+    .blogheight.blog-list{
+        margin-bottom: 0px;
+    }
+    .blogheight.blog-list .underline a{
+        text-decoration: none;
+        font-family: "DNP ShueiGoGinStd";
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        line-height: 0px;
+        text-align: center;
+        color: #272727;
+    }
+    .blogheight.blog-list .underline{
+        text-align: center;
+        margin: 50px auto 0px auto;
+    }
+    .TopBottomM {
+        padding: 0;
+    }
+    .BottomM{
+        padding-bottom: 0px;
+    }
+}
+
+
+/* 長谷川さん担当ページ修正css */
+.img-content img{
+    width: 100%;
+    height: 1140px;
+}
+.img-content{
+    width: 100%;
+}
+
+/* 動きつけるやつ */
+/* マウスオーバー時 */
+/* .NewsList li:hover{
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
+    transform: translate(-5px 5px 0 0);
+    cursor: pointer;
+} */
+/* マウスオーバー時 */
+.NewsList .btn_design:hover, .NewsList .btn_design:focus, .NewsList .btn_design:active {
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.SPCLback1:hover, .SPCLback1:focus, .SPCLback1:active {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.SPCLback2:hover, .SPCLback2:focus, .SPCLback2:active {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.SPCLback3:hover, .SPCLback3:focus, .SPCLback3:active {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.SPCLback4:hover, .SPCLback4:focus, .SPCLback4:active {
+    -webkit-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.PBox img:hover, .PBox img:focus, .PBox img:active {
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+.blog-list-content a:hover, .blog-list-content a:focus, .blog-list-content a:active {
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+.shop-list-content img:hover, .shop-list-content img:focus, .shop-list-content img:active {
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+/*== 波紋がふわっと広がる */
+
+.btnripple2{
+    /*波紋の基点とするためrelativeを指定*/
+	position: relative;
+    /*リンクの形状*/
+	display:inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+
+/*波形の設定*/
+.btnripple2:hover::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left:20%;
+    top:0px;
+    /*波形の形状*/
+    border: 1px solid rgb(0, 0, 0);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #000;
+    /*はじめは不透明*/
+	opacity:1;
+    /*アニメーションの設定*/
+    animation:1s circleanime2 forwards;
+}
+
+/*波形が広がるアニメーション*/
+@keyframes circleanime2{
+	0%{
+	  transform: scale(0);
+	}
+	100%{
+		transform:scale(2);
+		opacity: 0;
+	}
+}
+
+/*矢印の設定*/
+.btnripple2::after {
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+}
+.blog-list .blog-category a:hover {
+    color: #000;
+}
+
+/* .blog-list-content li{
+    box-shadow: 2.5px 2.5px 9px rgba(0, 0, 0, 0.16);
+    margin-bottom: 20px;
+} */

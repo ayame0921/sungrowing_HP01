@@ -1,0 +1,32 @@
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {}
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "instagram": "aa",
+          "facebook": "aa",
+          "twitter": "aa"
+        }
+      },
+      "toppage-header": {
+        "type": "toppage-header",
+        "settings": {
+          "toppage_header_image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg"
+        }
+      },
+      "toppage-products": {
+        "type": "toppage-products",
+        "settings": {}
+      }
+    },
+    "content_for_index": []
+  },
+  "presets": {
+    "Default": {}
+  }
+}

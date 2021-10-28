@@ -1,0 +1,109 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+<div class="shop-description">
+  <div class="shop-description-row">
+    <div class="img-content">
+      <ul class="slider">
+        {% for image in product.images %}
+            <li><img src="{{ image.src | img_url: 'compact' }}" alt=""></li>
+        {% endfor %}
+    </ul>
+    </div>
+  <div class="discription-box">
+    <div class="discription">
+      <div class="item-text">
+        <h2>{{ product.title }}</h2>
+        <h6>{{ current_variant.price | money }}</h6>
+        <div class="item-discription">
+          {{ product.description }}
+        </div>
+      </div>
+
+      <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="add-cart">
+        <div class="form-row">
+          <div class="form-group d-flex">
+            <label for="id">type</label>
+            <select name="id" id="productSelect" class="form-control">
+              {% for variant in product.variants %}
+              {% if variant.available %}
+              <option value="{{ variant.id }}">
+                {{ variant.title }}<!--  - {{ variant.price | money_with_currency }} -->
+              </option>
+              {% else %}
+              <option disabled="disabled">
+                {{ variant.title }} - sold out
+              </option>
+              {% endif %}
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group d-flex">
+            <label for="number">quantity</label>
+            <input type="number" id="Quantity" name="quantity" class="form-control" value="1" min="1">
+          </div>
+        </div>
+        <button type="submit" name="add" id="AddToCart">ADD CART</button>
+      </form>
+      <div class="detail">
+        <h3>Detail</h3>
+        <div class="detail-content">
+
+        </div>
+      </div>
+      <div class="shop-description-content">
+        <div class="main-img">
+          <img src="{{ featured_image | img_url: 'large' }}" alt="{{ featured_image.alt | escape }}">
+        </div>
+        <div class="sub-img">
+          <ul>
+            {% for image in product.images %}
+            <li><a href="{{ image.src | img_url: 'large' }}"><img src="{{ image.src | img_url: 'compact' }}" alt=""></a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="review">
+          <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<style>
+  header .header-content {
+    border-bottom: 1px solid black !important;
+  }
+
+  header .nav ul li a {
+    color: black;
+  }
+
+  .site-title a {
+    color: black !important;
+  }
+</style>
+
+<style>
+  #productSelect{
+    border: 1px solid #707070;
+    width: 234px;
+    height: 35px;
+    border-radius: 0px;
+    font-size: 16px;
+  }
+
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+</style>
+<script>
+  $('.slider').slick({
+    autoplay:true,
+    autoplaySpeed:5000,
+    dots:true,
+});
+</script>

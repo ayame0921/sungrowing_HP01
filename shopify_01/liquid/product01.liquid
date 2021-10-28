@@ -1,0 +1,48 @@
+<div class="main">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-sm">
+        <img src="{{ featured_image | img_url: 'large' }}" alt="{{ featured_image.alt | escape }}" alt=""
+          class="product_big_img">
+        <div class="row row-cols-sm-3 mt-3">
+          {% for image in product.images %}
+          <div class="col">
+            <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}" class="product_small_img">
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-sm">
+        <h2 class="mb-3 f30">{{ product.title }}</h2>
+        <p class="f26">{{ current_variant.price | money }}</p>
+        <p class="my-5">{{ product.description }}</p>
+
+        <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="id">種類</label>
+              <select name="id" id="productSelect" class="form-control">
+                {% for variant in product.variants %}
+                {% if variant.available %}
+                <option value="{{ variant.id }}">
+                  {{ variant.title }} - {{ variant.price | money_with_currency }}
+                </option>
+                {% else %}
+                <option disabled="disabled">
+                  {{ variant.title }} - sold out
+                </option>
+                {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="number">数量</label>
+              <input type="number" id="Quantity" name="quantity" class="form-control" value="1" min="1">
+            </div>
+          </div>
+          <button type="submit" name="add" id="AddToCart" class="mx-auto btn btn-dark">カートに入れる</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

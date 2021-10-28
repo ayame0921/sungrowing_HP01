@@ -1,0 +1,60 @@
+<div class="alert-page">
+  <h2 class="page-title">{{ page.title }}</h2>
+  <!-- <hr> -->
+  <div class="common-design">
+    <div class="container">
+      {{ page.content }}
+    </div>
+  </div>
+
+</div>
+
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .change{
+     fill: rgb(0, 0, 0);
+}
+  
+.alert-page .page-title{
+    margin-bottom: 30px;
+  }
+  
+  
+  header {
+    z-index: 1000;
+   fill:black!important;
+}
+@media screen and (min-width: 480px) {
+  .alert-page .common-design .container{
+    width: 1240px;
+    padding: 4%;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .alert-page .common-design{
+    background-color: #f7f4ed;
+    padding: 50px 0;
+  }
+    }
+    @media screen and (max-width: 480px){
+      .alert-page .common-design .container{
+    width: 375px;
+    padding: 4%;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .alert-page .common-design{
+    background-color: #f7f4ed;
+    padding: 50px 0; 
+  }
+
+  footer{
+    margin-top: 0px;
+  }
+    }
+</style>

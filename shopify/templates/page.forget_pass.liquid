@@ -1,0 +1,95 @@
+<div class="forget_pass-page">
+  <h2>Forgot Password</h2>
+  <hr>
+  <div class="common-design">
+    <div class="container">
+      {% form 'recover_customer_password' %}
+
+      {{ form.errors | default_errors }}
+      <div class="block">
+        <label for="customer_email" class="sample-font">Email Address</label>
+        <input class="sample-input" type="email" name="email" />
+  
+        <input class="submit" type="submit" value="Submit" />
+      </div>
+    
+      {% endform %}
+    </div>
+  </div>
+</div>
+
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  .headerShow .header-content{
+  border-bottom: 0px solid #000000 !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .site-title a{
+    color: black !important;
+  }
+  header {
+    z-index: 1000;
+   fill:black!important;
+}
+.change{
+     fill: rgb(0, 0, 0);
+}
+  /* スマホ */
+  @media screen and (max-width: 480px){
+        header{
+            height: 70px;
+        }
+        header .header-content {
+            font-family: "Operetta 8";
+            height: 70px!important;
+            margin: 0 auto;
+        }
+        .topNav.headerShow.hide{
+            color: #000000!important;
+            background-color: #ffffff!important;
+            z-index: 1000;
+        }
+        .topNav.headerShow .site-title a{
+            color: #000000!important;
+            z-index: 1000;
+        }
+        .topNav .hamburger span {
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            left: 6px;
+            background: rgb(0, 0, 0)!important;
+            -webkit-transition: .3s ease-in-out;
+            -moz-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .topNav.headerShow .hamburger span {
+            background: rgb(0, 0, 0)!important;
+        }
+        .site-title h1{
+            padding: 2px 0 0 0;
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: .1em;
+            text-align: center;
+        } 
+        .site-title a {
+            padding: 0;
+            margin-bottom: 10px;
+            color: #000000!important;
+        }
+        header .header-content {
+            border-bottom: 1px solid rgb(255, 255, 255) !important;
+        }
+        header:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 1000;
+        }
+      }
+</style>

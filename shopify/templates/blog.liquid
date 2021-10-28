@@ -1,0 +1,159 @@
+<div class="blog-list">
+  <div class="page-title"><h2>News & Column</h2></div>
+  <div class="blog-category pc">
+    <nav>
+      <ul>
+        {% for tag in blog.all_tags by 4 %}
+        <li><a class="btnripple2" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+<div class="cp_ipselect cp_sl01 m">
+<select required onChange="location.href=value;">
+	<option value="" hidden>カテゴリ</option>
+  {% for tag in blog.all_tags by 4 %}
+	<option value="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</option>
+  {% endfor %}
+</select>
+</div>
+  <div class="blog-list-content">
+  <ul>
+    {% paginate blog.articles by 6 %}
+          {% for article in blog.articles %}
+  <li><a href="{{ article.url }}">
+    <img src="{{article.image.src | img_url: '1920x'}}" alt="">
+    <div class="text">
+      <div class="date">
+        <p>{{ article.created_at | date: "%Y.%m/%d" }}</p>
+      </div>
+      <div class="title">
+        <p>{{ article.title }}</p>
+      </div>
+    </div>
+  </a></li>
+  {% endfor%}
+  
+  
+  </ul>
+  {% if paginate.pages > 1 %}
+        <nav aria-label="Page navigation example" class="pagination_nav">
+          {{ paginate | default_pagination: next: '>', previous: '<' }}
+        </nav>
+        {% endif %}
+  {% endpaginate%}
+</div>
+</div>
+
+
+
+
+
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  .headerShow .header-content{
+  border-bottom: 0px solid #000000 !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .site-title a{
+    color: black !important;
+  }
+  header {
+    z-index: 1000 !important;
+   fill:black !important;
+}
+.change{
+     fill: rgb(0, 0, 0);
+}
+  /* スマホ */
+    /* スマホ */
+    @media screen and (max-width: 480px){
+        header{
+            height: 70px;
+        }
+        header .header-content {
+            font-family: "Operetta 8";
+            height: 70px!important;
+            margin: 0 auto;
+        }
+        .topNav.headerShow.hide{
+            color: #000000!important;
+            background-color: #ffffff!important;
+            z-index: 1000;
+        }
+        .topNav.headerShow .site-title a{
+            color: #000000!important;
+            z-index: 1000;
+        }
+        .topNav .hamburger span {
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            left: 6px;
+            background: rgb(0, 0, 0)!important;
+            -webkit-transition: .3s ease-in-out;
+            -moz-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .topNav.headerShow .hamburger span {
+            background: rgb(0, 0, 0)!important;
+        }
+        .site-title h1{
+            padding: 2px 0 0 0;
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: .1em;
+            text-align: center;
+        } 
+        .site-title a {
+            padding: 0;
+            margin-bottom: 10px;
+            color: #000000!important;
+        }
+        header .header-content {
+            border-bottom: 1px solid rgb(255, 255, 255) !important;
+        }
+        header:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 1000;
+        }
+      }
+</style>
+
+<style>
+  .pagination_nav{
+    width: 100px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .pagination_nav .page{
+    display: none;
+  }
+  .pagination_nav span{
+    font-size: 27px;
+    color: #484848;
+  }
+
+  .pagination_nav .next{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .pagination_nav .pre{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  footer{
+    margin-top: 100px;
+  }
+</style>

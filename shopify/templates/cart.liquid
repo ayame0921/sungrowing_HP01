@@ -1,0 +1,191 @@
+<div class="cart-page">
+  <h2>Cart</h2>
+  <hr>
+  <div class="common-design">
+    <div class="pc">
+      {% if cart.item_count > 0 %}
+      <div class="container">
+        <form action="/cart" method="post" novalidate>
+          <table class="table cart_table">
+            <thead>
+              <tr>
+                <th scope="col" class="sample-font">商品</th>
+                <th scope="col"></th>
+                <th scope="col" class="sample-font">価格</th>
+                <th scope="col" class="sample-font">数量</th>
+                <th scope="col" class="sample-font">合計</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in cart.items %}
+              <tr>
+                <th scope="col"><a href="{{ item.url | within: collections.all }}">
+                    <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}"
+                      class="cover_img cart_product_img">
+                  </a></th>
+                <td><a href="{{ item.url | within: collections.all }}">{{ item.variant.title }}</a></td>
+                <td class="sample-font">{{ item.price | money }}</td>
+                <td>
+                  <input type="number" class="form-control" name="updates[]" id="updates_{{ item.key }}"
+                    value="{{ item.quantity }}" min="0">
+                </td>
+                <td class="sample-font">{% if item.original_line_price != item.line_price %}{{ item.original_line_price
+                  | money }}{% endif %}
+                  {{ item.line_price | money }}
+                  {% for discount in item.discounts %}{{ discount.title }}{% endfor %}</td>
+                <td><a href="/cart/change?line={{ forloop.index }}&quantity=0" class="delete_button">削除</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <div class="total-price">
+            <p class="total-price-font left">小計</p>
+            <p class="total-price-font right">{{ cart.total_price | money }}</p>
+          </div>
+          <p class="f10 sample-font">※税と配送料は購入手続き時に計算されます</p>
+          <div class="d-flex cart-button-box">
+            <button type="submit" class="ml-auto mr-3 cart-button" name="update">更新
+            </button>
+            <button type="submit" class="go_cart" name="checkout">レジに進む
+            </button>
+          </div>
+          <div class="text-right mt-3">
+            <a href="/" class="f14 border-bottom go-shopping">ショッピングを続ける</a>
+          </div>
+        </form>
+      </div>
+      {% else %}
+      <div class="cart-empty">
+        <p>カート内に商品がありません</p>
+        <a href="/" class="f14">ショッピングを続ける</a>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="m">
+      {% if cart.item_count > 0 %}
+      <div class="container">
+        <form action="/cart" method="post" novalidate>
+          
+          {% for item in cart.items %}
+          <div class="line"></div>
+          <a href="{{ item.url | within: collections.all }}">
+            <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}"
+              class="cart-img">
+          </a>
+          <a class="cart-title" href="{{ item.url | within: collections.all }}">{{ item.variant.title }}</a>
+          <p class="cart-money">price  {{ item.price | money }}</p>
+
+          <div class="quantity-box">
+            <p class="sample-font">quantity</p>
+            <input type="number" class="form-control" name="updates[]" id="updates_{{ item.key }}"
+            value="{{ item.quantity }}" min="0">
+          </div>
+          
+          <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="delete_button">削除</a>
+          
+          {% endfor %}
+          </table>
+          <div class="total-price">
+            <p class="total-price-font left">小計</p>
+            <p class="total-price-font right">{{ cart.total_price | money }}</p>
+          </div>
+          <p class="f10 sample-font">※税と配送料は購入手続き時に計算されます</p>
+          <div class="d-flex">
+            <button type="submit" class="ml-auto mr-3 cart-button" name="update">更新
+            </button>
+            <button type="submit" class="go_cart" name="checkout">レジに進む
+            </button>
+          </div>
+          <div class="text-right mt-3">
+            <a href="/" class="f14 go-shopping">ショッピングを続ける</a>
+          </div>
+        </form>
+      </div>
+      {% else %}
+      <div class="cart-empty">
+        <p>カート内に商品がありません</p>
+        <a href="/" class="f14">ショッピングを続ける</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  .headerShow .header-content{
+  border-bottom: 0px solid #000000 !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .site-title a{
+    color: black !important;
+  }
+  header {
+    z-index: 1000;
+   fill:black!important;
+}
+.change{
+     fill: rgb(0, 0, 0);
+}
+  /* スマホ */
+    /* スマホ */
+    @media screen and (max-width: 480px){
+        header{
+            height: 70px;
+        }
+        header .header-content {
+            font-family: "Operetta 8";
+            height: 70px!important;
+            margin: 0 auto;
+        }
+        .topNav.headerShow.hide{
+            color: #000000!important;
+            background-color: #ffffff!important;
+            z-index: 1000;
+        }
+        .topNav.headerShow .site-title a{
+            color: #000000!important;
+            z-index: 1000;
+        }
+        .topNav .hamburger span {
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            left: 6px;
+            background: rgb(0, 0, 0)!important;
+            -webkit-transition: .3s ease-in-out;
+            -moz-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .topNav.headerShow .hamburger span {
+            background: rgb(0, 0, 0)!important;
+        }
+        .site-title h1{
+            padding: 2px 0 0 0;
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: .1em;
+            text-align: center;
+        } 
+        .site-title a {
+            padding: 0;
+            margin-bottom: 10px;
+            color: #000000!important;
+        }
+        header .header-content {
+            border-bottom: 1px solid rgb(255, 255, 255) !important;
+        }
+        header:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 1000;
+        }
+      }
+</style>

@@ -1,0 +1,354 @@
+#business {
+    display: block;
+    height: 1080px;
+    width: 100%;
+    position: relative;
+    .wrapper {
+        width: 66.6666%;
+        margin: 0 auto;
+        .busiBox {
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            width: 66.6666%;
+            height: 43%;
+            display: flex;
+
+            .boxImg {
+                width: 47%;
+
+                .boxImgTop {
+                    position: absolute;
+                    transform: translate(10%, 10%);
+                    img {
+                        display: block;
+                        width: 90%;
+                    }
+                }
+                .boxImgTop2 {
+                    position: absolute;
+                    transform: translate(0%, 30%);
+                    width: 120%;
+                    z-index: -1;
+                    img {
+                        display: block;
+                        width: 39%;
+                    }
+                }
+            }
+            .boxTxt {
+                height: 100%;
+                width: 200%;
+                margin: 0 40px;
+                flex: 1;
+                .txtTitle {
+                    transform: translate(0%, -60%);
+                    .title {
+                        display: inline-block;
+                        font-size: 320%;
+                        line-height: 20px;
+                        font-family: "EB Garamond", serif;
+                        letter-spacing: 15px;
+                        font-weight: 500;
+                        margin-top: 20px;
+                    }
+                    .sub {
+                        display: block;
+                        font-size: 80%;
+                        font-family: "Noto Serif JP", serif;
+                        letter-spacing: 4px;
+                        font-weight: 600;
+                    }
+                }
+                .txtTitle2 {
+                    transform: translate(0%, -10%);
+                    .title {
+                        display: block;
+                        font-size: 170%;
+                        font-family: "EB Garamond", serif;
+                        letter-spacing: 5px;
+                        font-weight: 500;
+                    }
+                    .sub {
+                        display: inline;
+                        font-size: 120%;
+                        font-family: "Noto Serif JP", serif;
+                        letter-spacing: 3px;
+                        line-height: 1px;
+                        font-weight: 600;
+                        background-color: #fff;
+                        color: black;
+                    }
+                    .border {
+                        position: absolute;
+
+                        top: 100px;
+                        width: 165%;
+                        transform: translate(-40px, 0%);
+                        height: 1px;
+                        background: #fff;
+                        z-index: -5;
+                    }
+                    .desc {
+                        position: absolute;
+                        font-size: 60%;
+                        font-family: "Noto Serif JP", serif;
+                        line-height: 20px;
+                        letter-spacing: 2.5px;
+                        margin-top: 15px;
+                        font-weight: 550;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#business2 {
+    display: block;
+    width: 100%;
+    .busiEff1 {
+        display: block;
+        height: 60vh;
+        width: 100%;
+        position: relative;
+        .wrapper {
+            width: 66.6666%;
+            margin: 0 auto;
+            .containerBis {
+                position: absolute;
+                width: 66.6666%;
+                height: 40%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                .box {
+                    display: inline-block;
+                    width: 20%;
+                    height: 20%;
+                }
+                .circle {
+                    border: 1px solid; /* 線の太さと可視化 */
+                    border-color: #fff;
+                    border-radius: 50%;
+                    height: 250px;
+                    width: 250px;
+                    transform: translate(0px, -50%);
+                    text-align: center;
+                    .text{
+                        transform: translate(0px, 80%);
+                        font-family: "Noto Serif JP", serif;
+                        letter-spacing: 2.5px;
+                        h2{
+                            font-size: 2rem;
+                        }
+                        p{
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                }
+                .circle2 {
+                    border: 1px solid; /* 線の太さと可視化 */
+                    border-color: #fff;
+                    border-radius: 50%;
+                    height: 250px;
+                    width: 250px;
+                    transform: translate(0px, -50%);
+                    text-align: center;
+                    .text{
+                        transform: translate(0px, 80%);
+                        font-family: "Noto Serif JP", serif;
+                        letter-spacing: 2.5px;
+                        h2{
+                            font-size: 2rem;
+                        }
+                        p{
+                            font-size: 1.2rem;
+                        }
+                    }
+                    
+
+                }
+            }
+            .containerBis2 {
+                position: absolute;
+                width: 66.6666%;
+                height: 40%;
+                display: flex;
+                justify-content: center;
+                transform: translate(0%, 20%);
+                .bisleft{
+                    transform: translate(-45%, 0%);
+                }
+                .bisright{
+                    transform: translate(45%, 0%);
+                }
+                .biscenter{
+                    transform: translate(10%, 35%);
+                    text-align: center;
+
+                    h2{
+                        font-family: "Noto Serif JP", serif;
+                        letter-spacing: 20px;
+                        font-size: 2rem;
+                        background-color: #C11920;
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .busiEff2 {
+        display: block;
+        height: 120vh;
+        width: 100%;
+        .wrapper {
+            width: 66.6666%;
+            margin: 0 auto;
+            .goods{
+                .images{
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+
+                    .sun{
+                        position: absolute;
+                        width: 10%;
+                        transform: translate(70%, -50%);
+                        z-index: 1;
+                    }
+                    .img{
+                        position: absolute;
+                        width: 50%;
+                        z-index: 0;
+                        transform: translate(10%, 0%);
+                    }
+                    .line{
+                        position: absolute;
+                        transform: translate(-60%, 90%);
+                        width: 80%;
+                        z-index: -1;
+                    }
+                }
+                .textBox{
+                    display: block;
+                    width: 50%;
+                    height: 50vh;
+                    transform: translate(0%, 98%);
+                    position: relative;
+                    .title{
+                        display: block;
+                        font-size: 170%;
+                        font-family: "EB Garamond", serif;
+                        letter-spacing: 5px;
+                        font-weight: 500;
+                    }
+                    .subTitle{
+                        display: inline;
+                        font-size: 120%;
+                        font-family: "Noto Serif JP", serif;
+                        letter-spacing: 3px;
+                        line-height: 1px;
+                        font-weight: 600;
+                        background-color: #fff;
+                        color: black;
+                    }
+                    .desc{
+                        position: absolute;
+                        font-size: 60%;
+                        font-family: "Noto Serif JP", serif;
+                        line-height: 20px;
+                        letter-spacing: 2.5px;
+                        margin-top: 15px;
+                        font-weight: 550;
+                    }
+                }
+            }
+            .capital{
+                .images{
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+
+                    .sun{
+                        position: absolute;
+                        width: 10%;
+                        transform: translate(400%, -115%);
+                        z-index: 1;
+                    }
+                    .img{
+                        position: absolute;
+                        width: 50%;
+                        z-index: 0;
+                        transform: translate(80%, -20%);
+                    }
+                    .line{
+                        position: absolute;
+                        transform: translate(60%, -98%);
+                        width: 80%;
+                        z-index: -1;
+                    }
+                }
+                .textBox{
+                    display: block;
+                    width: 50%;
+                    height: 50vh;
+                    transform: translate(150%, 20%);
+                    position: relative;
+                    .title{
+                        display: block;
+                        font-size: 170%;
+                        font-family: "EB Garamond", serif;
+                        letter-spacing: 5px;
+                        font-weight: 500;
+                    }
+                    .subTitle{
+                        display: inline;
+                        font-size: 120%;
+                        font-family: "Noto Serif JP", serif;
+                        letter-spacing: 3px;
+                        line-height: 1px;
+                        font-weight: 600;
+                        background-color: #fff;
+                        color: black;
+                    }
+                    .desc{
+                        position: absolute;
+                        font-size: 60%;
+                        font-family: "Noto Serif JP", serif;
+                        line-height: 20px;
+                        letter-spacing: 2.5px;
+                        margin-top: 15px;
+                        font-weight: 550;
+                    }
+                }
+            }
+        }
+    }
+}
+
+svg {
+    width: 100px;
+    path {
+        fill: none;
+        stroke-linejoin: round;
+        stroke-dasharray: 500px;
+        stroke-dashoffset: 500px;
+        animation: line_animation 5s both;
+        stroke: #fff;
+    }
+}
+
+@keyframes line_animation {
+    0% {
+        stroke-dashoffset: 1000px;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+    }
+}

@@ -1,0 +1,90 @@
+<div class="blog-page">
+  <div class="eye-chatch">
+    <img src="{% if article.image %}{{article.image.src | img_url: '1920x'}}{% else %}何らかのURL{% endif %}" alt="">
+  </div>
+  <div class="date">
+    <p>{{ article.created_at | date: "%Y.%m/%d" }}</p>
+  </div>
+  <div class="title">
+    <p>{{article.title}}</p>
+  </div>
+  <div class="blog-content">
+    {{ article.content }}
+  </div>
+</div>
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  .headerShow .header-content{
+  border-bottom: 0px solid #000000 !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .site-title a{
+    color: black !important;
+  }
+  header {
+    z-index: 1000;
+   fill:black!important;
+}
+.change{
+     fill: rgb(0, 0, 0);
+}
+  /* スマホ */
+    /* スマホ */
+    @media screen and (max-width: 480px){
+        header{
+            height: 70px;
+        }
+        header .header-content {
+            font-family: "Operetta 8";
+            height: 70px!important;
+            margin: 0 auto;
+        }
+        .topNav.headerShow.hide{
+            color: #000000!important;
+            background-color: #ffffff!important;
+            z-index: 1000;
+        }
+        .topNav.headerShow .site-title a{
+            color: #000000!important;
+            z-index: 1000;
+        }
+        .topNav .hamburger span {
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            left: 6px;
+            background: rgb(0, 0, 0)!important;
+            -webkit-transition: .3s ease-in-out;
+            -moz-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .topNav.headerShow .hamburger span {
+            background: rgb(0, 0, 0)!important;
+        }
+        .site-title h1{
+            padding: 2px 0 0 0;
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: .1em;
+            text-align: center;
+        } 
+        .site-title a {
+            padding: 0;
+            margin-bottom: 10px;
+            color: #000000!important;
+        }
+        header .header-content {
+            border-bottom: 1px solid rgb(255, 255, 255) !important;
+        }
+        header:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 1000;
+        }
+      }
+</style>

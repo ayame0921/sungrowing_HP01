@@ -1,0 +1,118 @@
+<div class="shop-list">
+  <div class="page-title">
+    <h2>Basic Collection</h2>
+    <p>Thousands of stories</p>
+  </div>
+  <div class="shop-list-copy">
+    <p>作る人からつなぐ人、使う人、そしてそれを話す人。<br class="pc">それぞれがプロダクトと過ごす時間がstoryを紡ぐ。<br class="pc">数多のstoryによって形作られたプロダクトは<br
+        class="pc">人々の想いを運び伝え、時をかけてまた人の手に。<br class="pc">持つ人とともに、新たなstoryを育み生きるCollection。</p>
+  </div>
+  <div class="shop-list-content">
+    <ul>
+      {% for product in collection.products %}
+      <li><a href="{{ product.url | within: collection }}">
+          <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="">
+        </a></li>
+      {% else %}
+      <p>現在商品がありません</p>
+      {% endfor %}
+    </ul>
+
+    {% if paginate.pages > 1 %}
+    <nav aria-label="Page navigation example" class="pagination_nav">
+      {{ paginate | default_pagination: next: '»', previous: '«' }}
+    </nav>
+{% endif %}
+<style>span.page a,span.page.current,span.next a,span.prev a,span.deco {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #333333;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.pagination_nav{
+  display: flex;
+  justify-content: center;
+}</style>
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  .headerShow .header-content{
+  border-bottom: 0px solid #000000 !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .site-title a{
+    color: black !important;
+  }
+  header {
+    z-index: 1000;
+   fill:black!important;
+}
+.change{
+     fill: rgb(0, 0, 0);
+}
+  /* スマホ */
+    /* スマホ */
+    @media screen and (max-width: 480px){
+        header{
+            height: 70px;
+        }
+        header .header-content {
+            font-family: "Operetta 8";
+            height: 70px!important;
+            margin: 0 auto;
+        }
+        .topNav.headerShow.hide{
+            color: #000000!important;
+            background-color: #ffffff!important;
+            z-index: 1000;
+        }
+        .topNav.headerShow .site-title a{
+            color: #000000!important;
+            z-index: 1000;
+        }
+        .topNav .hamburger span {
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            left: 6px;
+            background: rgb(0, 0, 0)!important;
+            -webkit-transition: .3s ease-in-out;
+            -moz-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .topNav.headerShow .hamburger span {
+            background: rgb(0, 0, 0)!important;
+        }
+        .site-title h1{
+            padding: 2px 0 0 0;
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: .1em;
+            text-align: center;
+        } 
+        .site-title a {
+            padding: 0;
+            margin-bottom: 10px;
+            color: #000000!important;
+        }
+        header .header-content {
+            border-bottom: 1px solid rgb(255, 255, 255) !important;
+        }
+        header:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 1000;
+        }
+      }
+</style>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="blog-list">
+  <div class="page-title"><h2>News & Column</h2></div>
+  <div class="blog-category pc">
+    <nav>
+      <ul>
+        {% for tag in blog.all_tags by 4 %}
+        <li><a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+<div class="cp_ipselect cp_sl01 m">
+<select required onChange="location.href=value;">
+	<option value="" hidden>カテゴリ</option>
+  {% for tag in blog.all_tags by 4 %}
+	<option value="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</option>
+  {% endfor %}
+</select>
+</div>
+  <div class="blog-list-content">
+  <ul>
+    {% paginate blog.articles by 6 %}
+          {% for article in blog.articles %}
+  <li><a href="{{ article.url }}">
+    <img src="{{article.image.src | img_url: '1920x'}}" alt="">
+    <div class="text">
+      <div class="date">
+        <p>{{ article.created_at | date: "%Y.%m/%d" }}</p>
+      </div>
+      <div class="title">
+        <p>{{ article.title }}</p>
+      </div>
+    </div>
+  </a></li>
+  {% endfor%}
+  </ul>
+  {% if paginate.pages > 1 %}
+        <nav aria-label="Page navigation example" class="pagination_nav">
+          {{ paginate | default_pagination: next: '>', previous: '<' }}
+        </nav>
+        {% endif %}
+  {% endpaginate%}
+</div>
+</div>
+</div>
+
+<style>
+  header .header-content{
+    border-bottom: 1px solid black !important;
+  }
+  header .nav ul li a{
+    color: black;
+  }
+  .site-title a{
+    color: black !important;
+  }
+</style>
+
+<style>
+  .pagination_nav{
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .pagination_nav .page{
+    display: none;
+  }
+</style>
