@@ -62,6 +62,7 @@
     position: absolute;
     left: 70px;
     top: 15px;
+  transition: .3s ease-in-out;
 }
 
 #service .service_button:hover svg {
@@ -71,25 +72,31 @@
   position: absolute;
   left:7px;
   fill: white !important;
+  transition: .3s ease-in-out;
 }
 #service .service_button:hover svg path{
   fill: white !important;
   stroke: white !important;
+  transition: .3s ease-in-out;
 }
 #service .service_button:hover{
   background-color: #150C09;
+  transition: .3s ease-in-out;
 }
 
 .service_button:hover{
   background-color: #150C09;
+  transition: .3s ease-in-out;
 }
 
 .service_button:hover p{
   left: 70px;
+  transition: .3s ease-in-out;
 }
 
 .service_button:hover img{
   left:7px;
+  transition: .3s ease-in-out;
 }
 
 /* ボタンここまで */
