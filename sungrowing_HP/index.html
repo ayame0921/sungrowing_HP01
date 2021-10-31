@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./asset/scss/style.css">
 
     <link rel="stylesheet" href="asset/scss/service.css">
+
+    <link rel="stylesheet" href="asset/scss/effect.css">
 </head>
 
 <body>
@@ -45,27 +47,7 @@
             </div>
         </nav>
     </header>
-    <header class="mobile">
-        <h1 class="site-title"><a href="index.html"><img src="asset/image/logo/[LOGO] HEADER .svg" alt=""></a></h1>
-        <div class="humburger" style="padding-top: 5px;">
-            <div>
-                <a href="#sidemenu" class="hamburger-menu">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </a>
-                <header id="sidemenu" class="sidenavs">
-                <a href="#" class="close-btn"><img src="asset/image/img/close-btn.png" alt=""></a>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">BUSINESS</a></li>
-                <li><a href="#">SERVICE</a></li>
-                <li><a href="#">COMPANY</a></li>
-                <li class="list-contact"><a href="#"><span class="mailBox"><img src="./asset/image/icon/[ICON] MAIL.svg"
-                                alt=""></span>CONTACT</a></li>
-                </header>
-              </div>
-        </div>
-    </header>
+    
     <main class="bg-half pc">
         <div class="bgMov">
             <video id="bgvideo" poster="asset/image/img/bg-movie03.svg" webkit-playsinline playsinline muted autoplay
@@ -107,7 +89,38 @@
             </div>
         </section>
     </main>
-    <main class="mobile">
+    <main class="bg-half mobile">
+        
+        <div class="bgMov">
+            <video id="bgvideo" poster="asset/image/img/bg-movie03.svg" webkit-playsinline playsinline muted autoplay
+                loop>
+                <source src="asset/image/mov/bg.mov" type="video/mp4">
+
+            </video>
+        </div>
+        
+        <div class="bg-red"></div>
+        <header class="mobile">
+            <h1 class="site-title"><a href="index.html"><img src="asset/image/logo/[LOGO] HEADER .svg" alt=""></a></h1>
+            <div class="humburger" style="padding-top: 5px;">
+                <div>
+                    <a href="#sidemenu" class="hamburger-menu">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </a>
+                    <header id="sidemenu" class="sidenavs">
+                    <a href="#" class="close-btn"><img src="asset/image/img/close-btn.png" alt=""></a>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">BUSINESS</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">COMPANY</a></li>
+                    <li class="list-contact"><a href="#"><span class="mailBox"><img src="./asset/image/icon/[ICON] MAIL.svg"
+                                    alt=""></span>CONTACT</a></li>
+                    </header>
+                  </div>
+            </div>
+        </header>
         <div class="main-box">
             <img src="asset/image/logo/logomain.svg" alt="">
             <h1>Creating a feeling<br>
@@ -128,8 +141,10 @@
                 <div class="aboutBox">
                     <div class="boxImg">
                         <div class="boxImgTop">
-                            <img src="./asset/image/img/AboutTop1.png" alt="" class="Aimg1">
-                            <img src="./asset/image/img/AboutTop2.png" alt="" class="Aimg2">
+                            
+                                <img src="./asset/image/img/AboutTop1.png" alt="" class="Aimg1">
+                                <img src="./asset/image/img/AboutTop2.png" alt="" class="Aimg2">
+                            
                         </div>
                         <div class="boxImgBtm"><img src="./asset/image/img/AboutTop3.png" alt=""></div>
                     </div>
@@ -172,12 +187,12 @@
             <div class="wrapper">
                 <div class="busiBox">
                     <div class="boxImg">
-                        <div class="boxImgTop">
-                            <img src="./asset/image/img/business_sun.png" alt="">
-                        </div>
-                        <div class="boxImgTop2">
-                            <img src="./asset/image/img/business_imgafter.png" alt="">
-                        </div>
+                            <div class="boxImgTop">
+                                <img src="./asset/image/img/business_sun.png" alt="">
+                            </div>
+                            <div class="boxImgTop2">
+                                <img src="./asset/image/img/business_imgafter.png" alt="">
+                            </div>
                     </div>
                     <div class="boxTxt">
                         <div class="txtTitle">
@@ -210,8 +225,9 @@
             <div class="human">
                 <div class="img-effect">
                     
-                    <img src="asset/image/img/business_imgafter.png" alt="" class="img02 hover08">
-                    <img src="asset/image/img/business_sun.png" alt="" class="img01">
+                        <img src="asset/image/img/business_imgafter.png" alt="" class="img02 hover08">
+                        <img src="asset/image/img/business_sun.png" alt="" class="img01">
+                    
                 </div>
                 <h1>Human</h1>
                 <h2>ヒトが事業を創り出す</h2>
@@ -359,7 +375,13 @@
                         案件の紹介などがメインになりますが、他にも様々な展開を企画しています。</p>
                 </div>
                 <a href="#" class="service_button">
-                    <img src="asset/image/img/arrow.png" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="47" height="21" viewBox="0 0 47 21">
+                        <g id="グループ_364" data-name="グループ 364" transform="translate(-1265 -820)">
+                          <path id="線_9" data-name="線 9" d="M46,.5H0A.5.5,0,0,1-.5,0,.5.5,0,0,1,0-.5H46a.5.5,0,0,1,.5.5A.5.5,0,0,1,46,.5Z" transform="translate(1265.5 830.5)"/>
+                          <path id="線_10" data-name="線 10" d="M10,10.5a.5.5,0,0,1-.354-.146l-10-10a.5.5,0,0,1,0-.707.5.5,0,0,1,.707,0l10,10A.5.5,0,0,1,10,10.5Z" transform="translate(1301.5 820.5)"/>
+                          <path id="線_11" data-name="線 11" d="M0,10.5a.5.5,0,0,1-.354-.146.5.5,0,0,1,0-.707l10-10a.5.5,0,0,1,.707,0,.5.5,0,0,1,0,.707l-10,10A.5.5,0,0,1,0,10.5Z" transform="translate(1301.5 830.5)"/>
+                        </g>
+                      </svg>                   
                     <p>サービスサイトへ</p>
                 </a>
             </div>
@@ -373,7 +395,15 @@
                         将来的には、『My SunGrowing』に統合されていく予定です。</p>
                 </div>
                 <a href="#" class="service_button">
-                    <img src="asset/image/img/arrow.png" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="47" height="21" viewBox="0 0 47 21">
+                        <g id="グループ_364" data-name="グループ 364" transform="translate(-1265 -820)">
+                          <path id="線_9" data-name="線 9" d="M46,.5H0A.5.5,0,0,1-.5,0,.5.5,0,0,1,0-.5H46a.5.5,0,0,1,.5.5A.5.5,0,0,1,46,.5Z" transform="translate(1265.5 830.5)"/>
+                          <path id="線_10" data-name="線 10" d="M10,10.5a.5.5,0,0,1-.354-.146l-10-10a.5.5,0,0,1,0-.707.5.5,0,0,1,.707,0l10,10A.5.5,0,0,1,10,10.5Z" transform="translate(1301.5 820.5)"/>
+                          <path id="線_11" data-name="線 11" d="M0,10.5a.5.5,0,0,1-.354-.146.5.5,0,0,1,0-.707l10-10a.5.5,0,0,1,.707,0,.5.5,0,0,1,0,.707l-10,10A.5.5,0,0,1,0,10.5Z" transform="translate(1301.5 830.5)"/>
+                        </g>
+                      </svg>
+                      
+                      
                     <p>サービスサイトへ</p>
                 </a>
             </div>
@@ -394,13 +424,16 @@
             </div>
             <p>自社の名前を冠する、これまでの実績を全て詰め込んだオリジナルSNSです。<br>
                 案件の紹介などがメインになりますが、他にも様々な展開を企画しています。</p>
-                <div class="btn">
                     <a href="#" class="service_button">
-                        <img src="asset/image/img/arrow.png" alt="">
-                        <p>サービスサイトへ</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="21" viewBox="0 0 47 21">
+                            <g id="グループ_364" data-name="グループ 364" transform="translate(-1265 -820)">
+                              <path id="線_9" data-name="線 9" d="M46,.5H0A.5.5,0,0,1-.5,0,.5.5,0,0,1,0-.5H46a.5.5,0,0,1,.5.5A.5.5,0,0,1,46,.5Z" transform="translate(1265.5 830.5)"/>
+                              <path id="線_10" data-name="線 10" d="M10,10.5a.5.5,0,0,1-.354-.146l-10-10a.5.5,0,0,1,0-.707.5.5,0,0,1,.707,0l10,10A.5.5,0,0,1,10,10.5Z" transform="translate(1301.5 820.5)"/>
+                              <path id="線_11" data-name="線 11" d="M0,10.5a.5.5,0,0,1-.354-.146.5.5,0,0,1,0-.707l10-10a.5.5,0,0,1,.707,0,.5.5,0,0,1,0,.707l-10,10A.5.5,0,0,1,0,10.5Z" transform="translate(1301.5 830.5)"/>
+                            </g>
+                          </svg>
+                                                  <p>サービスサイトへ</p>
                     </a>
-                </div>
-                
             <div class="service-content">
                 <img src="asset/image/img/service_3.png" alt="" class="img01">
                 <img src="asset/image/img/service_2.png" alt="" class="img02">
@@ -408,12 +441,17 @@
                     ちょこっとビジネス</h3>
                 <p>ちょこビジは、LINEを活用して「お小遣い稼ぎ」に関する情報発信を行う案件紹介のプラットフォームです。<br>
                     将来的には、『My SunGrowing』に統合されていく予定です。</p>
-                    <div class="btn">
-                    <a href="#" class="service_button">
-                        <img src="asset/image/img/arrow.png" alt="">
-                        <p>サービスサイトへ</p>
-                    </a>
-                </div>
+
+                        <a href="#" class="service_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="21" viewBox="0 0 47 21">
+                                <g id="グループ_364" data-name="グループ 364" transform="translate(-1265 -820)">
+                                  <path id="線_9" data-name="線 9" d="M46,.5H0A.5.5,0,0,1-.5,0,.5.5,0,0,1,0-.5H46a.5.5,0,0,1,.5.5A.5.5,0,0,1,46,.5Z" transform="translate(1265.5 830.5)"/>
+                                  <path id="線_10" data-name="線 10" d="M10,10.5a.5.5,0,0,1-.354-.146l-10-10a.5.5,0,0,1,0-.707.5.5,0,0,1,.707,0l10,10A.5.5,0,0,1,10,10.5Z" transform="translate(1301.5 820.5)"/>
+                                  <path id="線_11" data-name="線 11" d="M0,10.5a.5.5,0,0,1-.354-.146.5.5,0,0,1,0-.707l10-10a.5.5,0,0,1,.707,0,.5.5,0,0,1,0,.707l-10,10A.5.5,0,0,1,0,10.5Z" transform="translate(1301.5 830.5)"/>
+                                </g>
+                              </svg>
+                            <p>サービスサイトへ</p>
+                        </a>
             </div>
         </div>
     </section>
@@ -457,7 +495,7 @@
         </div>
         <img src="asset/image/img/company02.png" alt="" class="company02">
         <div class="map">
-
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683745!2d139.7432442152582!3d35.65858048019946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1635596526287!5m2!1sja!2sjp" width="100%" height="611px" style="border:0; " allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
     <section id="company" class="mobile">
@@ -481,6 +519,7 @@
             </dl>
             <img src="asset/image/img/company-m01.png" alt="" class="img02">
             <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683745!2d139.7432442152582!3d35.65858048019946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1635596526287!5m2!1sja!2sjp" width="327px" height="233px" style="border:0; " allowfullscreen="" loading="lazy"></iframe>
 
             </div>
         </div>

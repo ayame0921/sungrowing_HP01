@@ -412,13 +412,13 @@ svg {
 }
 
 svg path {
-  fill: none;
+  /* fill: none; */
   stroke-linejoin: round;
   stroke-dasharray: 500px;
   stroke-dashoffset: 500px;
   -webkit-animation: line_animation 5s both;
           animation: line_animation 5s both;
-  stroke: #fff;
+  /* stroke: #fff; */
 }
 
 @-webkit-keyframes line_animation {

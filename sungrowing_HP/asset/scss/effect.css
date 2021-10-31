@@ -1,0 +1,95 @@
+#business .wrapper .busiBox .boxImg .boxImgTop img{
+  width: 100%;
+  /* -webkit-transform: translate(40%, -115%); */
+          transform: translate(0%, 0%);
+  z-index: 1;
+}
+
+#business .wrapper .busiBox .boxImg:hover .boxImgTop img{
+  width: 200px;
+  transform: translate(-20%, 0%);
+  cursor: pointer;
+  /* transition: .1s ease-in-out; */
+}
+
+#business .wrapper .busiBox .boxImg:hover .boxImgTop2{
+  filter:grayscale(0%) !important;
+}
+
+#business .wrapper .busiBox .boxImg .boxImgTop2{
+  filter: grayscale(100%);
+  transition: .3s ease-in-out;
+}
+
+#business2 .busiEff2 .wrapper .goods .images .sun{
+    transition-property: transform;
+}
+
+#business2 .busiEff2 .wrapper .goods .images:hover .sun{
+  width: 15%;
+  transform: translate(20%, -50%);
+  cursor: pointer;
+  /* transition: .4s ease-in-out; */
+}
+
+#business2 .busiEff2 .wrapper .capital .images:hover .sun{
+  width: 15%;
+  transform: translate(245%, -90%);
+  cursor: pointer;
+  /* transition: .4s ease-in-out; */
+}
+
+#business .wrapper .busiBox .boxImg:hover .boxImgTop2{
+  filter:grayscale(0%) !important;
+}
+
+#business .wrapper .busiBox .boxImg .boxImgTop2{
+  filter: grayscale(100%);
+  transition: .3s ease-in-out;
+}
+
+
+/* ボタンここから */
+#service .service_1 .service_button:hover{
+    background-color: #150C09;
+}
+
+#service .service_button:hover p{
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.4em;
+    color: #fefefe;
+    position: absolute;
+    left: 70px;
+    top: 15px;
+}
+
+#service .service_button:hover svg {
+  width: 46px;
+  height: 20px;
+  margin-top: 23.5px;
+  position: absolute;
+  left:7px;
+  fill: white !important;
+}
+#service .service_button:hover svg path{
+  fill: white !important;
+  stroke: white !important;
+}
+#service .service_button:hover{
+  background-color: #150C09;
+}
+
+.service_button:hover{
+  background-color: #150C09;
+}
+
+.service_button:hover p{
+  left: 70px;
+}
+
+.service_button:hover img{
+  left:7px;
+}
+
+/* ボタンここまで */

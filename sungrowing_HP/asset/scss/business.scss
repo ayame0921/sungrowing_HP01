@@ -335,12 +335,10 @@
 svg {
     width: 100px;
     path {
-        fill: none;
         stroke-linejoin: round;
         stroke-dasharray: 500px;
         stroke-dashoffset: 500px;
         animation: line_animation 5s both;
-        stroke: #fff;
     }
 }
 
